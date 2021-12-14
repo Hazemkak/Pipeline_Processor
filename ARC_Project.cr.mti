@@ -1,0 +1,117 @@
+C:/Users/kc/Downloads/project/Tri-stateBuffer.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/Tri-stateBuffer.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tri_state_buffer
+-- Compiling architecture archTriState of tri_state_buffer
+
+} {} {}} C:/Users/kc/Downloads/project/Data_MEM.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/Data_MEM.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity DataMEM
+-- Compiling architecture ArchDataMEM of DataMEM
+
+} {} {}} C:/Users/kc/Downloads/project/Control_Unit.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/Control_Unit.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity control
+-- Compiling architecture archcontrol of control
+
+} {} {}} C:/Users/kc/Downloads/project/Instraction_MEM.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/Instraction_MEM.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity InstractionMem
+-- Compiling architecture ArchInstractionMem of InstractionMem
+
+} {} {}} C:/Users/kc/Downloads/project/MEM-WB.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/MEM-WB.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity MEMWB
+-- Compiling architecture archMEMWB of MEMWB
+
+} {} {}} C:/Users/kc/Downloads/project/decoder.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/decoder.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decoder3_8
+-- Compiling architecture archDecoder of decoder3_8
+
+} {} {}} C:/Users/kc/Downloads/project/ID-EX.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/ID-EX.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity IDEX
+-- Compiling architecture archIDEX of IDEX
+
+} {} {}} C:/Users/kc/Downloads/project/EX-MEM.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/EX-MEM.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity EXMEM
+-- Compiling architecture archEXMEM of EXMEM
+
+} {} {}} C:/Users/kc/Downloads/project/IF-ID.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/IF-ID.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity IFID
+-- Compiling architecture archIFID of IFID
+
+} {} {}} C:/Users/kc/Downloads/project/MIPS.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/MIPS.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MIPS
+-- Compiling architecture ArchMIPS of MIPS
+
+} {} {}} C:/Users/kc/Downloads/project/ALU.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/ALU.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALU
+-- Compiling architecture archALU of ALU
+
+} {} {}} C:/Users/kc/Downloads/project/PC.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/PC.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PC_reg
+-- Compiling architecture PCarchReg of PC_reg
+
+} {} {}} C:/Users/kc/Downloads/project/Register_File.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/Register_File.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity registerfile
+-- Compiling architecture Archregisterfile of registerfile
+
+} {} {}} C:/Users/kc/Downloads/project/reg16bit.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/reg16bit.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reg16bit
+-- Compiling architecture Archreg16bit of reg16bit
+
+} {} {}}
