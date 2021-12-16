@@ -1,0 +1,88 @@
+# Compile of fourbyonemux.vhd was successful.
+# Compile of flagstoreregister.vhd was successful.
+# Compile of flagregisterV2.vhd was successful.
+# Compile of twobyonemux.vhd was successful.
+# Compile of flagsintegration.vhd was successful.
+# Compile of flagregister.vhd was successful.
+# Compile of onebitfulladder.vhd was successful.
+# Compile of onebitfullsubtractor.vhd was successful.
+# Compile of sixteenbitfulladder.vhd was successful.
+# Compile of sixteenfullsubtractor.vhd was successful.
+# Compile of forwardingunit.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of tristatebuffer.vhd was successful.
+# Compile of executestage.vhd was successful.
+# Compile of executestage.vhd was successful.
+# Compile of flagregister.vhd was successful.
+# Compile of flagregisterV2.vhd was successful.
+# Compile of flagstoreregister.vhd was successful.
+# Compile of twobyonemux.vhd was successful.
+# Compile of fourbyonemux.vhd was successful.
+# Compile of flagsintegration.vhd was successful.
+# Compile of onebitfulladder.vhd was successful.
+# Compile of onebitfullsubtractor.vhd was successful.
+# Compile of sixteenbitfulladder.vhd was successful.
+# Compile of sixteenfullsubtractor.vhd was successful.
+# Compile of forwardingunit.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of tristatebuffer.vhd was successful.
+# 14 compiles, 14 failed with no errors.
+# Compile of decoder.vhd was successful.
+# Compile of Control_Unit.vhd was successful.
+# Compile of Data_MEM.vhd was successful.
+# Compile of EX-MEM.vhd was successful.
+# Compile of EX-MEM.vhd was successful.
+# Compile of ID-EX.vhd was successful.
+# Compile of IF-ID.vhd was successful.
+# Compile of Instraction_MEM.vhd was successful.
+# Compile of MEM-WB.vhd was successful.
+# Compile of MIPS.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of reg16bit.vhd was successful.
+# Compile of Register_File.vhd was successful.
+# Compile of SP.vhd was successful.
+# Compile of Tri-stateBuffer.vhd was successful.
+# Compile of executestage.vhd was successful.
+# Compile of flagregister.vhd was successful.
+# Compile of flagregisterV2.vhd was successful.
+# Compile of flagstoreregister.vhd was successful.
+# Compile of twobyonemux.vhd was successful.
+# Compile of fourbyonemux.vhd was successful.
+# Compile of flagsintegration.vhd was successful.
+# Compile of onebitfulladder.vhd was successful.
+# Compile of onebitfullsubtractor.vhd was successful.
+# Compile of sixteenbitfulladder.vhd was successful.
+# Compile of sixteenfullsubtractor.vhd was successful.
+# Compile of forwardingunit.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of tristatebuffer.vhd was successful.
+# Compile of Control_Unit.vhd was successful.
+# Compile of Data_MEM.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of EX-MEM.vhd was successful.
+# Compile of ID-EX.vhd was successful.
+# Compile of IF-ID.vhd was successful.
+# Compile of Instraction_MEM.vhd was successful.
+# Compile of MEM-WB.vhd was successful.
+# Compile of MIPS.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of reg16bit.vhd was successful.
+# Compile of Register_File.vhd was successful.
+# Compile of SP.vhd was successful.
+# Compile of Tri-stateBuffer.vhd was successful.
+# 28 compiles, 0 failed with no errors.
+vsim -gui work.alu
+# vsim -gui work.alu 
+# Start time: 11:27:29 on Dec 16,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.alu(data_alu)
+# Loading work.sixteenbitfulladder(data_sixteenbitfulladder)
+# Loading work.onebitfulladder(data_onebitfulladder)
+# Loading work.sixteenbitfullsubtractor(data_sixteenbitfullsubtractor)
+# Loading work.onebitfullsubtractor(data_onebitfullsubtractor)
+quit -sim
+# End time: 11:28:19 on Dec 16,2021, Elapsed time: 0:00:50
+# Errors: 0, Warnings: 74

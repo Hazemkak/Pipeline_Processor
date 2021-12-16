@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11e MIXED_VERSIONS
 13
 !s112 1.1
 !i10d 8192
@@ -17,6 +18,7 @@ Z2 o-quiet -auto_acc_if_foreign -work work
 Z3 tCvgOpt 0
 n@_opt
 Z4 OL;O;10.5;63
+R0
 T_opt1
 !s110 1639474894
 V__Dk]OAVkBGQoj1I55h_@1
@@ -38,36 +40,38 @@ n@_opt2
 R4
 R0
 Ealu
-Z5 w1638938393
-Z6 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z5 w1639608427
+Z6 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z9 dC:/Users/kc/Downloads/Pipeline_Processor
-Z10 8C:/Users/kc/Downloads/project/ALU.vhd
-Z11 FC:/Users/kc/Downloads/project/ALU.vhd
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 55
+Z9 dC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor
+Z10 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/ALU.vhd
+Z11 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/ALU.vhd
 l0
-L5
-V=Ta4WbmclAe11Jzkhg;X41
-!s100 _5Dn_3kNhBkk8O3dBz6UV3
-Z12 OL;C;10.5;63
+L5 1
+VJ^I3nKSCWW@a>;Jjjg;J12
+!s100 On3z@G_TjLYY9VzFS>NA40
+Z12 OV;C;2020.1;71
 32
-Z13 !s110 1639475360
+Z13 !s110 1639646817
 !i10b 1
-Z14 !s108 1639475360.000000
-Z15 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/ALU.vhd|
-Z16 !s107 C:/Users/kc/Downloads/project/ALU.vhd|
-!i113 0
+Z14 !s108 1639646816.000000
+Z15 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/ALU.vhd|
+Z16 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/ALU.vhd|
+!i113 1
 Z17 o-work work -2002 -explicit
 Z18 tExplicit 1 CvgOpt 0
-Aarchalu
+Adata_alu
 R6
 R7
 R8
-DEx4 work 3 alu 0 22 =Ta4WbmclAe11Jzkhg;X41
-l17
-L12
-VzaYAdXoE]TV]8>>hUAe032
-!s100 4Ab5lUWL^;NjCXD0SiZzC2
+DEx4 work 3 alu 0 22 J^I3nKSCWW@a>;Jjjg;J12
+!i122 55
+l37
+L15 96
+VToL;W^L<[CVVIRDQ;eU0Z3
+!s100 jM>BkEHYe0[E1D5U72<BV0
 R12
 32
 R13
@@ -75,265 +79,602 @@ R13
 R14
 R15
 R16
+!i113 1
+R17
+R18
+Aarchalu
+Z19 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R7
+Z20 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+DEx4 work 3 alu 0 22 =Ta4WbmclAe11Jzkhg;X41
+l17
+L12
+VzaYAdXoE]TV]8>>hUAe032
+!s100 4Ab5lUWL^;NjCXD0SiZzC2
+Z21 OL;C;10.5;63
+32
+!s110 1639475360
+!i10b 1
+!s108 1639475360.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/ALU.vhd|
+!s107 C:/Users/kc/Downloads/project/ALU.vhd|
 !i113 0
 R17
 R18
+dC:/Users/kc/Downloads/Pipeline_Processor
+FC:/Users/kc/Downloads/project/ALU.vhd
+w1638938393
+8C:/Users/kc/Downloads/project/ALU.vhd
 Econtrol
-Z19 w1639313839
+Z22 w1639645204
 R7
 R8
+!i122 57
 R9
-Z20 8C:/Users/kc/Downloads/project/Control_Unit.vhd
-Z21 FC:/Users/kc/Downloads/project/Control_Unit.vhd
+Z23 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Control_Unit.vhd
+Z24 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Control_Unit.vhd
 l0
-L4
+L4 1
 V4Xid>HLDNzlb<4UcAoTVe3
 !s100 T>ngZ=DE=6UNDbCO>gz9C2
 R12
 32
 R13
 !i10b 1
-R14
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/Control_Unit.vhd|
-Z23 !s107 C:/Users/kc/Downloads/project/Control_Unit.vhd|
-!i113 0
+Z25 !s108 1639646817.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Control_Unit.vhd|
+Z27 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Control_Unit.vhd|
+!i113 1
 R17
 R18
 Aarchcontrol
 R7
 R8
 DEx4 work 7 control 0 22 4Xid>HLDNzlb<4UcAoTVe3
+!i122 57
 l12
-L11
+L11 27
 Vl7Se6I==Ulm]TkomKVUco0
 !s100 TgTa5Y5hVSbiLYl@nV7[13
 R12
 32
 R13
 !i10b 1
-R14
-R22
-R23
-!i113 0
+R25
+R26
+R27
+!i113 1
 R17
 R18
 Edatamem
-Z24 w1639470481
+R22
 R6
 R7
 R8
+!i122 58
 R9
-Z25 8C:/Users/kc/Downloads/project/Data_MEM.vhd
-Z26 FC:/Users/kc/Downloads/project/Data_MEM.vhd
+Z28 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Data_MEM.vhd
+Z29 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Data_MEM.vhd
 l0
-L5
-VQ9Lh>nbQJ@lULJIR^5n;D0
-!s100 ih0;DP[>XX5>9acCK1Ia`0
+L5 1
+VN^o=MbFATb30jV[5<WXRK3
+!s100 gk@P8Nd?SRcD7kklTd>PA0
 R12
 32
-R13
+Z30 !s110 1639646818
 !i10b 1
-R14
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/Data_MEM.vhd|
-Z28 !s107 C:/Users/kc/Downloads/project/Data_MEM.vhd|
-!i113 0
+R25
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Data_MEM.vhd|
+Z32 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Data_MEM.vhd|
+!i113 1
 R17
 R18
 Aarchdatamem
 R6
 R7
 R8
-DEx4 work 7 datamem 0 22 Q9Lh>nbQJ@lULJIR^5n;D0
-l21
-L16
-Vm=]b3V6O8_1EF^DS4AKVW2
-!s100 1fcJfFl]?>^8JJ@zCEjEA3
+DEx4 work 7 datamem 0 22 N^o=MbFATb30jV[5<WXRK3
+!i122 58
+l22
+L17 21
+VgO?7;a4:?fKzoEVI6@9UM3
+!s100 mlEZ?1Qm=B>VL@230OReU1
 R12
 32
-R13
+R30
 !i10b 1
-R14
-R27
-R28
-!i113 0
+R25
+R31
+R32
+!i113 1
 R17
 R18
 Edecoder3_8
-Z29 w1638843245
+R22
 R7
 R8
+!i122 59
 R9
-Z30 8C:/Users/kc/Downloads/project/decoder.vhd
-Z31 FC:/Users/kc/Downloads/project/decoder.vhd
+Z33 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/decoder.vhd
+Z34 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/decoder.vhd
 l0
-L4
+L4 1
 VEZEYP;dUgAH3NX380bBT13
 !s100 JQ022KKEe;?kZ69gnKW9X3
 R12
 32
-R13
+R30
 !i10b 1
-R14
-Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/decoder.vhd|
-Z33 !s107 C:/Users/kc/Downloads/project/decoder.vhd|
-!i113 0
+Z35 !s108 1639646818.000000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/decoder.vhd|
+Z37 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/decoder.vhd|
+!i113 1
 R17
 R18
 Aarchdecoder
 R7
 R8
 DEx4 work 10 decoder3_8 0 22 EZEYP;dUgAH3NX380bBT13
+!i122 59
 l12
-L11
+L11 18
 Vi38VKm;1eX?[[^eA7G9Rb0
 !s100 WU6BVzRmW[V?<44FedG062
 R12
 32
-R13
+R30
 !i10b 1
-R14
-R32
-R33
-!i113 0
+R35
+R36
+R37
+!i113 1
+R17
+R18
+Eexecutestage
+Z38 w1639643030
+R6
+R7
+R8
+!i122 43
+R9
+Z39 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/executestage.vhd
+Z40 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/executestage.vhd
+l0
+L5 1
+VjedGoX=UNS1J2]MBaB@_K1
+!s100 VJ5Y9R:V[CEAXBn`^ifo;3
+R12
+32
+Z41 !s110 1639646812
+!i10b 1
+Z42 !s108 1639646812.000000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/executestage.vhd|
+Z44 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/executestage.vhd|
+!i113 1
+R17
+R18
+Adata_executestage
+R6
+R7
+R8
+DEx4 work 12 executestage 0 22 jedGoX=UNS1J2]MBaB@_K1
+!i122 43
+l123
+L48 86
+V=MdkaD>KTBK`JT[6Q8YF72
+!s100 A?ZRQ6Q=9i@g_JS8EY[2Z1
+R12
+32
+R41
+!i10b 1
+R42
+R43
+R44
+!i113 1
 R17
 R18
 Eexmem
-Z34 w1638938202
+Z45 w1639646515
 R7
 R8
+!i122 60
 R9
-Z35 8C:/Users/kc/Downloads/project/EX-MEM.vhd
-Z36 FC:/Users/kc/Downloads/project/EX-MEM.vhd
+Z46 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/EX-MEM.vhd
+Z47 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/EX-MEM.vhd
 l0
-L5
+L5 1
 V=X8>jhG?W>14D0Z0kXAn63
 !s100 H7WR<mi^_fDdV>zTBSXU63
 R12
 32
-R13
+R30
 !i10b 1
-R14
-Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/EX-MEM.vhd|
-Z38 !s107 C:/Users/kc/Downloads/project/EX-MEM.vhd|
-!i113 0
+R35
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/EX-MEM.vhd|
+Z49 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/EX-MEM.vhd|
+!i113 1
 R17
 R18
 Aarchexmem
 R7
 R8
 DEx4 work 5 exmem 0 22 =X8>jhG?W>14D0Z0kXAn63
+!i122 60
 l16
-L14
+Z50 L14 17
 V^iaf^kEnSa6VLm;iNXEd12
 !s100 _zaXjnoHRaU?7iA^d5cli2
 R12
 32
-R13
+R30
+!i10b 1
+R35
+R48
+R49
+!i113 1
+R17
+R18
+Eflagregister
+Z51 w1639613553
+R6
+R7
+R8
+!i122 44
+R9
+Z52 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregister.vhd
+Z53 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregister.vhd
+l0
+L5 1
+VNOaeT3WTGo5VO77MjBR4j0
+!s100 Dd3S45c1N;n8A=kieo=FZ2
+R12
+32
+Z54 !s110 1639646813
+!i10b 1
+R42
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregister.vhd|
+Z56 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregister.vhd|
+!i113 1
+R17
+R18
+Abehav_flagregister
+R6
+R7
+R8
+DEx4 work 12 flagregister 0 22 NOaeT3WTGo5VO77MjBR4j0
+!i122 44
+l24
+L23 21
+V0SEgINS[bkgEB@@kVi61M1
+!s100 T=WmY:`2TZYZ>dHNZ4AdG0
+R12
+32
+R54
+!i10b 1
+R42
+R55
+R56
+!i113 1
+R17
+R18
+Eflagregisterv2
+Z57 w1639641321
+R6
+R7
+R8
+!i122 45
+R9
+Z58 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregisterV2.vhd
+Z59 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregisterV2.vhd
+l0
+L5 1
+VD:AH`Bdo3_oh2nY;F?=3B3
+!s100 @m@j48QFi3o?5KcG1GLhS3
+R12
+32
+R54
+!i10b 1
+Z60 !s108 1639646813.000000
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregisterV2.vhd|
+Z62 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregisterV2.vhd|
+!i113 1
+R17
+R18
+Adata_flagregisterv2
+R6
+R7
+R8
+DEx4 work 14 flagregisterv2 0 22 D:AH`Bdo3_oh2nY;F?=3B3
+!i122 45
+l18
+L17 26
+VWBIB<@c3;Vfz]M;1GSSC03
+!s100 57HHM^iTnmKoV5MRKfYmW2
+R12
+32
+R54
+!i10b 1
+R60
+R61
+R62
+!i113 1
+R17
+R18
+Eflagsintegration
+Z63 w1639642228
+R6
+R7
+R8
+!i122 49
+R9
+Z64 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagsintegration.vhd
+Z65 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagsintegration.vhd
+l0
+L5 1
+VV=m>T?Gg9<^;[Uac^nZAe1
+!s100 QY3CLQY9kRViA<dFVMcYn3
+R12
+32
+Z66 !s110 1639646814
+!i10b 1
+Z67 !s108 1639646814.000000
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagsintegration.vhd|
+Z69 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagsintegration.vhd|
+!i113 1
+R17
+R18
+Abehav_flagsintegration
+R6
+R7
+R8
+DEx4 work 16 flagsintegration 0 22 V=m>T?Gg9<^;[Uac^nZAe1
+!i122 49
+l56
+L23 41
+VCD`g0Q@3==k_:U=CERd^X2
+!s100 4`]ckogNQL7mFh_H1llPM0
+R12
+32
+R66
+!i10b 1
+R67
+R68
+R69
+!i113 1
+R17
+R18
+Eflagstoreregister
+Z70 w1639483642
+R6
+R7
+R8
+!i122 46
+R9
+Z71 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagstoreregister.vhd
+Z72 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagstoreregister.vhd
+l0
+L5 1
+VGa6VjjXefL0Zo9Oh7aF180
+!s100 35WnW1;6;^Mng6Idmd1NR0
+R12
+32
+R54
+!i10b 1
+R60
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagstoreregister.vhd|
+Z74 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagstoreregister.vhd|
+!i113 1
+R17
+R18
+Abehav_flagstoreregister
+R6
+R7
+R8
+DEx4 work 17 flagstoreregister 0 22 Ga6VjjXefL0Zo9Oh7aF180
+!i122 46
+l14
+L13 15
+VIZBa]=5A@TR6efe;B[XCn1
+!s100 ^7<gj3]WODm7oZ1jMg[Jj2
+R12
+32
+R54
+!i10b 1
+R60
+R73
+R74
+!i113 1
+R17
+R18
+Eforwardingunit
+Z75 w1639608635
+R6
+R7
+R8
+!i122 54
+R9
+Z76 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/forwardingunit.vhd
+Z77 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/forwardingunit.vhd
+l0
+L5 1
+VNiU>PZiX;RVIXY^gH@?:j0
+!s100 2K55gP^3I2ZXE<XGRN^NX3
+R12
+32
+Z78 !s110 1639646816
 !i10b 1
 R14
-R37
-R38
-!i113 0
+Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/forwardingunit.vhd|
+Z80 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/forwardingunit.vhd|
+!i113 1
+R17
+R18
+Adata_forwardingunit
+R6
+R7
+R8
+DEx4 work 14 forwardingunit 0 22 NiU>PZiX;RVIXY^gH@?:j0
+!i122 54
+l15
+R50
+VdIzjYIlCdcZ6Afc2T]TDA2
+!s100 za`B1OUjU1<Sz^>U95f:l2
+R12
+32
+R78
+!i10b 1
+R14
+R79
+R80
+!i113 1
+R17
+R18
+Efourbyonemux
+Z81 w1639608893
+R6
+R7
+R8
+!i122 48
+R9
+Z82 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/fourbyonemux.vhd
+Z83 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/fourbyonemux.vhd
+l0
+L5 1
+VDfjhZG73o[Tj?Uzk;cAUT2
+!s100 C0BPOnQGDLc`fgn<fPBFo2
+R12
+32
+R66
+!i10b 1
+R67
+Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/fourbyonemux.vhd|
+Z85 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/fourbyonemux.vhd|
+!i113 1
+R17
+R18
+Adata_fourbyonemux
+R6
+R7
+R8
+DEx4 work 12 fourbyonemux 0 22 DfjhZG73o[Tj?Uzk;cAUT2
+!i122 48
+l14
+L13 8
+VUXfgl==m^f1a7R260PFUb0
+!s100 B8n;i9NEQW6^P?J:@F_ee1
+R12
+32
+R66
+!i10b 1
+R67
+R84
+R85
+!i113 1
 R17
 R18
 Eidex
-Z39 w1638938191
+R22
 R7
 R8
+!i122 61
 R9
-Z40 8C:/Users/kc/Downloads/project/ID-EX.vhd
-Z41 FC:/Users/kc/Downloads/project/ID-EX.vhd
+Z86 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/ID-EX.vhd
+Z87 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/ID-EX.vhd
 l0
-L5
+L5 1
 VHB=8_YZZe9OX]lifREkJ[3
 !s100 8K53`YaNi<zDFD_IA0@@e2
 R12
 32
-R13
+Z88 !s110 1639646819
 !i10b 1
-R14
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/ID-EX.vhd|
-Z43 !s107 C:/Users/kc/Downloads/project/ID-EX.vhd|
-!i113 0
+R35
+Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/ID-EX.vhd|
+Z90 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/ID-EX.vhd|
+!i113 1
 R17
 R18
 Aarchidex
 R7
 R8
 DEx4 work 4 idex 0 22 HB=8_YZZe9OX]lifREkJ[3
+!i122 61
 l15
-L13
+Z91 L13 17
 V`7Vb]cafQIP8?4UWTaFSm3
 !s100 Gj;[_AL;cNV;5iV65n?<h0
 R12
 32
-R13
+R88
 !i10b 1
-R14
-R42
-R43
-!i113 0
+R35
+R89
+R90
+!i113 1
 R17
 R18
 Eifid
-Z44 w1638851662
+R22
 R7
 R8
+!i122 62
 R9
-Z45 8C:/Users/kc/Downloads/project/IF-ID.vhd
-Z46 FC:/Users/kc/Downloads/project/IF-ID.vhd
+Z92 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/IF-ID.vhd
+Z93 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/IF-ID.vhd
 l0
-L5
+L5 1
 V3g1lD7=2o1PKYQbW:Egz[2
 !s100 YlmT1nj40]fcjd`JZfE=l1
 R12
 32
-Z47 !s110 1639475361
+R88
 !i10b 1
-R14
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/IF-ID.vhd|
-Z49 !s107 C:/Users/kc/Downloads/project/IF-ID.vhd|
-!i113 0
+Z94 !s108 1639646819.000000
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/IF-ID.vhd|
+Z96 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/IF-ID.vhd|
+!i113 1
 R17
 R18
 Aarchifid
 R7
 R8
 DEx4 work 4 ifid 0 22 3g1lD7=2o1PKYQbW:Egz[2
+!i122 62
 l15
-L13
+R91
 VbA0gDJbBVg`N2Xh0?DADl1
 !s100 VdN3ijH<aVlOf>aKOAL0b0
 R12
 32
-R47
+R88
 !i10b 1
-R14
-R48
-R49
-!i113 0
+R94
+R95
+R96
+!i113 1
 R17
 R18
 Einstractionmem
-Z50 w1638898692
+R22
 R6
 R7
 R8
+!i122 63
 R9
-Z51 8C:/Users/kc/Downloads/project/Instraction_MEM.vhd
-Z52 FC:/Users/kc/Downloads/project/Instraction_MEM.vhd
+Z97 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Instraction_MEM.vhd
+Z98 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Instraction_MEM.vhd
 l0
-L5
+L5 1
 V2dUYb?BU?;6HdRBC_Wl4L0
 !s100 S<LMVNYkUhaKKPm[VSkkM1
 R12
 32
-R47
+R88
 !i10b 1
-Z53 !s108 1639475361.000000
-Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/Instraction_MEM.vhd|
-Z55 !s107 C:/Users/kc/Downloads/project/Instraction_MEM.vhd|
-!i113 0
+R94
+Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Instraction_MEM.vhd|
+Z100 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Instraction_MEM.vhd|
+!i113 1
 R17
 R18
 Aarchinstractionmem
@@ -341,120 +682,124 @@ R6
 R7
 R8
 DEx4 work 14 instractionmem 0 22 2dUYb?BU?;6HdRBC_Wl4L0
+!i122 63
 l17
-L12
+L12 9
 VQNLKTXU@QAHF^A5T^j32N2
 !s100 mgcR[On5m645IoZUi7`S=2
 R12
 32
-R47
+R88
 !i10b 1
-R53
-R54
-R55
-!i113 0
+R94
+R99
+R100
+!i113 1
 R17
 R18
 Ememory
-Z56 w1639467124
-R6
+Z101 w1639467124
+R19
 R7
-R8
-Z57 dC:/Users/kc/Downloads/3rd CMP/Architecture/Project
-Z58 8C:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd
-Z59 FC:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd
+R20
+Z102 dC:/Users/kc/Downloads/3rd CMP/Architecture/Project
+Z103 8C:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd
+Z104 FC:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd
 l0
 L6
 Vb7S6O:ijT5_URD?>NfH1d2
 !s100 >EEk:b4We6Uij]KdL=?OT0
-R12
+R21
 32
-Z60 !s110 1639467128
+Z105 !s110 1639467128
 !i10b 1
-Z61 !s108 1639467128.000000
-Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd|
-Z63 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd|
+Z106 !s108 1639467128.000000
+Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd|
+Z108 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd|
 !i113 0
 R17
 R18
 Aarchmemory
-R6
+R19
 R7
-R8
+R20
 DEx4 work 6 memory 0 22 b7S6O:ijT5_URD?>NfH1d2
 l21
 L16
 VDMP0JPE1_J]NDn<?lX>Tl3
 !s100 Yg_X=nA@Fg5VG;;Cbj@Z50
-R12
+R21
 32
-R60
+R105
 !i10b 1
-R61
-R62
-R63
+R106
+R107
+R108
 !i113 0
 R17
 R18
 Ememwb
-Z64 w1638938213
+R22
 R7
 R8
+!i122 64
 R9
-Z65 8C:/Users/kc/Downloads/project/MEM-WB.vhd
-Z66 FC:/Users/kc/Downloads/project/MEM-WB.vhd
+Z109 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/MEM-WB.vhd
+Z110 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/MEM-WB.vhd
 l0
-L5
+L5 1
 VClKCVO?32X@0XUzIZPPWo2
 !s100 eS=AIhXcT;LXkETa47RXE0
 R12
 32
-R47
+Z111 !s110 1639646820
 !i10b 1
-R53
-Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/MEM-WB.vhd|
-Z68 !s107 C:/Users/kc/Downloads/project/MEM-WB.vhd|
-!i113 0
+R94
+Z112 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/MEM-WB.vhd|
+Z113 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/MEM-WB.vhd|
+!i113 1
 R17
 R18
 Aarchmemwb
 R7
 R8
 DEx4 work 5 memwb 0 22 ClKCVO?32X@0XUzIZPPWo2
+!i122 64
 l16
-L14
+R50
 VDUmf<<CO3eO6V?ecI6jC62
 !s100 H^zW@DAJEkXz2UHR<Y_LS1
 R12
 32
-R47
+R111
 !i10b 1
-R53
-R67
-R68
-!i113 0
+R94
+R112
+R113
+!i113 1
 R17
 R18
 Emips
-Z69 w1639066689
+R22
 R6
 R7
 R8
+!i122 65
 R9
-Z70 8C:/Users/kc/Downloads/project/MIPS.vhd
-Z71 FC:/Users/kc/Downloads/project/MIPS.vhd
+Z114 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/MIPS.vhd
+Z115 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/MIPS.vhd
 l0
-L7
+L7 1
 V?J3X4JmM[JH5nX9iA[TUA1
 !s100 cbg@nOd?Jz>AUMBhPYM3Q1
 R12
 32
-R47
+R111
 !i10b 1
-R53
-Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/MIPS.vhd|
-Z73 !s107 C:/Users/kc/Downloads/project/MIPS.vhd|
-!i113 0
+Z116 !s108 1639646820.000000
+Z117 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/MIPS.vhd|
+Z118 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/MIPS.vhd|
+!i113 1
 R17
 R18
 Aarchmips
@@ -462,157 +807,337 @@ R6
 R7
 R8
 DEx4 work 4 mips 0 22 ?J3X4JmM[JH5nX9iA[TUA1
+!i122 65
 l116
-L17
+L17 164
 VXnk:U]zAFFLgR^U3Rb]Vi2
 !s100 ;1mMOIjBa9iMMRe2hhU7n0
 R12
 32
-R47
+R111
 !i10b 1
-R53
-R72
-R73
-!i113 0
+R116
+R117
+R118
+!i113 1
+R17
+R18
+Eonebitfulladder
+Z119 w1639608490
+R6
+R7
+R8
+!i122 50
+R9
+Z120 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfulladder.vhd
+Z121 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfulladder.vhd
+l0
+L5 1
+VG]1HZb4N_EHBN0U;cKk302
+!s100 d1jdgP5gKK;4XBIdB^J>32
+R12
+32
+Z122 !s110 1639646815
+!i10b 1
+R67
+Z123 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfulladder.vhd|
+Z124 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfulladder.vhd|
+!i113 1
+R17
+R18
+Adata_onebitfulladder
+R6
+R7
+R8
+DEx4 work 15 onebitfulladder 0 22 G]1HZb4N_EHBN0U;cKk302
+!i122 50
+l14
+Z125 L13 5
+VKfH`E:H[S32h8<GNjH`JI1
+!s100 @R?S>GA7;38^bl<gc9?Q40
+R12
+32
+R122
+!i10b 1
+R67
+R123
+R124
+!i113 1
+R17
+R18
+Eonebitfullsubtractor
+Z126 w1639608471
+R6
+R7
+R8
+!i122 51
+R9
+Z127 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfullsubtractor.vhd
+Z128 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfullsubtractor.vhd
+l0
+L5 1
+V2MIA8?i7LE:H8LYhDS@b02
+!s100 o[W3?Y2JXY1igGi14[<[^3
+R12
+32
+R122
+!i10b 1
+Z129 !s108 1639646815.000000
+Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfullsubtractor.vhd|
+Z131 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfullsubtractor.vhd|
+!i113 1
+R17
+R18
+Adata_onebitfullsubtractor
+R6
+R7
+R8
+DEx4 work 20 onebitfullsubtractor 0 22 2MIA8?i7LE:H8LYhDS@b02
+!i122 51
+l14
+R125
+VR2>F;5KLh`N?3nZPSAR811
+!s100 WaD9ZSG_FQQS]AE6e5]YL1
+R12
+32
+R122
+!i10b 1
+R129
+R130
+R131
+!i113 1
 R17
 R18
 Epc_reg
-Z74 w1638803703
+R22
 R7
 R8
+!i122 66
 R9
-Z75 8C:/Users/kc/Downloads/project/PC.vhd
-Z76 FC:/Users/kc/Downloads/project/PC.vhd
+Z132 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/PC.vhd
+Z133 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/PC.vhd
 l0
-L5
+L5 1
 V>1U0EYOF]2P72`;j0gMg43
 !s100 hcP`??]:=@;k3QX<Xh[AV0
 R12
 32
-R47
+R111
 !i10b 1
-R53
-Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/PC.vhd|
-Z78 !s107 C:/Users/kc/Downloads/project/PC.vhd|
-!i113 0
+R116
+Z134 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/PC.vhd|
+Z135 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/PC.vhd|
+!i113 1
 R17
 R18
 Apcarchreg
 R7
 R8
 DEx4 work 6 pc_reg 0 22 >1U0EYOF]2P72`;j0gMg43
+!i122 66
 l15
-L13
+R91
 VEcKkShmMzdaD1mH^0>NoS2
 !s100 h<fHCZ_P6?E_9L18lj^lm3
 R12
 32
-R47
+R111
 !i10b 1
-R53
-R77
-R78
-!i113 0
+R116
+R134
+R135
+!i113 1
 R17
 R18
 Ereg16bit
-Z79 w1639063825
+R22
 R7
 R8
+!i122 67
 R9
-Z80 8C:/Users/kc/Downloads/project/reg16bit.vhd
-Z81 FC:/Users/kc/Downloads/project/reg16bit.vhd
+Z136 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/reg16bit.vhd
+Z137 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/reg16bit.vhd
 l0
-L5
+L5 1
 VMXJK4BVjVaL4XHM_2D?OR0
 !s100 =A_fiYLhcPR[186hP]VUJ3
 R12
 32
-R47
+Z138 !s110 1639646821
 !i10b 1
-R53
-Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/reg16bit.vhd|
-Z83 !s107 C:/Users/kc/Downloads/project/reg16bit.vhd|
-!i113 0
+R116
+Z139 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/reg16bit.vhd|
+Z140 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/reg16bit.vhd|
+!i113 1
 R17
 R18
 Aarchreg16bit
 R7
 R8
 DEx4 work 8 reg16bit 0 22 MXJK4BVjVaL4XHM_2D?OR0
+!i122 67
 l15
-L13
+R91
 Vz1S1JPP?kZE;Oe`Knifh`1
 !s100 di?e@3B?EP>^9``0PcH>T0
 R12
 32
-R47
+R138
 !i10b 1
-R53
-R82
-R83
-!i113 0
+R116
+R139
+R140
+!i113 1
 R17
 R18
 Eregisterfile
-Z84 w1639062411
+R22
 R7
 R8
+!i122 68
 R9
-Z85 8C:/Users/kc/Downloads/project/Register_File.vhd
-Z86 FC:/Users/kc/Downloads/project/Register_File.vhd
+Z141 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Register_File.vhd
+Z142 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Register_File.vhd
 l0
-L5
+L5 1
 V:XbidYkPk]m^GOT2oBJX22
 !s100 [Y`]MP]NmU<R=R7RW56IF1
 R12
 32
-R47
+R138
 !i10b 1
-R53
-Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/Register_File.vhd|
-Z88 !s107 C:/Users/kc/Downloads/project/Register_File.vhd|
-!i113 0
+Z143 !s108 1639646821.000000
+Z144 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Register_File.vhd|
+Z145 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Register_File.vhd|
+!i113 1
 R17
 R18
 Aarchregisterfile
 R7
 R8
 DEx4 work 12 registerfile 0 22 :XbidYkPk]m^GOT2oBJX22
+!i122 68
 l51
-L22
+L22 75
 V]ET]UY1AdJigPKig;^4eo2
 !s100 g]^PN22Mf=7kTd<9;]e1d2
 R12
 32
-R47
+R138
 !i10b 1
-R53
-R87
-R88
-!i113 0
+R143
+R144
+R145
+!i113 1
 R17
 R18
-Estackpointer
-Z89 w1639474933
+Esixteenbitfulladder
+Z146 w1639608529
 R6
 R7
 R8
+!i122 52
 R9
-Z90 8C:/Users/kc/Downloads/3rd CMP/Architecture/Project/SP.vhd
-Z91 FC:/Users/kc/Downloads/3rd CMP/Architecture/Project/SP.vhd
+Z147 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenbitfulladder.vhd
+Z148 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenbitfulladder.vhd
 l0
-L5
+L5 1
+V_0V]NinF30]d@OC[Jn@fc1
+!s100 [IIPO;gagShc9GXJ>9nZ13
+R12
+32
+R122
+!i10b 1
+R129
+Z149 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenbitfulladder.vhd|
+Z150 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenbitfulladder.vhd|
+!i113 1
+R17
+R18
+Adata_sixteenbitfulladder
+R6
+R7
+R8
+DEx4 work 19 sixteenbitfulladder 0 22 _0V]NinF30]d@OC[Jn@fc1
+!i122 52
+l24
+R50
+V?kbiD4h07=BTP_hnO[_9Q0
+!s100 D710[Eo]F;aF5nzGQ7d9F0
+R12
+32
+R122
+!i10b 1
+R129
+R149
+R150
+!i113 1
+R17
+R18
+Esixteenbitfullsubtractor
+Z151 w1639608513
+R6
+R7
+R8
+!i122 53
+R9
+Z152 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenfullsubtractor.vhd
+Z153 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenfullsubtractor.vhd
+l0
+L5 1
+V=C<<UQKC`f]Mc?ao9Cb=f3
+!s100 Ga4^9>JIjnYdTX<2EQRIM3
+R12
+32
+R78
+!i10b 1
+R14
+Z154 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenfullsubtractor.vhd|
+Z155 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenfullsubtractor.vhd|
+!i113 1
+R17
+R18
+Adata_sixteenbitfullsubtractor
+R6
+R7
+R8
+DEx4 work 24 sixteenbitfullsubtractor 0 22 =C<<UQKC`f]Mc?ao9Cb=f3
+!i122 53
+l24
+R50
+V26>DWeRS@6n1_h46kdjLa2
+!s100 kd`XJ3i=9R4CUOX]2LT@J2
+R12
+32
+R78
+!i10b 1
+R14
+R154
+R155
+!i113 1
+R17
+R18
+Estackpointer
+R22
+R6
+R7
+R8
+!i122 69
+R9
+Z156 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/SP.vhd
+Z157 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/SP.vhd
+l0
+L5 1
 VBR=O7FmFh<2odLzMKL0cT3
 !s100 GV_hACCez3cd]M<8dIZ`41
 R12
 32
-R47
+R138
 !i10b 1
-R53
-Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Project/SP.vhd|
-Z93 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Project/SP.vhd|
-!i113 0
+R143
+Z158 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/SP.vhd|
+Z159 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/SP.vhd|
+!i113 1
 R17
 R18
 Aarch_stackpointer
@@ -620,56 +1145,145 @@ R6
 R7
 R8
 DEx4 work 12 stackpointer 0 22 BR=O7FmFh<2odLzMKL0cT3
+!i122 69
 l15
-L14
+L14 32
 V09ci=Z8Y;eko5AYLhFN7E1
 !s100 ICNWoIIE29?d;BM<C2l>z3
 R12
 32
-R47
+R138
 !i10b 1
-R53
-R92
-R93
-!i113 0
+R143
+R158
+R159
+!i113 1
 R17
 R18
 Etri_state_buffer
-Z94 w1638838789
+R22
 R7
 R8
+!i122 70
 R9
-Z95 8C:/Users/kc/Downloads/project/Tri-stateBuffer.vhd
-Z96 FC:/Users/kc/Downloads/project/Tri-stateBuffer.vhd
+Z160 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Tri-stateBuffer.vhd
+Z161 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Tri-stateBuffer.vhd
 l0
-L5
+L5 1
 VSOV_@nmn<L=hN^Fl@Hn4A0
 !s100 g=9coaCdd6[37Q?i_gSOz0
 R12
 32
-R47
+Z162 !s110 1639646822
 !i10b 1
-R53
-Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/Tri-stateBuffer.vhd|
-Z98 !s107 C:/Users/kc/Downloads/project/Tri-stateBuffer.vhd|
-!i113 0
+Z163 !s108 1639646822.000000
+Z164 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Tri-stateBuffer.vhd|
+Z165 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Tri-stateBuffer.vhd|
+!i113 1
 R17
 R18
 Aarchtristate
 R7
 R8
-DEx4 work 16 tri_state_buffer 0 22 SOV_@nmn<L=hN^Fl@Hn4A0
+Z166 DEx4 work 16 tri_state_buffer 0 22 SOV_@nmn<L=hN^Fl@Hn4A0
+!i122 70
 l14
-L12
-VlFYnz>Qfho?I9a68A5[^f2
-!s100 3W2VAS[Z2Y3kZKMKU^gkm2
+Z167 L12 7
+Z168 VlFYnz>Qfho?I9a68A5[^f2
+Z169 !s100 3W2VAS[Z2Y3kZKMKU^gkm2
 R12
 32
-R47
+R162
 !i10b 1
-R53
-R97
-R98
-!i113 0
+R163
+R164
+R165
+!i113 1
+R17
+R18
+Etristatebuffer
+Z170 w1639606475
+R6
+R7
+R8
+!i122 56
+R9
+Z171 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/tristatebuffer.vhd
+Z172 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/tristatebuffer.vhd
+l0
+L5 1
+Vm<b^HFXN6ePIdDcLX8ojI1
+!s100 ;>9I]i6h_o`5D]nLCi6Oz1
+R12
+32
+R13
+!i10b 1
+R25
+Z173 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/tristatebuffer.vhd|
+Z174 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/tristatebuffer.vhd|
+!i113 1
+R17
+R18
+Adata_tristatebuffer
+R6
+R7
+R8
+DEx4 work 14 tristatebuffer 0 22 m<b^HFXN6ePIdDcLX8ojI1
+!i122 56
+l14
+R125
+VDYYG>gF:W6CKoDTonG2IN3
+!s100 1?AhYgCz7oZF:VagfELDU1
+R12
+32
+R13
+!i10b 1
+R25
+R173
+R174
+!i113 1
+R17
+R18
+Etwobyonemux
+Z175 w1639469518
+R6
+R7
+R8
+!i122 47
+R9
+Z176 8C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/twobyonemux.vhd
+Z177 FC:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/twobyonemux.vhd
+l0
+L5 1
+V1h@LW?IP5g5KUOEAZmIHz1
+!s100 `:K1m=0J@0<d34i0AU>Z90
+R12
+32
+R66
+!i10b 1
+R60
+Z178 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/twobyonemux.vhd|
+Z179 !s107 C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/twobyonemux.vhd|
+!i113 1
+R17
+R18
+Adata_twobyonemux
+R6
+R7
+R8
+DEx4 work 11 twobyonemux 0 22 1h@LW?IP5g5KUOEAZmIHz1
+!i122 47
+l14
+L13 6
+VFWA1YUC?[z1WLJ>Lgm[TG0
+!s100 Bombca4kS4lg95m`aDUPX2
+R12
+32
+R66
+!i10b 1
+R60
+R178
+R179
+!i113 1
 R17
 R18

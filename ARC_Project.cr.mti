@@ -1,13 +1,139 @@
-C:/Users/kc/Downloads/project/Tri-stateBuffer.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/Tri-stateBuffer.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/tristatebuffer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/tristatebuffer.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity tri_state_buffer
--- Compiling architecture archTriState of tri_state_buffer
+-- Loading package NUMERIC_STD
+-- Compiling entity tristatebuffer
+-- Compiling architecture data_tristatebuffer of tristatebuffer
 
-} {} {}} C:/Users/kc/Downloads/project/Data_MEM.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/Data_MEM.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/forwardingunit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/forwardingunit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity forwardingunit
+-- Compiling architecture data_forwardingunit of forwardingunit
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagstoreregister.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagstoreregister.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity flagstoreregister
+-- Compiling architecture behav_flagstoreregister of flagstoreRegister
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfullsubtractor.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfullsubtractor.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity onebitfullsubtractor
+-- Compiling architecture data_onebitfullsubtractor of onebitfullsubtractor
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/decoder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decoder3_8
+-- Compiling architecture archDecoder of decoder3_8
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/executestage.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/executestage.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity executestage
+-- Compiling architecture data_executestage of executestage
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregister.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregister.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity flagregister
+-- Compiling architecture behav_flagregister of flagregister
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagsintegration.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagsintegration.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity flagsintegration
+-- Compiling architecture behav_flagsintegration of flagsintegration
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/twobyonemux.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/twobyonemux.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity twobyonemux
+-- Compiling architecture data_twobyonemux of twobyonemux
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/ALU.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALU
+-- Compiling architecture data_ALU of ALU
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenbitfulladder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenbitfulladder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sixteenbitfulladder
+-- Compiling architecture data_sixteenbitfulladder of sixteenbitfulladder
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/fourbyonemux.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/fourbyonemux.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fourbyonemux
+-- Compiling architecture data_fourbyonemux of fourbyonemux
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenfullsubtractor.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/sixteenfullsubtractor.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sixteenbitfullsubtractor
+-- Compiling architecture data_sixteenbitfullsubtractor of sixteenbitfullsubtractor
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfulladder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/onebitfulladder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity onebitfulladder
+-- Compiling architecture data_onebitfulladder of onebitfulladder
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregisterV2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/flagregisterV2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity flagregisterV2
+-- Compiling architecture data_flagregisterV2 of flagregisterV2
+
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Data_MEM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Data_MEM.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -15,103 +141,12 @@ Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
 -- Compiling entity DataMEM
 -- Compiling architecture ArchDataMEM of DataMEM
 
-} {} {}} C:/Users/kc/Downloads/project/Control_Unit.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/Control_Unit.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+} {} {}} C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Control_Unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bishoy/Desktop/CA-Project-github/Pipeline_Processor/Control_Unit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity control
 -- Compiling architecture archcontrol of control
-
-} {} {}} C:/Users/kc/Downloads/project/Instraction_MEM.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/Instraction_MEM.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity InstractionMem
--- Compiling architecture ArchInstractionMem of InstractionMem
-
-} {} {}} C:/Users/kc/Downloads/project/MEM-WB.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/MEM-WB.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity MEMWB
--- Compiling architecture archMEMWB of MEMWB
-
-} {} {}} C:/Users/kc/Downloads/project/decoder.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/decoder.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity decoder3_8
--- Compiling architecture archDecoder of decoder3_8
-
-} {} {}} C:/Users/kc/Downloads/project/ID-EX.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/ID-EX.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity IDEX
--- Compiling architecture archIDEX of IDEX
-
-} {} {}} C:/Users/kc/Downloads/project/EX-MEM.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/EX-MEM.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity EXMEM
--- Compiling architecture archEXMEM of EXMEM
-
-} {} {}} C:/Users/kc/Downloads/project/IF-ID.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/IF-ID.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity IFID
--- Compiling architecture archIFID of IFID
-
-} {} {}} C:/Users/kc/Downloads/project/MIPS.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/MIPS.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity MIPS
--- Compiling architecture ArchMIPS of MIPS
-
-} {} {}} C:/Users/kc/Downloads/project/ALU.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/ALU.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ALU
--- Compiling architecture archALU of ALU
-
-} {} {}} C:/Users/kc/Downloads/project/PC.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/PC.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity PC_reg
--- Compiling architecture PCarchReg of PC_reg
-
-} {} {}} C:/Users/kc/Downloads/project/Register_File.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/Register_File.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity registerfile
--- Compiling architecture Archregisterfile of registerfile
-
-} {} {}} C:/Users/kc/Downloads/project/reg16bit.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/kc/Downloads/project/reg16bit.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity reg16bit
--- Compiling architecture Archreg16bit of reg16bit
 
 } {} {}}
