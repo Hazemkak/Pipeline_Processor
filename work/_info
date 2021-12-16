@@ -7,669 +7,608 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/modeltech64_10.5/examples
+Z0 dC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor
 T_opt
-!s110 1639475428
-VYKa=ZO1IcgPhC^92V[lfz3
-Z1 04 12 17 work stackpointer arch_stackpointer 1
-=2-3c2c30d61833-61b868e4-315-358c
-Z2 o-quiet -auto_acc_if_foreign -work work
-Z3 tCvgOpt 0
+!s110 1639643895
+VfG5N4cb87IAb`nN0keOmN2
+04 4 8 work mips archmips 1
+=1-3c2c30d61833-61bafaf7-12f-376c
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
 n@_opt
-Z4 OL;O;10.5;63
-T_opt1
-!s110 1639474894
-V__Dk]OAVkBGQoj1I55h_@1
-R1
-=1-3c2c30d61833-61b866ce-61-4954
-R2
-R3
-n@_opt1
-R4
-R0
-T_opt2
-!s110 1639475368
-VjHgkE0Y:70oKkz4kDXJIj3
-R1
-=1-3c2c30d61833-61b868a7-38b-358c
-R2
-R3
-n@_opt2
-R4
-R0
+OL;O;10.5;63
 Ealu
-Z5 w1638938393
-Z6 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z9 dC:/Users/kc/Downloads/Pipeline_Processor
-Z10 8C:/Users/kc/Downloads/project/ALU.vhd
-Z11 FC:/Users/kc/Downloads/project/ALU.vhd
+Z1 w1638938393
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/ALU.vhd
+Z6 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/ALU.vhd
 l0
 L5
 V=Ta4WbmclAe11Jzkhg;X41
 !s100 _5Dn_3kNhBkk8O3dBz6UV3
-Z12 OL;C;10.5;63
+Z7 OL;C;10.5;63
 32
-Z13 !s110 1639475360
+Z8 !s110 1639643881
 !i10b 1
-Z14 !s108 1639475360.000000
-Z15 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/ALU.vhd|
-Z16 !s107 C:/Users/kc/Downloads/project/ALU.vhd|
+Z9 !s108 1639643881.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/ALU.vhd|
+Z11 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/ALU.vhd|
 !i113 0
-Z17 o-work work -2002 -explicit
-Z18 tExplicit 1 CvgOpt 0
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
 Aarchalu
-R6
-R7
-R8
+R2
+R3
+R4
 DEx4 work 3 alu 0 22 =Ta4WbmclAe11Jzkhg;X41
 l17
 L12
 VzaYAdXoE]TV]8>>hUAe032
 !s100 4Ab5lUWL^;NjCXD0SiZzC2
-R12
-32
-R13
-!i10b 1
-R14
-R15
-R16
-!i113 0
-R17
-R18
-Econtrol
-Z19 w1639313839
 R7
+32
 R8
+!i10b 1
 R9
-Z20 8C:/Users/kc/Downloads/project/Control_Unit.vhd
-Z21 FC:/Users/kc/Downloads/project/Control_Unit.vhd
+R10
+R11
+!i113 0
+R12
+R13
+Econtrol
+Z14 w1639313839
+R3
+R4
+R0
+Z15 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Control_Unit.vhd
+Z16 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Control_Unit.vhd
 l0
 L4
 V4Xid>HLDNzlb<4UcAoTVe3
 !s100 T>ngZ=DE=6UNDbCO>gz9C2
-R12
-32
-R13
-!i10b 1
-R14
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/Control_Unit.vhd|
-Z23 !s107 C:/Users/kc/Downloads/project/Control_Unit.vhd|
-!i113 0
-R17
-R18
-Aarchcontrol
 R7
+32
 R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Control_Unit.vhd|
+Z18 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Control_Unit.vhd|
+!i113 0
+R12
+R13
+Aarchcontrol
+R3
+R4
 DEx4 work 7 control 0 22 4Xid>HLDNzlb<4UcAoTVe3
 l12
 L11
 Vl7Se6I==Ulm]TkomKVUco0
 !s100 TgTa5Y5hVSbiLYl@nV7[13
-R12
+R7
 32
-R13
+R8
 !i10b 1
-R14
-R22
-R23
-!i113 0
+R9
 R17
 R18
+!i113 0
+R12
+R13
 Edatamem
-Z24 w1639470481
-R6
-R7
-R8
-R9
-Z25 8C:/Users/kc/Downloads/project/Data_MEM.vhd
-Z26 FC:/Users/kc/Downloads/project/Data_MEM.vhd
+Z19 w1639643643
+R2
+R3
+R4
+R0
+Z20 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Data_MEM.vhd
+Z21 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Data_MEM.vhd
 l0
 L5
-VQ9Lh>nbQJ@lULJIR^5n;D0
-!s100 ih0;DP[>XX5>9acCK1Ia`0
-R12
-32
-R13
-!i10b 1
-R14
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/Data_MEM.vhd|
-Z28 !s107 C:/Users/kc/Downloads/project/Data_MEM.vhd|
-!i113 0
-R17
-R18
-Aarchdatamem
-R6
+VN^o=MbFATb30jV[5<WXRK3
+!s100 gk@P8Nd?SRcD7kklTd>PA0
 R7
-R8
-DEx4 work 7 datamem 0 22 Q9Lh>nbQJ@lULJIR^5n;D0
-l21
-L16
-Vm=]b3V6O8_1EF^DS4AKVW2
-!s100 1fcJfFl]?>^8JJ@zCEjEA3
-R12
 32
-R13
+Z22 !s110 1639643882
 !i10b 1
-R14
-R27
-R28
-!i113 0
-R17
-R18
-Edecoder3_8
-Z29 w1638843245
-R7
-R8
 R9
-Z30 8C:/Users/kc/Downloads/project/decoder.vhd
-Z31 FC:/Users/kc/Downloads/project/decoder.vhd
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Data_MEM.vhd|
+Z24 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Data_MEM.vhd|
+!i113 0
+R12
+R13
+Aarchdatamem
+R2
+R3
+R4
+DEx4 work 7 datamem 0 22 N^o=MbFATb30jV[5<WXRK3
+l22
+L17
+V7k=Ik`X1H8HbMkknIhPU@3
+!s100 LYZdneH]bE;9VGi`CLcRS0
+R7
+32
+R22
+!i10b 1
+R9
+R23
+R24
+!i113 0
+R12
+R13
+Edecoder3_8
+Z25 w1638843245
+R3
+R4
+R0
+Z26 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/decoder.vhd
+Z27 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/decoder.vhd
 l0
 L4
 VEZEYP;dUgAH3NX380bBT13
 !s100 JQ022KKEe;?kZ69gnKW9X3
-R12
-32
-R13
-!i10b 1
-R14
-Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/decoder.vhd|
-Z33 !s107 C:/Users/kc/Downloads/project/decoder.vhd|
-!i113 0
-R17
-R18
-Aarchdecoder
 R7
-R8
+32
+R22
+!i10b 1
+Z28 !s108 1639643882.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/decoder.vhd|
+Z30 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/decoder.vhd|
+!i113 0
+R12
+R13
+Aarchdecoder
+R3
+R4
 DEx4 work 10 decoder3_8 0 22 EZEYP;dUgAH3NX380bBT13
 l12
 L11
 Vi38VKm;1eX?[[^eA7G9Rb0
 !s100 WU6BVzRmW[V?<44FedG062
-R12
-32
-R13
-!i10b 1
-R14
-R32
-R33
-!i113 0
-R17
-R18
-Eexmem
-Z34 w1638938202
 R7
-R8
-R9
-Z35 8C:/Users/kc/Downloads/project/EX-MEM.vhd
-Z36 FC:/Users/kc/Downloads/project/EX-MEM.vhd
+32
+R22
+!i10b 1
+R28
+R29
+R30
+!i113 0
+R12
+R13
+Eexmem
+Z31 w1638938202
+R3
+R4
+R0
+Z32 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/EX-MEM.vhd
+Z33 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/EX-MEM.vhd
 l0
 L5
 V=X8>jhG?W>14D0Z0kXAn63
 !s100 H7WR<mi^_fDdV>zTBSXU63
-R12
-32
-R13
-!i10b 1
-R14
-Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/EX-MEM.vhd|
-Z38 !s107 C:/Users/kc/Downloads/project/EX-MEM.vhd|
-!i113 0
-R17
-R18
-Aarchexmem
 R7
-R8
+32
+R22
+!i10b 1
+R28
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/EX-MEM.vhd|
+Z35 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/EX-MEM.vhd|
+!i113 0
+R12
+R13
+Aarchexmem
+R3
+R4
 DEx4 work 5 exmem 0 22 =X8>jhG?W>14D0Z0kXAn63
 l16
 L14
 V^iaf^kEnSa6VLm;iNXEd12
 !s100 _zaXjnoHRaU?7iA^d5cli2
-R12
-32
-R13
-!i10b 1
-R14
-R37
-R38
-!i113 0
-R17
-R18
-Eidex
-Z39 w1638938191
 R7
-R8
-R9
-Z40 8C:/Users/kc/Downloads/project/ID-EX.vhd
-Z41 FC:/Users/kc/Downloads/project/ID-EX.vhd
+32
+R22
+!i10b 1
+R28
+R34
+R35
+!i113 0
+R12
+R13
+Eidex
+Z36 w1638938191
+R3
+R4
+R0
+Z37 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/ID-EX.vhd
+Z38 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/ID-EX.vhd
 l0
 L5
 VHB=8_YZZe9OX]lifREkJ[3
 !s100 8K53`YaNi<zDFD_IA0@@e2
-R12
-32
-R13
-!i10b 1
-R14
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/ID-EX.vhd|
-Z43 !s107 C:/Users/kc/Downloads/project/ID-EX.vhd|
-!i113 0
-R17
-R18
-Aarchidex
 R7
-R8
+32
+R22
+!i10b 1
+R28
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/ID-EX.vhd|
+Z40 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/ID-EX.vhd|
+!i113 0
+R12
+R13
+Aarchidex
+R3
+R4
 DEx4 work 4 idex 0 22 HB=8_YZZe9OX]lifREkJ[3
 l15
 L13
 V`7Vb]cafQIP8?4UWTaFSm3
 !s100 Gj;[_AL;cNV;5iV65n?<h0
-R12
-32
-R13
-!i10b 1
-R14
-R42
-R43
-!i113 0
-R17
-R18
-Eifid
-Z44 w1638851662
 R7
-R8
-R9
-Z45 8C:/Users/kc/Downloads/project/IF-ID.vhd
-Z46 FC:/Users/kc/Downloads/project/IF-ID.vhd
+32
+R22
+!i10b 1
+R28
+R39
+R40
+!i113 0
+R12
+R13
+Eifid
+Z41 w1638851662
+R3
+R4
+R0
+Z42 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/IF-ID.vhd
+Z43 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/IF-ID.vhd
 l0
 L5
 V3g1lD7=2o1PKYQbW:Egz[2
 !s100 YlmT1nj40]fcjd`JZfE=l1
-R12
-32
-Z47 !s110 1639475361
-!i10b 1
-R14
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/IF-ID.vhd|
-Z49 !s107 C:/Users/kc/Downloads/project/IF-ID.vhd|
-!i113 0
-R17
-R18
-Aarchifid
 R7
-R8
+32
+R22
+!i10b 1
+R28
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/IF-ID.vhd|
+Z45 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/IF-ID.vhd|
+!i113 0
+R12
+R13
+Aarchifid
+R3
+R4
 DEx4 work 4 ifid 0 22 3g1lD7=2o1PKYQbW:Egz[2
 l15
 L13
 VbA0gDJbBVg`N2Xh0?DADl1
 !s100 VdN3ijH<aVlOf>aKOAL0b0
-R12
-32
-R47
-!i10b 1
-R14
-R48
-R49
-!i113 0
-R17
-R18
-Einstractionmem
-Z50 w1638898692
-R6
 R7
-R8
-R9
-Z51 8C:/Users/kc/Downloads/project/Instraction_MEM.vhd
-Z52 FC:/Users/kc/Downloads/project/Instraction_MEM.vhd
+32
+R22
+!i10b 1
+R28
+R44
+R45
+!i113 0
+R12
+R13
+Einstractionmem
+Z46 w1638898692
+R2
+R3
+R4
+R0
+Z47 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Instraction_MEM.vhd
+Z48 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Instraction_MEM.vhd
 l0
 L5
 V2dUYb?BU?;6HdRBC_Wl4L0
 !s100 S<LMVNYkUhaKKPm[VSkkM1
-R12
-32
-R47
-!i10b 1
-Z53 !s108 1639475361.000000
-Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/Instraction_MEM.vhd|
-Z55 !s107 C:/Users/kc/Downloads/project/Instraction_MEM.vhd|
-!i113 0
-R17
-R18
-Aarchinstractionmem
-R6
 R7
-R8
+32
+R22
+!i10b 1
+R28
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Instraction_MEM.vhd|
+Z50 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Instraction_MEM.vhd|
+!i113 0
+R12
+R13
+Aarchinstractionmem
+R2
+R3
+R4
 DEx4 work 14 instractionmem 0 22 2dUYb?BU?;6HdRBC_Wl4L0
 l17
 L12
 VQNLKTXU@QAHF^A5T^j32N2
 !s100 mgcR[On5m645IoZUi7`S=2
-R12
-32
-R47
-!i10b 1
-R53
-R54
-R55
-!i113 0
-R17
-R18
-Ememory
-Z56 w1639467124
-R6
 R7
-R8
-Z57 dC:/Users/kc/Downloads/3rd CMP/Architecture/Project
-Z58 8C:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd
-Z59 FC:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd
-l0
-L6
-Vb7S6O:ijT5_URD?>NfH1d2
-!s100 >EEk:b4We6Uij]KdL=?OT0
-R12
 32
-Z60 !s110 1639467128
+R22
 !i10b 1
-Z61 !s108 1639467128.000000
-Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd|
-Z63 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Project/Memory.vhd|
+R28
+R49
+R50
 !i113 0
-R17
-R18
-Aarchmemory
-R6
-R7
-R8
-DEx4 work 6 memory 0 22 b7S6O:ijT5_URD?>NfH1d2
-l21
-L16
-VDMP0JPE1_J]NDn<?lX>Tl3
-!s100 Yg_X=nA@Fg5VG;;Cbj@Z50
 R12
-32
-R60
-!i10b 1
-R61
-R62
-R63
-!i113 0
-R17
-R18
+R13
 Ememwb
-Z64 w1638938213
-R7
-R8
-R9
-Z65 8C:/Users/kc/Downloads/project/MEM-WB.vhd
-Z66 FC:/Users/kc/Downloads/project/MEM-WB.vhd
+Z51 w1638938213
+R3
+R4
+R0
+Z52 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/MEM-WB.vhd
+Z53 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/MEM-WB.vhd
 l0
 L5
 VClKCVO?32X@0XUzIZPPWo2
 !s100 eS=AIhXcT;LXkETa47RXE0
-R12
-32
-R47
-!i10b 1
-R53
-Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/MEM-WB.vhd|
-Z68 !s107 C:/Users/kc/Downloads/project/MEM-WB.vhd|
-!i113 0
-R17
-R18
-Aarchmemwb
 R7
-R8
+32
+R22
+!i10b 1
+R28
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/MEM-WB.vhd|
+Z55 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/MEM-WB.vhd|
+!i113 0
+R12
+R13
+Aarchmemwb
+R3
+R4
 DEx4 work 5 memwb 0 22 ClKCVO?32X@0XUzIZPPWo2
 l16
 L14
 VDUmf<<CO3eO6V?ecI6jC62
 !s100 H^zW@DAJEkXz2UHR<Y_LS1
-R12
-32
-R47
-!i10b 1
-R53
-R67
-R68
-!i113 0
-R17
-R18
-Emips
-Z69 w1639066689
-R6
 R7
-R8
-R9
-Z70 8C:/Users/kc/Downloads/project/MIPS.vhd
-Z71 FC:/Users/kc/Downloads/project/MIPS.vhd
+32
+R22
+!i10b 1
+R28
+R54
+R55
+!i113 0
+R12
+R13
+Emips
+Z56 w1639580661
+R2
+R3
+R4
+R0
+Z57 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/MIPS.vhd
+Z58 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/MIPS.vhd
 l0
 L7
 V?J3X4JmM[JH5nX9iA[TUA1
 !s100 cbg@nOd?Jz>AUMBhPYM3Q1
-R12
+R7
 32
-R47
+Z59 !s110 1639643883
 !i10b 1
-R53
-Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/MIPS.vhd|
-Z73 !s107 C:/Users/kc/Downloads/project/MIPS.vhd|
+Z60 !s108 1639643883.000000
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/MIPS.vhd|
+Z62 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/MIPS.vhd|
 !i113 0
-R17
-R18
+R12
+R13
 Aarchmips
-R6
-R7
-R8
+R2
+R3
+R4
 DEx4 work 4 mips 0 22 ?J3X4JmM[JH5nX9iA[TUA1
-l116
+l140
 L17
-VXnk:U]zAFFLgR^U3Rb]Vi2
-!s100 ;1mMOIjBa9iMMRe2hhU7n0
-R12
-32
-R47
-!i10b 1
-R53
-R72
-R73
-!i113 0
-R17
-R18
-Epc_reg
-Z74 w1638803703
+VUIN>mZo8n@YDVK9ZVUz`T1
+!s100 O]iF7`J[bBoM`b_MX=?NY1
 R7
-R8
-R9
-Z75 8C:/Users/kc/Downloads/project/PC.vhd
-Z76 FC:/Users/kc/Downloads/project/PC.vhd
+32
+R59
+!i10b 1
+R60
+R61
+R62
+!i113 0
+R12
+R13
+Epc_reg
+Z63 w1638803703
+R3
+R4
+R0
+Z64 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/PC.vhd
+Z65 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/PC.vhd
 l0
 L5
 V>1U0EYOF]2P72`;j0gMg43
 !s100 hcP`??]:=@;k3QX<Xh[AV0
-R12
-32
-R47
-!i10b 1
-R53
-Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/PC.vhd|
-Z78 !s107 C:/Users/kc/Downloads/project/PC.vhd|
-!i113 0
-R17
-R18
-Apcarchreg
 R7
-R8
+32
+R59
+!i10b 1
+R60
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/PC.vhd|
+Z67 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/PC.vhd|
+!i113 0
+R12
+R13
+Apcarchreg
+R3
+R4
 DEx4 work 6 pc_reg 0 22 >1U0EYOF]2P72`;j0gMg43
 l15
 L13
 VEcKkShmMzdaD1mH^0>NoS2
 !s100 h<fHCZ_P6?E_9L18lj^lm3
-R12
-32
-R47
-!i10b 1
-R53
-R77
-R78
-!i113 0
-R17
-R18
-Ereg16bit
-Z79 w1639063825
 R7
-R8
-R9
-Z80 8C:/Users/kc/Downloads/project/reg16bit.vhd
-Z81 FC:/Users/kc/Downloads/project/reg16bit.vhd
+32
+R59
+!i10b 1
+R60
+R66
+R67
+!i113 0
+R12
+R13
+Ereg16bit
+Z68 w1639063825
+R3
+R4
+R0
+Z69 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/reg16bit.vhd
+Z70 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/reg16bit.vhd
 l0
 L5
 VMXJK4BVjVaL4XHM_2D?OR0
 !s100 =A_fiYLhcPR[186hP]VUJ3
-R12
-32
-R47
-!i10b 1
-R53
-Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/reg16bit.vhd|
-Z83 !s107 C:/Users/kc/Downloads/project/reg16bit.vhd|
-!i113 0
-R17
-R18
-Aarchreg16bit
 R7
-R8
+32
+R59
+!i10b 1
+R60
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/reg16bit.vhd|
+Z72 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/reg16bit.vhd|
+!i113 0
+R12
+R13
+Aarchreg16bit
+R3
+R4
 DEx4 work 8 reg16bit 0 22 MXJK4BVjVaL4XHM_2D?OR0
 l15
 L13
 Vz1S1JPP?kZE;Oe`Knifh`1
 !s100 di?e@3B?EP>^9``0PcH>T0
-R12
-32
-R47
-!i10b 1
-R53
-R82
-R83
-!i113 0
-R17
-R18
-Eregisterfile
-Z84 w1639062411
 R7
-R8
-R9
-Z85 8C:/Users/kc/Downloads/project/Register_File.vhd
-Z86 FC:/Users/kc/Downloads/project/Register_File.vhd
+32
+R59
+!i10b 1
+R60
+R71
+R72
+!i113 0
+R12
+R13
+Eregisterfile
+Z73 w1639062411
+R3
+R4
+R0
+Z74 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Register_File.vhd
+Z75 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Register_File.vhd
 l0
 L5
 V:XbidYkPk]m^GOT2oBJX22
 !s100 [Y`]MP]NmU<R=R7RW56IF1
-R12
-32
-R47
-!i10b 1
-R53
-Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/Register_File.vhd|
-Z88 !s107 C:/Users/kc/Downloads/project/Register_File.vhd|
-!i113 0
-R17
-R18
-Aarchregisterfile
 R7
-R8
+32
+R59
+!i10b 1
+R60
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Register_File.vhd|
+Z77 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Register_File.vhd|
+!i113 0
+R12
+R13
+Aarchregisterfile
+R3
+R4
 DEx4 work 12 registerfile 0 22 :XbidYkPk]m^GOT2oBJX22
 l51
 L22
 V]ET]UY1AdJigPKig;^4eo2
 !s100 g]^PN22Mf=7kTd<9;]e1d2
-R12
-32
-R47
-!i10b 1
-R53
-R87
-R88
-!i113 0
-R17
-R18
-Estackpointer
-Z89 w1639474933
-R6
 R7
-R8
-R9
-Z90 8C:/Users/kc/Downloads/3rd CMP/Architecture/Project/SP.vhd
-Z91 FC:/Users/kc/Downloads/3rd CMP/Architecture/Project/SP.vhd
+32
+R59
+!i10b 1
+R60
+R76
+R77
+!i113 0
+R12
+R13
+Estackpointer
+Z78 w1639643830
+R2
+R3
+R4
+R0
+Z79 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/SP.vhd
+Z80 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/SP.vhd
 l0
 L5
 VBR=O7FmFh<2odLzMKL0cT3
 !s100 GV_hACCez3cd]M<8dIZ`41
-R12
-32
-R47
-!i10b 1
-R53
-Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Project/SP.vhd|
-Z93 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Project/SP.vhd|
-!i113 0
-R17
-R18
-Aarch_stackpointer
-R6
 R7
-R8
+32
+R59
+!i10b 1
+R60
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/SP.vhd|
+Z82 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/SP.vhd|
+!i113 0
+R12
+R13
+Aarch_stackpointer
+R2
+R3
+R4
 DEx4 work 12 stackpointer 0 22 BR=O7FmFh<2odLzMKL0cT3
 l15
 L14
-V09ci=Z8Y;eko5AYLhFN7E1
-!s100 ICNWoIIE29?d;BM<C2l>z3
-R12
-32
-R47
-!i10b 1
-R53
-R92
-R93
-!i113 0
-R17
-R18
-Etri_state_buffer
-Z94 w1638838789
+VGjEGU6zme0412Mn85Y[j=3
+!s100 fz`i9ND^[2`dVa5SRZ9kb1
 R7
-R8
-R9
-Z95 8C:/Users/kc/Downloads/project/Tri-stateBuffer.vhd
-Z96 FC:/Users/kc/Downloads/project/Tri-stateBuffer.vhd
+32
+R59
+!i10b 1
+R60
+R81
+R82
+!i113 0
+R12
+R13
+Etri_state_buffer
+Z83 w1638838789
+R3
+R4
+R0
+Z84 8C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Tri-stateBuffer.vhd
+Z85 FC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Tri-stateBuffer.vhd
 l0
 L5
 VSOV_@nmn<L=hN^Fl@Hn4A0
 !s100 g=9coaCdd6[37Q?i_gSOz0
-R12
-32
-R47
-!i10b 1
-R53
-Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/project/Tri-stateBuffer.vhd|
-Z98 !s107 C:/Users/kc/Downloads/project/Tri-stateBuffer.vhd|
-!i113 0
-R17
-R18
-Aarchtristate
 R7
-R8
+32
+R59
+!i10b 1
+R60
+Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Tri-stateBuffer.vhd|
+Z87 !s107 C:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor/Tri-stateBuffer.vhd|
+!i113 0
+R12
+R13
+Aarchtristate
+R3
+R4
 DEx4 work 16 tri_state_buffer 0 22 SOV_@nmn<L=hN^Fl@Hn4A0
 l14
 L12
 VlFYnz>Qfho?I9a68A5[^f2
 !s100 3W2VAS[Z2Y3kZKMKU^gkm2
-R12
+R7
 32
-R47
+R59
 !i10b 1
-R53
-R97
-R98
+R60
+R86
+R87
 !i113 0
-R17
-R18
+R12
+R13

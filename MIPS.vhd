@@ -97,6 +97,29 @@ control_signals : OUT std_logic_vector(23 DOWNTO 0)
 END component;
 
 
+component DataMEM IS
+	PORT(
+		clk : IN std_logic;
+		MW32  : IN std_logic;
+        MW16  : IN std_logic;
+		address : IN  std_logic_vector(31 DOWNTO 0);
+		data_16bits : IN  std_logic_vector(15 DOWNTO 0);
+		data_32bits : IN  std_logic_vector(31 DOWNTO 0);
+
+		dataout : OUT std_logic_vector(31 DOWNTO 0));
+END component ;
+
+
+component STACKPOINTER IS
+	PORT(
+		clk : IN std_logic;
+		reset: IN std_logic;
+		SP  : IN std_logic_vector(2 DOWNTO 0); -- SP[0] is the enable // SP[1] & SP[2] are selector for mux
+        	SP_data  : INOUT std_logic_vector(31 DOWNTO 0)
+	);
+END component ;
+
+
 signal PC_en , IFID_en ,IDEX_en,EXMEM_en,MEMWB_en, write_en: std_logic;
 signal write_address : std_logic_vector(2 downto 0);
 signal PC : std_logic_vector (31 downto 0);
@@ -110,8 +133,9 @@ signal cin : std_logic_vector(31 downto 0);
 signal Rsrc1,Rsrc2,writedata,alu_out :  STD_LOGIC_VECTOR(15 DOWNTO 0); 
 
 signal controls : STD_LOGIC_VECTOR(23 DOWNTO 0); 
-
-
+signal address :  STD_LOGIC_VECTOR(31 DOWNTO 0);
+signal sp_data :  STD_LOGIC_VECTOR(31 DOWNTO 0);
+signal mem_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 begin
 
@@ -162,6 +186,9 @@ EXMEM_buff : EXMEM port map(EXMEM_in,EXMEM_en,reset,clk,EXMEM_out);
 
 -----------------------------------------------------------------------------------------------------------------------------------
 --Mem stage 
+sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data) ;
+address<=sp_data;
+memo :DataMEM port map (clk,EXMEM_out(0),EXMEM_out(1),address,"0000000000000001","00000000000000000000000000000011",mem_out);
 
 ----------------------------
 -- MEM/WB buffer

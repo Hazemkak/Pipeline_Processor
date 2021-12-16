@@ -16,22 +16,22 @@ END ENTITY DataMEM;
 
 ARCHITECTURE ArchDataMEM OF DataMEM IS
 
-	TYPE ram_type IS ARRAY(0 TO 255) OF std_logic_vector(15 DOWNTO 0);
-	SIGNAL ram : ram_type ;
+	TYPE ram_type_memo IS ARRAY(0 TO 1048575) OF std_logic_vector(15 DOWNTO 0);
+	SIGNAL ram_arr : ram_type_memo ;
 	
 	BEGIN
 		PROCESS(clk) IS
 		BEGIN
 			IF rising_edge(clk) THEN  
 				IF MW32 = '1' THEN
-					ram(to_integer(unsigned(address))) <= data_32bits(15 DOWNTO 0);
-                        		ram(to_integer(unsigned(address)+1)) <= data_32bits(31 DOWNTO 16);
+					ram_arr(to_integer(unsigned(address))) <= data_32bits(31 DOWNTO 16);
+                        		ram_arr(to_integer(to_unsigned(to_integer(unsigned(address))+1048575,20))) <= data_32bits(15 DOWNTO 0);
 				END IF;
                     		IF MW16 = '1' THEN
-					ram(to_integer(unsigned(address))) <= data_16bits;
+					ram_arr(to_integer(unsigned(address))) <= data_16bits;
                        
 				END IF;
 			END IF;
 		END PROCESS;
-		dataout <=ram(to_integer(unsigned(address)+1)) &ram(to_integer(unsigned(address)));
+		dataout <=ram_arr(to_integer(unsigned(address))) & ram_arr(to_integer(to_unsigned(to_integer(unsigned(address))+1048575,20)));
 END ArchDataMEM;

@@ -18,7 +18,7 @@ BEGIN
 			IF (reset = '1') THEN
 				SP_data <= "00000000000011111111111111111111";
 			END IF;
-			IF falling_edge(clk) THEN  
+			IF rising_edge(clk) THEN  
 				IF SP(0) = '1' THEN
 					IF SP(1)='0' and SP(2)='0' THEN -- 00 decrement by 1
 
@@ -28,7 +28,7 @@ BEGIN
 
 						SP_data <= std_logic_vector( to_unsigned( to_integer(unsigned(SP_data)) + 1 , 32) );
 
-					ELSIF SP(1)='1' and SP(2)='0' THEN -- 10 decrement by 2
+					ELSIF SP(1)='0' and SP(2)='1' THEN -- 10 decrement by 2
 
 						SP_data <= std_logic_vector( to_unsigned( to_integer(unsigned(SP_data)) - 2 , 32) );
 
