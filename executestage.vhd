@@ -36,8 +36,8 @@ entity executestage is
         ------------------------------------------------------------------
 
         ---------------inputs to flagsintegration unit--------------------
-        setCarry: in  std_logic; --input from ID/EX buffer
-        flagEn: in std_logic_vector(1 downto 0); --input from ID/EX buffer
+        -- setCarry: in  std_logic; --input from ID/EX buffer
+        flagEn: in std_logic_vector(2 downto 0); --input from ID/EX buffer
         clk, rst: in std_logic;
         flagRes: in std_logic; --input from ID/EX buffer to mux1 select
         flagRev: in std_logic --input from ID/EX buffer to mux2 select
@@ -95,8 +95,8 @@ architecture data_executestage of executestage is
             -----------input to flag register and output from ALU -----------
             ALUThreeflags: in std_logic_vector(2 downto 0); --input from ALU when ADD or SUB
             ALUTwoFlags: in std_logic_vector(2 downto 0); --input from ALU when AND or NOT
-            setCarry: in  std_logic; --input from ID/EX buffer
-            flagEn: in std_logic_vector(1 downto 0); --input from ID/EX buffer
+            setCarry: in  std_logic; --input from ALU "1 when setCarry operation zero otherwise"
+            flagEn: in std_logic_vector(2 downto 0); --input from ID/EX buffer
             clk, rst: in std_logic;
             ----------------------------------------------------------------
 
@@ -129,5 +129,5 @@ architecture data_executestage of executestage is
         alu1: ALU port map(mux3Output, mux2Output, result, carryFlag, zeroFlag, negativeFlag, operationSel, carryFlagEnable, zeroFlagEnable, negativeFlagEnable);
         ALUThreeFlags <= zeroFlag & negativeFlag & carryFlag;
         ALUTwoFlags <=  zeroFlag & negativeFlag & '0';
-        FI: flagsintegration port map(ALUThreeFlags, ALUTwoFlags, setCarry, flagEn, clk, rst, flagRes, flagRev);
+        FI: flagsintegration port map(ALUThreeFlags, ALUTwoFlags, carryFlag, flagEn, clk, rst, flagRes, flagRev);
     end data_executestage;

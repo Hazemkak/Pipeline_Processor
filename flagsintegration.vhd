@@ -8,7 +8,7 @@ entity flagsintegration is
         ALUThreeflags: in std_logic_vector(2 downto 0); --input from ALU when ADD or SUB
         ALUTwoFlags: in std_logic_vector(2 downto 0); --input from ALU when AND or NOT
         setCarry: in  std_logic; --input from ID/EX buffer
-        flagEn: in std_logic_vector(1 downto 0); --input from ID/EX buffer
+        flagEn: in std_logic_vector(2 downto 0); --input from ID/EX buffer
         clk, rst: in std_logic;
         ----------------------------------------------------------------
         ---------input select to mux1-----------------------------------
@@ -27,7 +27,7 @@ architecture behav_flagsintegration of flagsintegration is
             ALUTwoFlags: in std_logic_vector(2 downto 0);
             setCarry: in std_logic;
             flagRev: in std_logic_vector(2 downto 0);
-            flagSel: in std_logic_vector(1 downto 0);
+            flagSel: in std_logic_vector(2 downto 0);
             clk, rst: in std_logic;
             carryFlag, negativeFlag, zeroFlag: out std_logic
         );
