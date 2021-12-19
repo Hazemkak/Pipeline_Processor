@@ -43,11 +43,11 @@ END component;
 
 component IDEX IS
 PORT(
-d : IN STD_LOGIC_VECTOR(112 DOWNTO 0);
+d : IN STD_LOGIC_VECTOR(114 DOWNTO 0);
 en : IN STD_LOGIC; 
 reset : IN STD_LOGIC; 
 clk : IN STD_LOGIC;
-q : OUT STD_LOGIC_VECTOR(112 DOWNTO 0)); 
+q : OUT STD_LOGIC_VECTOR(114 DOWNTO 0)); 
 END component;
 
 
@@ -92,7 +92,7 @@ END component;
 component control is 
 PORT
 ( op_code: IN std_logic_vector(4 DOWNTO 0);
-control_signals : OUT std_logic_vector(23 DOWNTO 0)
+control_signals : OUT std_logic_vector(25 DOWNTO 0)
 );
 END component;
 
@@ -127,22 +127,70 @@ component writeback is
     );
 end component;
 
+
+component executestage is
+    port(
+        -------forwarding hazard data and inputs to mux2 and mux3----------
+        aluData: in std_logic_vector(15 downto 0); --from EX/MEM buffer
+        memData: in std_logic_vector(15 downto 0); --from MEM/WB buffer
+        -------------------------------------------------------------------
+
+        --------------inputs to mux1---------------------------------------
+        src1Data, imValue: in std_logic_vector(15 downto 0); --from ID/EX buffer
+        aluSel: in std_logic_vector(1 downto 0); --from ID/EX buffer
+        --this mux will get as input imIndex from adding 6 to imValue
+        -------------------------------------------------------------------
+        
+        -------------inputs to mux2----------------------------------------
+        src2Data: in std_logic_vector(15 downto 0);--from ID/EX buffer
+        --this mux will get 2B from forwarding unit as input select
+        -------------------------------------------------------------------
+
+        -----------inputs to ALU-------------------------------------------
+        operationSel: in std_logic_vector(2 downto 0); --from ID/EX buffer
+        --this ALU will get output of mux2 and mux3 as input operands
+        result: out std_logic_vector(15 downto 0);
+        -------------------------------------------------------------------
+
+        ---------------inputs to forwarding unit---------------------------
+        src1RegNum, src2RegNum: in std_logic_vector(2 downto 0); --from ID/EX buffer
+        regDest_EX: in std_logic_vector(2 downto 0); --from EX/MEM buffer
+        regDest_MEM: in std_logic_vector(2 downto 0); --from MEM/WB buffer
+        WB_EXMEM: in std_logic; --from EX/MEM buffer
+        WB_MEMWB: in std_logic; -- from MEM/WB buffer
+        HZEN: in std_logic; --from ID/EX buffer
+        ------------------------------------------------------------------
+
+        ---------------inputs to flagsintegration unit--------------------
+        -- setCarry: in  std_logic; --input from ID/EX buffer
+        flagEn: in std_logic_vector(2 downto 0); --input from ID/EX buffer
+        clk, rst: in std_logic;
+        flagRes: in std_logic; --input from ID/EX buffer to mux1 select
+        flagRev: in std_logic --input from ID/EX buffer to mux2 select
+        ------------------------------------------------------------------
+    );
+end component;
+
+
+
+
 signal PC_en , IFID_en ,IDEX_en,EXMEM_en,MEMWB_en, write_en: std_logic;
 signal write_address : std_logic_vector(2 downto 0);
 signal PC : std_logic_vector (31 downto 0);
 signal newPC : std_logic_vector (31 downto 0);
 signal instraction :std_logic_vector (31 downto 0);
 signal IFID_in,IFID_out  : std_logic_vector (63 downto 0);
-signal  IDEX_in ,IDEX_out: std_logic_vector (112 downto 0);
+signal  IDEX_in ,IDEX_out: std_logic_vector (114 downto 0);
 signal  EXMEM_in ,EXMEM_out: std_logic_vector (79 downto 0);
 signal  MEMWB_in ,MEMWB_out: std_logic_vector (60 downto 0);
 signal cin : std_logic_vector(31 downto 0);
 signal Rsrc1,Rsrc2,writedata,alu_out :  STD_LOGIC_VECTOR(15 DOWNTO 0); 
 
-signal controls : STD_LOGIC_VECTOR(23 DOWNTO 0); 
+signal controls : STD_LOGIC_VECTOR(25 DOWNTO 0); 
 signal address :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 signal sp_data :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 signal mem_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
+signal AluSel : STD_LOGIC_VECTOR(1 DOWNTO 0); -- input to EX stage 
 
 begin
 
@@ -181,14 +229,14 @@ IDEX_buff : IDEX port map(IDEX_in,IDEX_en,reset,clk,IDEX_out);
 
 -----------------------------------------------------------------------------------------------------------------------------------
 -- Ex stage
-
-alu0 : ALU port map (IDEX_out(55 downto 40),IDEX_out(39 downto 24),alu_out);
+AluSel<=IDEX_out(18)&IDEX_out(4);
+ex: executestage port map (EXMEM_out(28 downto 13),MEMWB_out(57 downto 42),IDEX_out(57 downto 42),IDEX_out(82 downto 67),AluSel ,IDEX_out(41 downto 26),IDEX_out(3 downto 1),alu_out,EXMEM_out(63 downto 61),EXMEM_out(60 downto 58),EXMEM_out(47 downto 45),MEMWB_out(60 downto 58),EXMEM_out(8),MEMWB_out(5),IDEX_out(0), IDEX_out(7 downto 5),clk,reset,IDEX_out(9),IDEX_out(8));
 
 ----------------------------
 -- EX/MEM buffer
 
 EXMEM_en<='1';
-EXMEM_in<=IDEX_out(112 downto 81) &IDEX_out(64 downto 62)&IDEX_out(39 downto 24)&alu_out&IDEX_out(23 downto 11);
+EXMEM_in<=IDEX_out(114 downto 83) &IDEX_out(66 downto 64)&IDEX_out(41 downto 26)&alu_out&IDEX_out(25 downto 13);
 EXMEM_buff : EXMEM port map(EXMEM_in,EXMEM_en,reset,clk,EXMEM_out);
 
 -----------------------------------------------------------------------------------------------------------------------------------

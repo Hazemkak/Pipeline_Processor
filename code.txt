@@ -1,7 +1,7 @@
 nop
-push r0 
-pop r1
+inc r0  
 nop
-pop r1
+nop
+nop
 nop
 nop
