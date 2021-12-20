@@ -231,7 +231,7 @@ IDEX_buff : IDEX port map(IDEX_in,IDEX_en,reset,clk,IDEX_out);
 -----------------------------------------------------------------------------------------------------------------------------------
 -- Ex stage
 AluSel<=IDEX_out(18)&IDEX_out(4);
-ex: executestage port map (EXMEM_out(28 downto 13),MEMWB_out(57 downto 42),IDEX_out(57 downto 42),IDEX_out(82 downto 67),AluSel ,IDEX_out(41 downto 26),IDEX_out(3 downto 1),alu_out,EXMEM_out(63 downto 61),EXMEM_out(60 downto 58),EXMEM_out(47 downto 45),MEMWB_out(60 downto 58),EXMEM_out(8),MEMWB_out(5),IDEX_out(0), IDEX_out(7 downto 5),clk,reset,IDEX_out(9),IDEX_out(8));
+ex: executestage port map (EXMEM_out(28 downto 13),MEMWB_out(25 downto 10),IDEX_out(57 downto 42),IDEX_out(82 downto 67),AluSel ,IDEX_out(41 downto 26),IDEX_out(3 downto 1),alu_out,IDEX_out(63 downto 61),IDEX_out(60 downto 58),EXMEM_out(47 downto 45),MEMWB_out(60 downto 58),EXMEM_out(8),MEMWB_out(5),IDEX_out(0), IDEX_out(7 downto 5),clk,reset,IDEX_out(9),IDEX_out(8));
 
 ----------------------------
 -- EX/MEM buffer
@@ -242,7 +242,11 @@ EXMEM_buff : EXMEM port map(EXMEM_in,EXMEM_en,reset,clk,EXMEM_out);
 
 -----------------------------------------------------------------------------------------------------------------------------------
 --Mem stage 
+
+
 sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data) ;
+
+-- (Temp for testing ) it should change with mux later 
 address<=sp_data when EXMEM_out(10)='1'
 else x"0000"&EXMEM_out(28 downto 13);
 memo :DataMEM port map (clk,EXMEM_out(0),EXMEM_out(1),EXMEM_out(2),address,EXMEM_out(44 downto 29),"00000000000000000000000000000011",mem_out); --

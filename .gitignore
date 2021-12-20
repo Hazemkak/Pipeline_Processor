@@ -4,3 +4,5 @@ work/*
 *.bak
 *.wlf
 *.do
+*.txt
+*.mem
