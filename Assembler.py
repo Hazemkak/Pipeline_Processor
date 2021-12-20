@@ -144,7 +144,7 @@ for line in assembly:
     imm ="0000000000000000"+decimalToBinary(int(line[2]))
     imm=imm[len(imm)-16:]
     num+=1
-    instrc+=2*src2+src1+"11\n"+str(num)+": "+imm
+    instrc+=2*src1+src2+"11\n"+str(num)+": "+imm
 
 
   

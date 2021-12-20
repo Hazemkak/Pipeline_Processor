@@ -1,7 +1,14 @@
 nop
-inc r0  
+inc r1
+inc r2
+nop
+nop
+add r0,r1,r2
 nop
 nop
 nop
+nop
+nop
+ldm r0 ,13
 nop
 nop

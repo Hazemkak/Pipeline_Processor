@@ -102,6 +102,7 @@ component DataMEM IS
 		clk : IN std_logic;
 		MW32  : IN std_logic;
     MW16  : IN std_logic;
+    MR : in std_logic;
 		address : IN  std_logic_vector(31 DOWNTO 0);
 		data_16bits : IN  std_logic_vector(15 DOWNTO 0);
 		data_32bits : IN  std_logic_vector(31 DOWNTO 0);
@@ -236,14 +237,15 @@ ex: executestage port map (EXMEM_out(28 downto 13),MEMWB_out(57 downto 42),IDEX_
 -- EX/MEM buffer
 
 EXMEM_en<='1';
-EXMEM_in<=IDEX_out(114 downto 83) &IDEX_out(66 downto 64)&IDEX_out(41 downto 26)&alu_out&IDEX_out(25 downto 13);
+EXMEM_in<=IDEX_out(114 downto 83) &IDEX_out(66 downto 64)&IDEX_out(57 downto 42)&alu_out&IDEX_out(25 downto 13);
 EXMEM_buff : EXMEM port map(EXMEM_in,EXMEM_en,reset,clk,EXMEM_out);
 
 -----------------------------------------------------------------------------------------------------------------------------------
 --Mem stage 
 sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data) ;
-address<=sp_data;
-memo :DataMEM port map (clk,EXMEM_out(0),EXMEM_out(1),address,"0000000000000001","00000000000000000000000000000011",mem_out); --
+address<=sp_data when EXMEM_out(10)='1'
+else x"0000"&EXMEM_out(28 downto 13);
+memo :DataMEM port map (clk,EXMEM_out(0),EXMEM_out(1),EXMEM_out(2),address,EXMEM_out(44 downto 29),"00000000000000000000000000000011",mem_out); --
 
 ----------------------------
 -- MEM/WB buffer
