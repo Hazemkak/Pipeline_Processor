@@ -34,6 +34,11 @@ ARCHITECTURE ArchDataMEM OF DataMEM IS
 					ram_arr(to_integer(unsigned(address))) <= data_16bits;
                        
 				END IF;
+				
+
+				dataout <=x"00000000";
+				   
+				
 			end IF ;
 
 
@@ -43,11 +48,7 @@ ARCHITECTURE ArchDataMEM OF DataMEM IS
 				dataout <=ram_arr(to_integer(unsigned(address))) & ram_arr(to_integer(to_unsigned(to_integer(unsigned(address))+1048575,20)));
 				   
 				END IF;
-				IF MR = '0' THEN
-
-				dataout <=x"00000000";
-				   
-				END IF;
+			
 
 			END IF;
 

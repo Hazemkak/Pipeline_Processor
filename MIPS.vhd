@@ -92,6 +92,7 @@ END component;
 component control is 
 PORT
 ( op_code: IN std_logic_vector(4 DOWNTO 0);
+sel : in std_logic;
 control_signals : OUT std_logic_vector(25 DOWNTO 0)
 );
 END component;
@@ -172,13 +173,31 @@ component executestage is
     );
 end component;
 
+component MUX_4_1_32bit is
+  port(
+      in0, in1, in2, in3: in std_logic_vector(31 downto 0);
+      sel: in std_logic_vector(1 downto 0);
+      output: out std_logic_vector(31 downto 0) 
+  );
+end component;
+
+component Hazard_Unit is
+  port(
+    regSrc1, regSrc2: in std_logic_vector(2 downto 0);
+    regDest_IDEX : in std_logic_vector(2 downto 0);
+    WB_IDEX, MR_IDEX,HZEN: in std_logic;
+
+    hz: out std_logic
+);
+end component;
+
 
 
 
 signal PC_en , IFID_en ,IDEX_en,EXMEM_en,MEMWB_en, write_en: std_logic;
 signal write_address : std_logic_vector(2 downto 0);
 signal PC : std_logic_vector (31 downto 0);
-signal newPC : std_logic_vector (31 downto 0);
+signal newPC ,Next_PC: std_logic_vector (31 downto 0);
 signal instraction :std_logic_vector (31 downto 0);
 signal IFID_in,IFID_out  : std_logic_vector (63 downto 0);
 signal  IDEX_in ,IDEX_out: std_logic_vector (114 downto 0);
@@ -193,17 +212,30 @@ signal sp_data :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 signal mem_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
 signal AluSel : STD_LOGIC_VECTOR(1 DOWNTO 0); -- input to EX stage 
 
+signal load_use : std_logic;
+
+signal jmp_Address: STD_LOGIC_VECTOR(31 DOWNTO 0);
+signal Jump,exception : std_logic;
+signal PC_sel : STD_LOGIC_VECTOR(1 DOWNTO 0); 
+signal IFID_rst, IDEX_rst : std_logic;
+
+
 begin
 
 
 
 cin<="0000000000000000000000000000000"&instraction(1);
-newPC<=std_logic_vector(unsigned(PC)+1+unsigned(cin));
+Next_PC<=std_logic_vector(unsigned(PC)+1+unsigned(cin));
+
+jmp_Address<=x"0000"&alu_out;
+Pc_sel<= (exception or EXMEM_out(4))&Jump;
+PC_MUX : MUX_4_1_32bit port map (Next_PC,jmp_Address,mem_out,mem_out,Pc_sel,newPC);
 
 -----------------------------------------------------------------------------------------------------------------------------------
 -- Fetch stage 
 
-PC_en<= '0'  WHEN instraction( 15 downto 11)="00001"
+
+PC_en<= '0'  WHEN (instraction( 15 downto 11)="00001" or load_use='1')
 	else '1';
 ProgramCounter : PC_reg port map(newPC,PC_en,reset,clk,PC);
 insrcMem : InstractionMem port map(PC,instraction);
@@ -211,27 +243,37 @@ insrcMem : InstractionMem port map(PC,instraction);
 ----------------------------
  -- IF/ID buffer
 
-IFID_en<='1';
+IFID_en<= (not load_use);
+IFID_rst<= reset or Jump or Pc_sel(1);
 IFID_in<= newPC&instraction;
-IFID_buff : IFID port map(IFID_in,IFID_en,reset,clk,IFID_out);
+IFID_buff : IFID port map(IFID_in,IFID_en,IFID_rst,clk,IFID_out);
 
 -----------------------------------------------------------------------------------------------------------------------------------
 -- Decode stage
 
-controlUnit : control port map (IFID_out( 15 downto 11),controls ); -- opcode (input) , controls (output)
+
+Hz_detection_unit :Hazard_Unit port map(IFID_out(7 downto 5),IFID_out(4 downto 2),IDEX_out(66 downto 64),IDEX_out(21),IDEX_out(15),IFID_out(0),load_use);
+
+
+controlUnit : control port map (IFID_out( 15 downto 11),load_use ,controls ); -- opcode (input) , controls (output)
 regFile :registerfile port map(reset,clk,IFID_out(7 downto 5),IFID_out(4 downto 2),write_en,write_address,writedata,Rsrc1,Rsrc2);
 
 ----------------------------
  -- ID/EX buffer
 
 IDEX_en<='1';
+IDEX_rst<=reset or Pc_sel(1); 
 IDEX_in<=IFID_out(63 downto 32)&IFID_out(31 downto 16)&IFID_out(10 downto 2)&Rsrc1&Rsrc2&controls;
-IDEX_buff : IDEX port map(IDEX_in,IDEX_en,reset,clk,IDEX_out);
+IDEX_buff : IDEX port map(IDEX_in,IDEX_en,IDEX_rst,clk,IDEX_out);
 
 -----------------------------------------------------------------------------------------------------------------------------------
 -- Ex stage
+
+Jump<= '0'; -- if the branch is taken set it to '1'
+
+
 AluSel<=IDEX_out(18)&IDEX_out(4);
-ex: executestage port map (EXMEM_out(28 downto 13),MEMWB_out(25 downto 10),IDEX_out(57 downto 42),IDEX_out(82 downto 67),AluSel ,IDEX_out(41 downto 26),IDEX_out(3 downto 1),alu_out,IDEX_out(63 downto 61),IDEX_out(60 downto 58),EXMEM_out(47 downto 45),MEMWB_out(60 downto 58),EXMEM_out(8),MEMWB_out(5),IDEX_out(0), IDEX_out(7 downto 5),clk,reset,IDEX_out(9),IDEX_out(8));
+ex: executestage port map (EXMEM_out(28 downto 13),writedata,IDEX_out(57 downto 42),IDEX_out(82 downto 67),AluSel ,IDEX_out(41 downto 26),IDEX_out(3 downto 1),alu_out,IDEX_out(63 downto 61),IDEX_out(60 downto 58),EXMEM_out(47 downto 45),MEMWB_out(60 downto 58),EXMEM_out(8),MEMWB_out(5),IDEX_out(0), IDEX_out(7 downto 5),clk,reset,IDEX_out(9),IDEX_out(8));
 
 ----------------------------
 -- EX/MEM buffer
@@ -243,12 +285,17 @@ EXMEM_buff : EXMEM port map(EXMEM_in,EXMEM_en,reset,clk,EXMEM_out);
 -----------------------------------------------------------------------------------------------------------------------------------
 --Mem stage 
 
+exception<='0'; -- if there is an exception set it to '1'
+
+
+
 
 sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data) ;
 
 -- (Temp for testing ) it should change with mux later 
-address<=sp_data when EXMEM_out(10)='1'
-else x"0000"&EXMEM_out(28 downto 13);
+address<=sp_data when EXMEM_out(10)='1' -- stack
+  else x"00000001" when EXMEM_out(3)='1'-- reset
+  else x"0000"&EXMEM_out(28 downto 13); -- address from alu
 memo :DataMEM port map (clk,EXMEM_out(0),EXMEM_out(1),EXMEM_out(2),address,EXMEM_out(44 downto 29),"00000000000000000000000000000011",mem_out); --
 
 ----------------------------
@@ -259,11 +306,19 @@ MEMWB_in<=EXMEM_out(47 downto 45)&mem_out&EXMEM_out(28 downto 13)&EXMEM_out(12 d
 MEMWB_buff : MEMWB port map(MEMWB_in,MEMWB_en,reset,clk,MEMWB_out); -- 
 
 -----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 -- WB stage 
 -- here i considerd the in port in the writeback which is false and will be changed 
 write_Back: writeback port map (MEMWB_out(4),MEMWB_out(6),datain,MEMWB_out(25 downto 10),MEMWB_out(57 downto 42),writedata);
 -- alu from 10 to 25 from mem 26+16=42 to 57 4 6 datain
 write_address<=MEMWB_out(60 downto 58); 
-write_en<=MEMWB_out(5);
+write_en<=MEMWB_out(5) and (not exception);
+
+
 
 END ArchMIPS;

@@ -1,10 +1,20 @@
 nop
-inc r1
+nop
+nop
 inc r2
+add r1,r1,r2
+inc r2
+add r0,r2,r1
+ldd r0,3(r1)
+nop
+add r0,r0,r1
+nop
+nop
+not r0
+nop
+nop
+reset
 add r0,r1,r2
-nop
-nop
-nop
 nop
 nop
 nop

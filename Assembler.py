@@ -146,6 +146,44 @@ for line in assembly:
     num+=1
     instrc+=2*src1+src2+"11\n"+str(num)+": "+imm
 
+  elif line[0]=="jz":
+    instrc+="10001"
+    dst ="000"+decimalToBinary(int(line[1][1:]))
+    dst=dst[len(dst)-3:]
+    instrc+=3*dst+"01"
+
+  elif line[0]=="jn":
+    instrc+="10010"
+    dst ="000"+decimalToBinary(int(line[1][1:]))
+    dst=dst[len(dst)-3:]
+    instrc+=3*dst+"01"
+
+  elif line[0]=="jc":
+    instrc+="10011"
+    dst ="000"+decimalToBinary(int(line[1][1:]))
+    dst=dst[len(dst)-3:]
+    instrc+=3*dst+"01"
+
+  elif line[0]=="jmp":
+    instrc+="10100"
+    dst ="000"+decimalToBinary(int(line[1][1:]))
+    dst=dst[len(dst)-3:]
+    instrc+=3*dst+"01"
+
+  elif line[0]=="call":
+    instrc+="10101"
+    dst ="000"+decimalToBinary(int(line[1][1:]))
+    dst=dst[len(dst)-3:]
+    instrc+=3*dst+"01"
+
+  elif line[0]=="ret":
+    instrc+="10110"
+    instrc+=3*"000"+"00"
+
+  elif line[0]=="reset":
+    instrc+="11001"
+    instrc+="000"*3+"00"
+
 
   
   print(line)
