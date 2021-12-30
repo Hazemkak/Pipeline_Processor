@@ -168,7 +168,16 @@ component executestage is
         flagEn: in std_logic_vector(2 downto 0); --input from ID/EX buffer
         clk, rst: in std_logic;
         flagRes: in std_logic; --input from ID/EX buffer to mux1 select
-        flagRev: in std_logic --input from ID/EX buffer to mux2 select
+        flagRev: in std_logic; --input from ID/EX buffer to mux2 select
+        ------------------------------------------------------------------
+
+        
+        ----input from ID/EX buffer----------------------------------
+        jmpSel: in std_logic_vector(2 downto 0);
+        -------------------------------------------------------------
+
+        ----output from execute stage-------------------------------------
+        jmpOrNoJump: out std_logic
         ------------------------------------------------------------------
     );
 end component;
@@ -269,11 +278,11 @@ IDEX_buff : IDEX port map(IDEX_in,IDEX_en,IDEX_rst,clk,IDEX_out);
 -----------------------------------------------------------------------------------------------------------------------------------
 -- Ex stage
 
-Jump<= '0'; -- if the branch is taken set it to '1'
+--Jump<= '0'; -- if the branch is taken set it to '1'
 
 
 AluSel<=IDEX_out(18)&IDEX_out(4);
-ex: executestage port map (EXMEM_out(28 downto 13),writedata,IDEX_out(57 downto 42),IDEX_out(82 downto 67),AluSel ,IDEX_out(41 downto 26),IDEX_out(3 downto 1),alu_out,IDEX_out(63 downto 61),IDEX_out(60 downto 58),EXMEM_out(47 downto 45),MEMWB_out(60 downto 58),EXMEM_out(8),MEMWB_out(5),IDEX_out(0), IDEX_out(7 downto 5),clk,reset,IDEX_out(9),IDEX_out(8));
+ex: executestage port map (EXMEM_out(28 downto 13),writedata,IDEX_out(57 downto 42),IDEX_out(82 downto 67),AluSel ,IDEX_out(41 downto 26),IDEX_out(3 downto 1),alu_out,IDEX_out(63 downto 61),IDEX_out(60 downto 58),EXMEM_out(47 downto 45),MEMWB_out(60 downto 58),EXMEM_out(8),MEMWB_out(5),IDEX_out(0), IDEX_out(7 downto 5),clk,reset,IDEX_out(9),IDEX_out(8),IDEX_out(12 downto 10),Jump);
 
 ----------------------------
 -- EX/MEM buffer
@@ -296,7 +305,7 @@ sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data) ;
 address<=sp_data when EXMEM_out(10)='1' -- stack
   else x"00000001" when EXMEM_out(3)='1'-- reset
   else x"0000"&EXMEM_out(28 downto 13); -- address from alu
-memo :DataMEM port map (clk,EXMEM_out(0),EXMEM_out(1),EXMEM_out(2),address,EXMEM_out(44 downto 29),"00000000000000000000000000000011",mem_out); --
+memo :DataMEM port map (clk,EXMEM_out(0),EXMEM_out(1),EXMEM_out(2),address,EXMEM_out(44 downto 29),EXMEM_out(79 downto 48),mem_out); --
 
 ----------------------------
 -- MEM/WB buffer

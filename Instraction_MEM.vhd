@@ -11,7 +11,7 @@ END ENTITY InstractionMem;
 
 ARCHITECTURE ArchInstractionMem OF InstractionMem IS
 
-	TYPE ram_type IS ARRAY(0 TO 255) OF std_logic_vector(15 DOWNTO 0);
+	TYPE ram_type IS ARRAY(0 TO 1048575) OF std_logic_vector(15 DOWNTO 0);
 	SIGNAL ram : ram_type ;
 	
 	BEGIN

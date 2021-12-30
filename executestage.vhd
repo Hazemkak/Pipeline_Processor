@@ -149,6 +149,8 @@ architecture data_executestage of executestage is
     signal zeroFlagEnable, negativeFlagEnable, carryFlagEnable: std_logic; --output of ALU and input to tri-state buffer
     signal ALUThreeFlags, ALUTwoFlags: std_logic_vector(2 downto 0);
     signal outputZF, outputNF, outputCF: std_logic;
+  
+
     begin
         adder: sixteenbitfulladder port map(imValue, "0000000000000110", '0', imIndex, imIndexCarry);
         mux1: fourbyonemux port map(src1Data, imValue, imIndex, "0000000000000000", aluSel, mux1Output);
@@ -161,4 +163,5 @@ architecture data_executestage of executestage is
         ALUTwoFlags <=  zeroFlag & negativeFlag & '0';
         FI: flagsintegration port map(ALUThreeFlags, ALUTwoFlags, carryFlag, flagEn, clk, rst, flagRes, flagRev, outputZF, outputNF, outputCF);
         jmp: jump port map(outputZF, outputNF, outputCF, jmpSel, jmpOrNoJump);
+        
     end data_executestage;

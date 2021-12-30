@@ -1,25 +1,17 @@
 nop
-<<<<<<< HEAD
-
-iadd R1, R2, 5
-=======
 nop
-nop
-inc r2
-add r1,r1,r2
-inc r2
-add r0,r2,r1
-ldd r0,3(r1)
->>>>>>> e8e6fa2fe9d7f0fb40465a15a530bb6949a1819d
-nop
-add r0,r0,r1
-nop
-nop
+ldm r0 ,11
+setc
+jmp r0
 not r0
 nop
 nop
-reset
-add r0,r1,r2
+nop
+not r0
+inc r0
+nop
+nop
+nop
 nop
 nop
 nop

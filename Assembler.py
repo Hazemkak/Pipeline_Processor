@@ -118,7 +118,7 @@ for line in assembly:
     instrc+="01110"
     dst ="000"+decimalToBinary(int(line[1][1:]))
     dst=dst[len(dst)-3:]
-    instrc+=3*dst+"01"
+    instrc+=3*dst+"10"
     imm ="0000000000000000"+decimalToBinary(int(line[2]))
     imm=imm[len(imm)-16:]
     num+=1
@@ -184,6 +184,8 @@ for line in assembly:
     instrc+="11001"
     instrc+="000"*3+"00"
 
+  else:
+    instrc+="0000000000000000"
 
   
   print(line)

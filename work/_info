@@ -14,7 +14,7 @@ Z0 w1640348936
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 1586
+!i122 2124
 Z4 dE:/Pipeline_Processor
 Z5 8E:/Pipeline_Processor/ALU.vhd
 Z6 FE:/Pipeline_Processor/ALU.vhd
@@ -24,9 +24,9 @@ VJ^I3nKSCWW@a>;Jjjg;J12
 !s100 On3z@G_TjLYY9VzFS>NA40
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1640391471
+Z8 !s110 1640888389
 !i10b 1
-Z9 !s108 1640391471.000000
+Z9 !s108 1640888388.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/ALU.vhd|
 Z11 !s107 E:/Pipeline_Processor/ALU.vhd|
 !i113 1
@@ -37,7 +37,7 @@ R1
 R2
 R3
 DEx4 work 3 alu 0 22 J^I3nKSCWW@a>;Jjjg;J12
-!i122 1586
+!i122 2124
 l37
 L15 96
 VToL;W^L<[CVVIRDQ;eU0Z3
@@ -53,10 +53,10 @@ R11
 R12
 R13
 Econtrol
-Z14 w1640391261
+Z14 w1640884980
 R2
 R3
-!i122 1587
+!i122 2125
 R4
 Z15 8E:/Pipeline_Processor/Control_Unit.vhd
 Z16 FE:/Pipeline_Processor/Control_Unit.vhd
@@ -68,9 +68,9 @@ R7
 32
 R8
 !i10b 1
-R9
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/Control_Unit.vhd|
-Z18 !s107 E:/Pipeline_Processor/Control_Unit.vhd|
+Z17 !s108 1640888389.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/Control_Unit.vhd|
+Z19 !s107 E:/Pipeline_Processor/Control_Unit.vhd|
 !i113 1
 R12
 R13
@@ -78,39 +78,39 @@ Aarchcontrol
 R2
 R3
 DEx4 work 7 control 0 22 IVIC39K=IehS=PL]E:T;n2
-!i122 1587
+!i122 2125
 l13
 L12 33
-VNN:E3B;jOS]L7NXz^QKC>0
-!s100 fCm4iIXk[<F_Q>A9^ghIP0
+V=kl^zI^f5<R;eT^bGFP@b0
+!s100 :>7anIiD1oh@5iGbaG[C;3
 R7
 32
 R8
 !i10b 1
-R9
 R17
 R18
+R19
 !i113 1
 R12
 R13
 Edatamem
-Z19 w1640386427
+Z20 w1640888120
 R1
 R2
 R3
-!i122 1588
+!i122 2126
 R4
-Z20 8E:/Pipeline_Processor/Data_MEM.vhd
-Z21 FE:/Pipeline_Processor/Data_MEM.vhd
+Z21 8E:/Pipeline_Processor/Data_MEM.vhd
+Z22 FE:/Pipeline_Processor/Data_MEM.vhd
 l0
 L5 1
 VRW]T9R:G]TlNiROCiaTX_1
 !s100 l:4cCLfb>Igz@Lo_=jHU;0
 R7
 32
-Z22 !s110 1640391472
+R8
 !i10b 1
-R9
+R17
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/Data_MEM.vhd|
 Z24 !s107 E:/Pipeline_Processor/Data_MEM.vhd|
 !i113 1
@@ -121,16 +121,16 @@ R1
 R2
 R3
 DEx4 work 7 datamem 0 22 RW]T9R:G]TlNiROCiaTX_1
-!i122 1588
+!i122 2126
 l24
-L19 39
-V<Z<Q9]e8^lanLYEG`i^YF3
-!s100 oihl@`Wg4ZcDW5[IF6kl60
+L19 36
+V5dU`BO16]JEhVSLagf:n52
+!s100 F=^E?Ka70Wj[iDk;EXW]=1
 R7
 32
-R22
+R8
 !i10b 1
-R9
+R17
 R23
 R24
 !i113 1
@@ -140,7 +140,7 @@ Edecoder3_8
 Z25 w1640348938
 R2
 R3
-!i122 1589
+!i122 2127
 R4
 Z26 8E:/Pipeline_Processor/decoder.vhd
 Z27 FE:/Pipeline_Processor/decoder.vhd
@@ -150,11 +150,11 @@ VEZEYP;dUgAH3NX380bBT13
 !s100 JQ022KKEe;?kZ69gnKW9X3
 R7
 32
-R22
+R8
 !i10b 1
-Z28 !s108 1640391472.000000
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/decoder.vhd|
-Z30 !s107 E:/Pipeline_Processor/decoder.vhd|
+R17
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/decoder.vhd|
+Z29 !s107 E:/Pipeline_Processor/decoder.vhd|
 !i113 1
 R12
 R13
@@ -162,39 +162,39 @@ Aarchdecoder
 R2
 R3
 DEx4 work 10 decoder3_8 0 22 EZEYP;dUgAH3NX380bBT13
-!i122 1589
+!i122 2127
 l12
 L11 18
 Vi38VKm;1eX?[[^eA7G9Rb0
 !s100 WU6BVzRmW[V?<44FedG062
 R7
 32
-R22
+R8
 !i10b 1
+R17
 R28
 R29
-R30
 !i113 1
 R12
 R13
 Eexecutestage
-Z31 w1640348940
+Z30 w1640880194
 R1
 R2
 R3
-!i122 1590
+!i122 2128
 R4
-Z32 8E:/Pipeline_Processor/executestage.vhd
-Z33 FE:/Pipeline_Processor/executestage.vhd
+Z31 8E:/Pipeline_Processor/executestage.vhd
+Z32 FE:/Pipeline_Processor/executestage.vhd
 l0
 L5 1
-Vi7Rd:Bf8f_<?fD8i@^69I2
-!s100 dm6X5OedD6GRg6BXKJ]_71
+VI5>:23gl;g=`]R?0OE_m43
+!s100 2RzUP>2@_O7E[GKD17C5j3
 R7
 32
-R22
+Z33 !s110 1640888390
 !i10b 1
-R28
+R17
 Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/executestage.vhd|
 Z35 !s107 E:/Pipeline_Processor/executestage.vhd|
 !i113 1
@@ -204,17 +204,17 @@ Adata_executestage
 R1
 R2
 R3
-DEx4 work 12 executestage 0 22 i7Rd:Bf8f_<?fD8i@^69I2
-!i122 1590
-l123
-L48 86
-V2`6[MCZl3ZWUg6;3OUl_>0
-!s100 ioJLNL;kmAEWHH5hmAC<02
+DEx4 work 12 executestage 0 22 I5>:23gl;g=`]R?0OE_m43
+!i122 2128
+l154
+L56 112
+V4SAP3]?=ImM8dgH[PPm_M0
+!s100 PcWGC?CAK778]EGiP<<^Z1
 R7
 32
-R22
+R33
 !i10b 1
-R28
+R17
 R34
 R35
 !i113 1
@@ -224,7 +224,7 @@ Eexmem
 R25
 R2
 R3
-!i122 1591
+!i122 2129
 R4
 Z36 8E:/Pipeline_Processor/EX-MEM.vhd
 Z37 FE:/Pipeline_Processor/EX-MEM.vhd
@@ -234,11 +234,11 @@ V=X8>jhG?W>14D0Z0kXAn63
 !s100 H7WR<mi^_fDdV>zTBSXU63
 R7
 32
-R22
+R33
 !i10b 1
-R28
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/EX-MEM.vhd|
-Z39 !s107 E:/Pipeline_Processor/EX-MEM.vhd|
+Z38 !s108 1640888390.000000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/EX-MEM.vhd|
+Z40 !s107 E:/Pipeline_Processor/EX-MEM.vhd|
 !i113 1
 R12
 R13
@@ -246,41 +246,41 @@ Aarchexmem
 R2
 R3
 DEx4 work 5 exmem 0 22 =X8>jhG?W>14D0Z0kXAn63
-!i122 1591
+!i122 2129
 l16
-Z40 L14 17
+Z41 L14 17
 V^iaf^kEnSa6VLm;iNXEd12
 !s100 _zaXjnoHRaU?7iA^d5cli2
 R7
 32
-R22
+R33
 !i10b 1
-R28
 R38
 R39
+R40
 !i113 1
 R12
 R13
 Eflagregister
-R31
+Z42 w1640348940
 R1
 R2
 R3
-!i122 1592
+!i122 2130
 R4
-Z41 8E:/Pipeline_Processor/flagregister.vhd
-Z42 FE:/Pipeline_Processor/flagregister.vhd
+Z43 8E:/Pipeline_Processor/flagregister.vhd
+Z44 FE:/Pipeline_Processor/flagregister.vhd
 l0
 L5 1
 VNOaeT3WTGo5VO77MjBR4j0
 !s100 Dd3S45c1N;n8A=kieo=FZ2
 R7
 32
-R22
+R33
 !i10b 1
-R28
-Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/flagregister.vhd|
-Z44 !s107 E:/Pipeline_Processor/flagregister.vhd|
+R38
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/flagregister.vhd|
+Z46 !s107 E:/Pipeline_Processor/flagregister.vhd|
 !i113 1
 R12
 R13
@@ -289,39 +289,39 @@ R1
 R2
 R3
 DEx4 work 12 flagregister 0 22 NOaeT3WTGo5VO77MjBR4j0
-!i122 1592
+!i122 2130
 l24
 L23 21
 V0SEgINS[bkgEB@@kVi61M1
 !s100 T=WmY:`2TZYZ>dHNZ4AdG0
 R7
 32
-R22
+R33
 !i10b 1
-R28
-R43
-R44
+R38
+R45
+R46
 !i113 1
 R12
 R13
 Eflagregisterv2
-R31
+R42
 R1
 R2
 R3
-!i122 1593
+!i122 2131
 R4
-Z45 8E:/Pipeline_Processor/flagregisterV2.vhd
-Z46 FE:/Pipeline_Processor/flagregisterV2.vhd
+Z47 8E:/Pipeline_Processor/flagregisterV2.vhd
+Z48 FE:/Pipeline_Processor/flagregisterV2.vhd
 l0
 L5 1
 VOAXTBQ_TZJCdL5X^hl;<C2
 !s100 1ezn8mA]bz?EA?C:eNcBD3
 R7
 32
-Z47 !s110 1640391473
+R33
 !i10b 1
-Z48 !s108 1640391473.000000
+R38
 Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/flagregisterV2.vhd|
 Z50 !s107 E:/Pipeline_Processor/flagregisterV2.vhd|
 !i113 1
@@ -332,41 +332,41 @@ R1
 R2
 R3
 DEx4 work 14 flagregisterv2 0 22 OAXTBQ_TZJCdL5X^hl;<C2
-!i122 1593
+!i122 2131
 l18
 L17 36
 V1BR]kBnXcE>io3mMVUo[[2
 !s100 T4HnW8o:TDNSi68<AdYC>1
 R7
 32
-R47
+R33
 !i10b 1
-R48
+R38
 R49
 R50
 !i113 1
 R12
 R13
 Eflagsintegration
-R31
+Z51 w1640878853
 R1
 R2
 R3
-!i122 1594
+!i122 2132
 R4
-Z51 8E:/Pipeline_Processor/flagsintegration.vhd
-Z52 FE:/Pipeline_Processor/flagsintegration.vhd
+Z52 8E:/Pipeline_Processor/flagsintegration.vhd
+Z53 FE:/Pipeline_Processor/flagsintegration.vhd
 l0
 L5 1
-VCL26_ADkIMQV0OUQ_g1@b1
-!s100 =oA?JMlK;CCD<TZf8KKG`2
+V<NiE5Km1IaekTJ^zYzClY2
+!s100 R0Im]J3IAR:VX;nfZ>^1R2
 R7
 32
-R47
+Z54 !s110 1640888391
 !i10b 1
-R48
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/flagsintegration.vhd|
-Z54 !s107 E:/Pipeline_Processor/flagsintegration.vhd|
+R38
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/flagsintegration.vhd|
+Z56 !s107 E:/Pipeline_Processor/flagsintegration.vhd|
 !i113 1
 R12
 R13
@@ -374,42 +374,42 @@ Abehav_flagsintegration
 R1
 R2
 R3
-DEx4 work 16 flagsintegration 0 22 CL26_ADkIMQV0OUQ_g1@b1
-!i122 1594
-l56
-L23 41
-V3TA:ijYFXzVBDSGbeiHiI1
-!s100 Hl@1PNU=zb4j`J1lSA:gD0
+DEx4 work 16 flagsintegration 0 22 <NiE5Km1IaekTJ^zYzClY2
+!i122 2132
+l60
+L27 44
+VckLGzc;QTYW]W3jci38hI2
+!s100 @YlGGczCX2dhz7fmB??;D1
 R7
 32
-R47
-!i10b 1
-R48
-R53
 R54
+!i10b 1
+R38
+R55
+R56
 !i113 1
 R12
 R13
 Eflagstoreregister
-R31
+R42
 R1
 R2
 R3
-!i122 1595
+!i122 2133
 R4
-Z55 8E:/Pipeline_Processor/flagstoreregister.vhd
-Z56 FE:/Pipeline_Processor/flagstoreregister.vhd
+Z57 8E:/Pipeline_Processor/flagstoreregister.vhd
+Z58 FE:/Pipeline_Processor/flagstoreregister.vhd
 l0
 L5 1
 VGa6VjjXefL0Zo9Oh7aF180
 !s100 35WnW1;6;^Mng6Idmd1NR0
 R7
 32
-R47
+R54
 !i10b 1
-R48
-Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/flagstoreregister.vhd|
-Z58 !s107 E:/Pipeline_Processor/flagstoreregister.vhd|
+Z59 !s108 1640888391.000000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/flagstoreregister.vhd|
+Z61 !s107 E:/Pipeline_Processor/flagstoreregister.vhd|
 !i113 1
 R12
 R13
@@ -418,41 +418,41 @@ R1
 R2
 R3
 DEx4 work 17 flagstoreregister 0 22 Ga6VjjXefL0Zo9Oh7aF180
-!i122 1595
+!i122 2133
 l14
 L13 15
 VIZBa]=5A@TR6efe;B[XCn1
 !s100 ^7<gj3]WODm7oZ1jMg[Jj2
 R7
 32
-R47
+R54
 !i10b 1
-R48
-R57
-R58
+R59
+R60
+R61
 !i113 1
 R12
 R13
 Eforwardingunit
-R31
+R42
 R1
 R2
 R3
-!i122 1596
+!i122 2134
 R4
-Z59 8E:/Pipeline_Processor/forwardingunit.vhd
-Z60 FE:/Pipeline_Processor/forwardingunit.vhd
+Z62 8E:/Pipeline_Processor/forwardingunit.vhd
+Z63 FE:/Pipeline_Processor/forwardingunit.vhd
 l0
 L5 1
 VNiU>PZiX;RVIXY^gH@?:j0
 !s100 2K55gP^3I2ZXE<XGRN^NX3
 R7
 32
-R47
+R54
 !i10b 1
-R48
-Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/forwardingunit.vhd|
-Z62 !s107 E:/Pipeline_Processor/forwardingunit.vhd|
+R59
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/forwardingunit.vhd|
+Z65 !s107 E:/Pipeline_Processor/forwardingunit.vhd|
 !i113 1
 R12
 R13
@@ -461,41 +461,41 @@ R1
 R2
 R3
 DEx4 work 14 forwardingunit 0 22 NiU>PZiX;RVIXY^gH@?:j0
-!i122 1596
+!i122 2134
 l15
-R40
+R41
 VdIzjYIlCdcZ6Afc2T]TDA2
 !s100 za`B1OUjU1<Sz^>U95f:l2
 R7
 32
-R47
+R54
 !i10b 1
-R48
-R61
-R62
+R59
+R64
+R65
 !i113 1
 R12
 R13
 Efourbyonemux
-R31
+R42
 R1
 R2
 R3
-!i122 1597
+!i122 2135
 R4
-Z63 8E:/Pipeline_Processor/fourbyonemux.vhd
-Z64 FE:/Pipeline_Processor/fourbyonemux.vhd
+Z66 8E:/Pipeline_Processor/fourbyonemux.vhd
+Z67 FE:/Pipeline_Processor/fourbyonemux.vhd
 l0
 L5 1
 VDfjhZG73o[Tj?Uzk;cAUT2
 !s100 C0BPOnQGDLc`fgn<fPBFo2
 R7
 32
-R47
+R54
 !i10b 1
-R48
-Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/fourbyonemux.vhd|
-Z66 !s107 E:/Pipeline_Processor/fourbyonemux.vhd|
+R59
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/fourbyonemux.vhd|
+Z69 !s107 E:/Pipeline_Processor/fourbyonemux.vhd|
 !i113 1
 R12
 R13
@@ -503,19 +503,19 @@ Adata_fourbyonemux
 R1
 R2
 R3
-Z67 DEx4 work 12 fourbyonemux 0 22 DfjhZG73o[Tj?Uzk;cAUT2
-!i122 1597
+Z70 DEx4 work 12 fourbyonemux 0 22 DfjhZG73o[Tj?Uzk;cAUT2
+!i122 2135
 l14
-Z68 L13 8
+Z71 L13 8
 VUXfgl==m^f1a7R260PFUb0
 !s100 B8n;i9NEQW6^P?J:@F_ee1
 R7
 32
-R47
+R54
 !i10b 1
-R48
-R65
-R66
+R59
+R68
+R69
 !i113 1
 R12
 R13
@@ -524,12 +524,12 @@ w1640359298
 R1
 R2
 R3
-R67
+R70
 !i122 889
-Z69 8E:/Pipeline_Processor/MUX_4_1_32bit.vhd
-Z70 FE:/Pipeline_Processor/MUX_4_1_32bit.vhd
+Z72 8E:/Pipeline_Processor/MUX_4_1_32bit.vhd
+Z73 FE:/Pipeline_Processor/MUX_4_1_32bit.vhd
 l14
-R68
+R71
 VO47nF>WKeGe:]IUlndXLl0
 !s100 X16_KdWnGmVYY`nlTkQjm2
 R7
@@ -537,31 +537,31 @@ R7
 !s110 1640359415
 !i10b 1
 !s108 1640359415.000000
-Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/MUX_4_1_32bit.vhd|
-Z72 !s107 E:/Pipeline_Processor/MUX_4_1_32bit.vhd|
+Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/MUX_4_1_32bit.vhd|
+Z75 !s107 E:/Pipeline_Processor/MUX_4_1_32bit.vhd|
 !i113 1
 R12
 R13
 Ehazard_unit
-Z73 w1640373162
+Z76 w1640373162
 R1
 R2
 R3
-!i122 1616
+!i122 2154
 R4
-Z74 8E:/Pipeline_Processor/HazardDetection_Unit.vhd
-Z75 FE:/Pipeline_Processor/HazardDetection_Unit.vhd
+Z77 8E:/Pipeline_Processor/HazardDetection_Unit.vhd
+Z78 FE:/Pipeline_Processor/HazardDetection_Unit.vhd
 l0
 L5 1
 VKfdiz0`bC2MA?Ug[C4@X:0
 !s100 ZSMN:ml4hDXFkh?:Pe8243
 R7
 32
-Z76 !s110 1640391477
+Z79 !s110 1640888396
 !i10b 1
-Z77 !s108 1640391477.000000
-Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/HazardDetection_Unit.vhd|
-Z79 !s107 E:/Pipeline_Processor/HazardDetection_Unit.vhd|
+Z80 !s108 1640888396.000000
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/HazardDetection_Unit.vhd|
+Z82 !s107 E:/Pipeline_Processor/HazardDetection_Unit.vhd|
 !i113 1
 R12
 R13
@@ -569,19 +569,19 @@ Aarchhazard_unit
 R1
 R2
 R3
-Z80 DEx4 work 11 hazard_unit 0 22 Kfdiz0`bC2MA?Ug[C4@X:0
-!i122 1616
+DEx4 work 11 hazard_unit 0 22 Kfdiz0`bC2MA?Ug[C4@X:0
+!i122 2154
 l17
-Z81 L16 7
-Z82 V5mU5nFjXSS8X5Xg?cIC6T1
-Z83 !s100 :G]anbXm>=8S6_>;ETY2P0
+L16 7
+V5mU5nFjXSS8X5Xg?cIC6T1
+!s100 :G]anbXm>=8S6_>;ETY2P0
 R7
 32
-R76
-!i10b 1
-R77
-R78
 R79
+!i10b 1
+R80
+R81
+R82
 !i113 1
 R12
 R13
@@ -589,21 +589,21 @@ Eidex
 R25
 R2
 R3
-!i122 1598
+!i122 2136
 R4
-Z84 8E:/Pipeline_Processor/ID-EX.vhd
-Z85 FE:/Pipeline_Processor/ID-EX.vhd
+Z83 8E:/Pipeline_Processor/ID-EX.vhd
+Z84 FE:/Pipeline_Processor/ID-EX.vhd
 l0
 L5 1
 Vh^6WG9bg5;4:?DEb_LWa90
 !s100 S?F3CEP4KDi?kKOIbFRn41
 R7
 32
-Z86 !s110 1640391474
+Z85 !s110 1640888392
 !i10b 1
-R48
-Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/ID-EX.vhd|
-Z88 !s107 E:/Pipeline_Processor/ID-EX.vhd|
+R59
+Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/ID-EX.vhd|
+Z87 !s107 E:/Pipeline_Processor/ID-EX.vhd|
 !i113 1
 R12
 R13
@@ -611,18 +611,18 @@ Aarchidex
 R2
 R3
 DEx4 work 4 idex 0 22 h^6WG9bg5;4:?DEb_LWa90
-!i122 1598
+!i122 2136
 l15
-Z89 L13 17
+Z88 L13 17
 V`7Vb]cafQIP8?4UWTaFSm3
 !s100 Gj;[_AL;cNV;5iV65n?<h0
 R7
 32
-R86
+R85
 !i10b 1
-R48
+R59
+R86
 R87
-R88
 !i113 1
 R12
 R13
@@ -630,21 +630,21 @@ Eifid
 R25
 R2
 R3
-!i122 1599
+!i122 2137
 R4
-Z90 8E:/Pipeline_Processor/IF-ID.vhd
-Z91 FE:/Pipeline_Processor/IF-ID.vhd
+Z89 8E:/Pipeline_Processor/IF-ID.vhd
+Z90 FE:/Pipeline_Processor/IF-ID.vhd
 l0
 L5 1
 V3g1lD7=2o1PKYQbW:Egz[2
 !s100 YlmT1nj40]fcjd`JZfE=l1
 R7
 32
-R86
+R85
 !i10b 1
-Z92 !s108 1640391474.000000
-Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/IF-ID.vhd|
-Z94 !s107 E:/Pipeline_Processor/IF-ID.vhd|
+Z91 !s108 1640888392.000000
+Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/IF-ID.vhd|
+Z93 !s107 E:/Pipeline_Processor/IF-ID.vhd|
 !i113 1
 R12
 R13
@@ -652,27 +652,27 @@ Aarchifid
 R2
 R3
 DEx4 work 4 ifid 0 22 3g1lD7=2o1PKYQbW:Egz[2
-!i122 1599
+!i122 2137
 l15
-R89
+R88
 VbA0gDJbBVg`N2Xh0?DADl1
 !s100 VdN3ijH<aVlOf>aKOAL0b0
 R7
 32
-R86
+R85
 !i10b 1
+R91
 R92
 R93
-R94
 !i113 1
 R12
 R13
 Einstractionmem
-R25
+Z94 w1640885610
 R1
 R2
 R3
-!i122 1600
+!i122 2138
 R4
 Z95 8E:/Pipeline_Processor/Instraction_MEM.vhd
 Z96 FE:/Pipeline_Processor/Instraction_MEM.vhd
@@ -682,9 +682,9 @@ V2dUYb?BU?;6HdRBC_Wl4L0
 !s100 S<LMVNYkUhaKKPm[VSkkM1
 R7
 32
-R86
+R85
 !i10b 1
-R92
+R91
 Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/Instraction_MEM.vhd|
 Z98 !s107 E:/Pipeline_Processor/Instraction_MEM.vhd|
 !i113 1
@@ -695,18 +695,61 @@ R1
 R2
 R3
 DEx4 work 14 instractionmem 0 22 2dUYb?BU?;6HdRBC_Wl4L0
-!i122 1600
+!i122 2138
 l17
 L12 9
-VQNLKTXU@QAHF^A5T^j32N2
-!s100 mgcR[On5m645IoZUi7`S=2
+V:L@SNFeHG1`EY4S0EVEP00
+!s100 h]?Y;E7Y`VbM@2SOF>nf42
 R7
 32
-R86
+R85
 !i10b 1
-R92
+R91
 R97
 R98
+!i113 1
+R12
+R13
+Ejump
+R51
+R1
+R2
+R3
+!i122 2155
+R4
+Z99 8E:/Pipeline_Processor/jump.vhd
+Z100 FE:/Pipeline_Processor/jump.vhd
+l0
+L5 1
+V7=9lN?3`9HCRa[oR^IEk11
+!s100 oFKTb]P;k9DGL5G4Xa;AY0
+R7
+32
+R79
+!i10b 1
+R80
+Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/jump.vhd|
+Z102 !s107 E:/Pipeline_Processor/jump.vhd|
+!i113 1
+R12
+R13
+Adata_jump
+R1
+R2
+R3
+Z103 DEx4 work 4 jump 0 22 7=9lN?3`9HCRa[oR^IEk11
+!i122 2155
+l14
+R71
+Z104 VNN2UVBY4W[MWNoYmi[Hc:3
+Z105 !s100 `OVM_g7TlG?ad3?Comjai1
+R7
+32
+R79
+!i10b 1
+R80
+R101
+R102
 !i113 1
 R12
 R13
@@ -714,21 +757,21 @@ Ememwb
 R25
 R2
 R3
-!i122 1601
+!i122 2139
 R4
-Z99 8E:/Pipeline_Processor/MEM-WB.vhd
-Z100 FE:/Pipeline_Processor/MEM-WB.vhd
+Z106 8E:/Pipeline_Processor/MEM-WB.vhd
+Z107 FE:/Pipeline_Processor/MEM-WB.vhd
 l0
 L5 1
 VClKCVO?32X@0XUzIZPPWo2
 !s100 eS=AIhXcT;LXkETa47RXE0
 R7
 32
-R86
+R85
 !i10b 1
-R92
-Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/MEM-WB.vhd|
-Z102 !s107 E:/Pipeline_Processor/MEM-WB.vhd|
+R91
+Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/MEM-WB.vhd|
+Z109 !s107 E:/Pipeline_Processor/MEM-WB.vhd|
 !i113 1
 R12
 R13
@@ -736,41 +779,41 @@ Aarchmemwb
 R2
 R3
 DEx4 work 5 memwb 0 22 ClKCVO?32X@0XUzIZPPWo2
-!i122 1601
+!i122 2139
 l16
-R40
+R41
 VDUmf<<CO3eO6V?ecI6jC62
 !s100 H^zW@DAJEkXz2UHR<Y_LS1
 R7
 32
-R86
+R85
 !i10b 1
-R92
-R101
-R102
+R91
+R108
+R109
 !i113 1
 R12
 R13
 Emips
-Z103 w1640387541
+Z110 w1640883962
 R1
 R2
 R3
-!i122 1602
+!i122 2140
 R4
-Z104 8E:/Pipeline_Processor/MIPS.vhd
-Z105 FE:/Pipeline_Processor/MIPS.vhd
+Z111 8E:/Pipeline_Processor/MIPS.vhd
+Z112 FE:/Pipeline_Processor/MIPS.vhd
 l0
 L7 1
 V3I2fIXRB7TNOI?bXYD7]71
 !s100 Z[=^Yn5LjQ4NW3bE3;7Ao1
 R7
 32
-R86
+R85
 !i10b 1
-R92
-Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/MIPS.vhd|
-Z107 !s107 E:/Pipeline_Processor/MIPS.vhd|
+R91
+Z113 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/MIPS.vhd|
+Z114 !s107 E:/Pipeline_Processor/MIPS.vhd|
 !i113 1
 R12
 R13
@@ -779,41 +822,41 @@ R1
 R2
 R3
 DEx4 work 4 mips 0 22 3I2fIXRB7TNOI?bXYD7]71
-!i122 1602
-l223
-L17 308
-VO3]iTK69NBolf]?m[9eP=0
-!s100 f7A>l9YNUYkc=2aMF=]BI0
+!i122 2140
+l232
+L17 317
+V8HZn7Q`g@>9`E48^i;FC42
+!s100 0B7=VTbC4n80HHz34^ci]1
 R7
 32
-R86
+R85
 !i10b 1
-R92
-R106
-R107
+R91
+R113
+R114
 !i113 1
 R12
 R13
 Emux_4_1_32bit
-Z108 w1640359504
+Z115 w1640359504
 R1
 R2
 R3
-!i122 1603
+!i122 2141
 R4
-R69
-R70
+R72
+R73
 l0
 L5 1
 V?=5ndD^cQNDz:Sf8ldB_f0
 !s100 QQE1CdC0VQZQkn@L=LARU3
 R7
 32
-Z109 !s110 1640391475
+Z116 !s110 1640888393
 !i10b 1
-Z110 !s108 1640391475.000000
-R71
-R72
+Z117 !s108 1640888393.000000
+R74
+R75
 !i113 1
 R12
 R13
@@ -822,41 +865,41 @@ R1
 R2
 R3
 DEx4 work 13 mux_4_1_32bit 0 22 ?=5ndD^cQNDz:Sf8ldB_f0
-!i122 1603
+!i122 2141
 l14
-R68
+R71
 Vhed3h^`7An5T4a_Kf44M]0
 !s100 B:WanCIfm]kBCP4EJOiGA1
 R7
 32
-R109
+R116
 !i10b 1
-R110
-R71
-R72
+R117
+R74
+R75
 !i113 1
 R12
 R13
 Eonebitfulladder
-R31
+R42
 R1
 R2
 R3
-!i122 1604
+!i122 2142
 R4
-Z111 8E:/Pipeline_Processor/onebitfulladder.vhd
-Z112 FE:/Pipeline_Processor/onebitfulladder.vhd
+Z118 8E:/Pipeline_Processor/onebitfulladder.vhd
+Z119 FE:/Pipeline_Processor/onebitfulladder.vhd
 l0
 L5 1
 VG]1HZb4N_EHBN0U;cKk302
 !s100 d1jdgP5gKK;4XBIdB^J>32
 R7
 32
-R109
+R116
 !i10b 1
-R110
-Z113 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/onebitfulladder.vhd|
-Z114 !s107 E:/Pipeline_Processor/onebitfulladder.vhd|
+R117
+Z120 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/onebitfulladder.vhd|
+Z121 !s107 E:/Pipeline_Processor/onebitfulladder.vhd|
 !i113 1
 R12
 R13
@@ -865,41 +908,41 @@ R1
 R2
 R3
 DEx4 work 15 onebitfulladder 0 22 G]1HZb4N_EHBN0U;cKk302
-!i122 1604
+!i122 2142
 l14
-Z115 L13 5
+Z122 L13 5
 VKfH`E:H[S32h8<GNjH`JI1
 !s100 @R?S>GA7;38^bl<gc9?Q40
 R7
 32
-R109
+R116
 !i10b 1
-R110
-R113
-R114
+R117
+R120
+R121
 !i113 1
 R12
 R13
 Eonebitfullsubtractor
-R31
+R42
 R1
 R2
 R3
-!i122 1605
+!i122 2143
 R4
-Z116 8E:/Pipeline_Processor/onebitfullsubtractor.vhd
-Z117 FE:/Pipeline_Processor/onebitfullsubtractor.vhd
+Z123 8E:/Pipeline_Processor/onebitfullsubtractor.vhd
+Z124 FE:/Pipeline_Processor/onebitfullsubtractor.vhd
 l0
 L5 1
 V2MIA8?i7LE:H8LYhDS@b02
 !s100 o[W3?Y2JXY1igGi14[<[^3
 R7
 32
-R109
+R116
 !i10b 1
-R110
-Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/onebitfullsubtractor.vhd|
-Z119 !s107 E:/Pipeline_Processor/onebitfullsubtractor.vhd|
+R117
+Z125 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/onebitfullsubtractor.vhd|
+Z126 !s107 E:/Pipeline_Processor/onebitfullsubtractor.vhd|
 !i113 1
 R12
 R13
@@ -908,18 +951,18 @@ R1
 R2
 R3
 DEx4 work 20 onebitfullsubtractor 0 22 2MIA8?i7LE:H8LYhDS@b02
-!i122 1605
+!i122 2143
 l14
-R115
+R122
 VR2>F;5KLh`N?3nZPSAR811
 !s100 WaD9ZSG_FQQS]AE6e5]YL1
 R7
 32
-R109
+R116
 !i10b 1
-R110
-R118
-R119
+R117
+R125
+R126
 !i113 1
 R12
 R13
@@ -927,21 +970,21 @@ Epc_reg
 R25
 R2
 R3
-!i122 1606
+!i122 2144
 R4
-Z120 8E:/Pipeline_Processor/PC.vhd
-Z121 FE:/Pipeline_Processor/PC.vhd
+Z127 8E:/Pipeline_Processor/PC.vhd
+Z128 FE:/Pipeline_Processor/PC.vhd
 l0
 L5 1
 V>1U0EYOF]2P72`;j0gMg43
 !s100 hcP`??]:=@;k3QX<Xh[AV0
 R7
 32
-R109
+R116
 !i10b 1
-R110
-Z122 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/PC.vhd|
-Z123 !s107 E:/Pipeline_Processor/PC.vhd|
+R117
+Z129 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/PC.vhd|
+Z130 !s107 E:/Pipeline_Processor/PC.vhd|
 !i113 1
 R12
 R13
@@ -949,40 +992,40 @@ Apcarchreg
 R2
 R3
 DEx4 work 6 pc_reg 0 22 >1U0EYOF]2P72`;j0gMg43
-!i122 1606
+!i122 2144
 l15
-R89
+R88
 VEcKkShmMzdaD1mH^0>NoS2
 !s100 h<fHCZ_P6?E_9L18lj^lm3
 R7
 32
-R109
+R116
 !i10b 1
-R110
-R122
-R123
+R117
+R129
+R130
 !i113 1
 R12
 R13
 Ereg16bit
-R31
+R42
 R2
 R3
-!i122 1607
+!i122 2145
 R4
-Z124 8E:/Pipeline_Processor/reg16bit.vhd
-Z125 FE:/Pipeline_Processor/reg16bit.vhd
+Z131 8E:/Pipeline_Processor/reg16bit.vhd
+Z132 FE:/Pipeline_Processor/reg16bit.vhd
 l0
 L5 1
 VMXJK4BVjVaL4XHM_2D?OR0
 !s100 =A_fiYLhcPR[186hP]VUJ3
 R7
 32
-R109
+Z133 !s110 1640888394
 !i10b 1
-R110
-Z126 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/reg16bit.vhd|
-Z127 !s107 E:/Pipeline_Processor/reg16bit.vhd|
+R117
+Z134 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/reg16bit.vhd|
+Z135 !s107 E:/Pipeline_Processor/reg16bit.vhd|
 !i113 1
 R12
 R13
@@ -990,18 +1033,18 @@ Aarchreg16bit
 R2
 R3
 DEx4 work 8 reg16bit 0 22 MXJK4BVjVaL4XHM_2D?OR0
-!i122 1607
+!i122 2145
 l15
-R89
+R88
 Vz1S1JPP?kZE;Oe`Knifh`1
 !s100 di?e@3B?EP>^9``0PcH>T0
 R7
 32
-R109
+R133
 !i10b 1
-R110
-R126
-R127
+R117
+R134
+R135
 !i113 1
 R12
 R13
@@ -1009,21 +1052,21 @@ Eregisterfile
 R25
 R2
 R3
-!i122 1608
+!i122 2146
 R4
-Z128 8E:/Pipeline_Processor/Register_File.vhd
-Z129 FE:/Pipeline_Processor/Register_File.vhd
+Z136 8E:/Pipeline_Processor/Register_File.vhd
+Z137 FE:/Pipeline_Processor/Register_File.vhd
 l0
 L5 1
 V:XbidYkPk]m^GOT2oBJX22
 !s100 [Y`]MP]NmU<R=R7RW56IF1
 R7
 32
-Z130 !s110 1640391476
+R133
 !i10b 1
-Z131 !s108 1640391476.000000
-Z132 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/Register_File.vhd|
-Z133 !s107 E:/Pipeline_Processor/Register_File.vhd|
+Z138 !s108 1640888394.000000
+Z139 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/Register_File.vhd|
+Z140 !s107 E:/Pipeline_Processor/Register_File.vhd|
 !i113 1
 R12
 R13
@@ -1031,41 +1074,41 @@ Aarchregisterfile
 R2
 R3
 DEx4 work 12 registerfile 0 22 :XbidYkPk]m^GOT2oBJX22
-!i122 1608
+!i122 2146
 l51
 L22 75
 V]ET]UY1AdJigPKig;^4eo2
 !s100 g]^PN22Mf=7kTd<9;]e1d2
 R7
 32
-R130
-!i10b 1
-R131
-R132
 R133
+!i10b 1
+R138
+R139
+R140
 !i113 1
 R12
 R13
 Esixteenbitfulladder
-R31
+R42
 R1
 R2
 R3
-!i122 1609
+!i122 2147
 R4
-Z134 8E:/Pipeline_Processor/sixteenbitfulladder.vhd
-Z135 FE:/Pipeline_Processor/sixteenbitfulladder.vhd
+Z141 8E:/Pipeline_Processor/sixteenbitfulladder.vhd
+Z142 FE:/Pipeline_Processor/sixteenbitfulladder.vhd
 l0
 L5 1
 V_0V]NinF30]d@OC[Jn@fc1
 !s100 [IIPO;gagShc9GXJ>9nZ13
 R7
 32
-R130
+R133
 !i10b 1
-R131
-Z136 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/sixteenbitfulladder.vhd|
-Z137 !s107 E:/Pipeline_Processor/sixteenbitfulladder.vhd|
+R138
+Z143 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/sixteenbitfulladder.vhd|
+Z144 !s107 E:/Pipeline_Processor/sixteenbitfulladder.vhd|
 !i113 1
 R12
 R13
@@ -1074,41 +1117,41 @@ R1
 R2
 R3
 DEx4 work 19 sixteenbitfulladder 0 22 _0V]NinF30]d@OC[Jn@fc1
-!i122 1609
+!i122 2147
 l24
-R40
+R41
 V?kbiD4h07=BTP_hnO[_9Q0
 !s100 D710[Eo]F;aF5nzGQ7d9F0
 R7
 32
-R130
+R133
 !i10b 1
-R131
-R136
-R137
+R138
+R143
+R144
 !i113 1
 R12
 R13
 Esixteenbitfullsubtractor
-R31
+R42
 R1
 R2
 R3
-!i122 1610
+!i122 2148
 R4
-Z138 8E:/Pipeline_Processor/sixteenfullsubtractor.vhd
-Z139 FE:/Pipeline_Processor/sixteenfullsubtractor.vhd
+Z145 8E:/Pipeline_Processor/sixteenfullsubtractor.vhd
+Z146 FE:/Pipeline_Processor/sixteenfullsubtractor.vhd
 l0
 L5 1
 V=C<<UQKC`f]Mc?ao9Cb=f3
 !s100 Ga4^9>JIjnYdTX<2EQRIM3
 R7
 32
-R130
+R133
 !i10b 1
-R131
-Z140 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/sixteenfullsubtractor.vhd|
-Z141 !s107 E:/Pipeline_Processor/sixteenfullsubtractor.vhd|
+R138
+Z147 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/sixteenfullsubtractor.vhd|
+Z148 !s107 E:/Pipeline_Processor/sixteenfullsubtractor.vhd|
 !i113 1
 R12
 R13
@@ -1117,41 +1160,41 @@ R1
 R2
 R3
 DEx4 work 24 sixteenbitfullsubtractor 0 22 =C<<UQKC`f]Mc?ao9Cb=f3
-!i122 1610
+!i122 2148
 l24
-R40
+R41
 V26>DWeRS@6n1_h46kdjLa2
 !s100 kd`XJ3i=9R4CUOX]2LT@J2
 R7
 32
-R130
+R133
 !i10b 1
-R131
-R140
-R141
+R138
+R147
+R148
 !i113 1
 R12
 R13
 Estackpointer
-R25
+Z149 w1640888199
 R1
 R2
 R3
-!i122 1611
+!i122 2149
 R4
-Z142 8E:/Pipeline_Processor/SP.vhd
-Z143 FE:/Pipeline_Processor/SP.vhd
+Z150 8E:/Pipeline_Processor/SP.vhd
+Z151 FE:/Pipeline_Processor/SP.vhd
 l0
 L5 1
 VBR=O7FmFh<2odLzMKL0cT3
 !s100 GV_hACCez3cd]M<8dIZ`41
 R7
 32
-R130
+Z152 !s110 1640888395
 !i10b 1
-R131
-Z144 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/SP.vhd|
-Z145 !s107 E:/Pipeline_Processor/SP.vhd|
+R138
+Z153 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/SP.vhd|
+Z154 !s107 E:/Pipeline_Processor/SP.vhd|
 !i113 1
 R12
 R13
@@ -1160,18 +1203,18 @@ R1
 R2
 R3
 DEx4 work 12 stackpointer 0 22 BR=O7FmFh<2odLzMKL0cT3
-!i122 1611
+!i122 2149
 l15
 L14 32
 VGjEGU6zme0412Mn85Y[j=3
 !s100 fz`i9ND^[2`dVa5SRZ9kb1
 R7
 32
-R130
+R152
 !i10b 1
-R131
-R144
-R145
+R138
+R153
+R154
 !i113 1
 R12
 R13
@@ -1179,21 +1222,21 @@ Etri_state_buffer
 R25
 R2
 R3
-!i122 1613
+!i122 2151
 R4
-Z146 8E:/Pipeline_Processor/Tri-stateBuffer.vhd
-Z147 FE:/Pipeline_Processor/Tri-stateBuffer.vhd
+Z155 8E:/Pipeline_Processor/Tri-stateBuffer.vhd
+Z156 FE:/Pipeline_Processor/Tri-stateBuffer.vhd
 l0
 L5 1
 VSOV_@nmn<L=hN^Fl@Hn4A0
 !s100 g=9coaCdd6[37Q?i_gSOz0
 R7
 32
-R76
+R152
 !i10b 1
-R77
-Z148 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/Tri-stateBuffer.vhd|
-Z149 !s107 E:/Pipeline_Processor/Tri-stateBuffer.vhd|
+Z157 !s108 1640888395.000000
+Z158 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/Tri-stateBuffer.vhd|
+Z159 !s107 E:/Pipeline_Processor/Tri-stateBuffer.vhd|
 !i113 1
 R12
 R13
@@ -1201,41 +1244,41 @@ Aarchtristate
 R2
 R3
 DEx4 work 16 tri_state_buffer 0 22 SOV_@nmn<L=hN^Fl@Hn4A0
-!i122 1613
+!i122 2151
 l14
 L12 7
 VlFYnz>Qfho?I9a68A5[^f2
 !s100 3W2VAS[Z2Y3kZKMKU^gkm2
 R7
 32
-R76
+R152
 !i10b 1
-R77
-R148
-R149
+R157
+R158
+R159
 !i113 1
 R12
 R13
 Etristatebuffer
-R31
+R42
 R1
 R2
 R3
-!i122 1612
+!i122 2150
 R4
-Z150 8E:/Pipeline_Processor/tristatebuffer.vhd
-Z151 FE:/Pipeline_Processor/tristatebuffer.vhd
+Z160 8E:/Pipeline_Processor/tristatebuffer.vhd
+Z161 FE:/Pipeline_Processor/tristatebuffer.vhd
 l0
 L5 1
 Vm<b^HFXN6ePIdDcLX8ojI1
 !s100 ;>9I]i6h_o`5D]nLCi6Oz1
 R7
 32
-R130
+R152
 !i10b 1
-R131
-Z152 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/tristatebuffer.vhd|
-Z153 !s107 E:/Pipeline_Processor/tristatebuffer.vhd|
+R157
+Z162 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/tristatebuffer.vhd|
+Z163 !s107 E:/Pipeline_Processor/tristatebuffer.vhd|
 !i113 1
 R12
 R13
@@ -1244,41 +1287,41 @@ R1
 R2
 R3
 DEx4 work 14 tristatebuffer 0 22 m<b^HFXN6ePIdDcLX8ojI1
-!i122 1612
+!i122 2150
 l14
-R115
+R122
 VDYYG>gF:W6CKoDTonG2IN3
 !s100 1?AhYgCz7oZF:VagfELDU1
 R7
 32
-R130
-!i10b 1
-R131
 R152
-R153
+!i10b 1
+R157
+R162
+R163
 !i113 1
 R12
 R13
 Etwobyonemux
-R31
+R42
 R1
 R2
 R3
-!i122 1614
+!i122 2152
 R4
-Z154 8E:/Pipeline_Processor/twobyonemux.vhd
-Z155 FE:/Pipeline_Processor/twobyonemux.vhd
+Z164 8E:/Pipeline_Processor/twobyonemux.vhd
+Z165 FE:/Pipeline_Processor/twobyonemux.vhd
 l0
 L5 1
 V1h@LW?IP5g5KUOEAZmIHz1
 !s100 `:K1m=0J@0<d34i0AU>Z90
 R7
 32
-R76
+R152
 !i10b 1
-R77
-Z156 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/twobyonemux.vhd|
-Z157 !s107 E:/Pipeline_Processor/twobyonemux.vhd|
+R157
+Z166 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/twobyonemux.vhd|
+Z167 !s107 E:/Pipeline_Processor/twobyonemux.vhd|
 !i113 1
 R12
 R13
@@ -1287,18 +1330,18 @@ R1
 R2
 R3
 DEx4 work 11 twobyonemux 0 22 1h@LW?IP5g5KUOEAZmIHz1
-!i122 1614
+!i122 2152
 l14
-Z158 L13 6
+Z168 L13 6
 VFWA1YUC?[z1WLJ>Lgm[TG0
 !s100 Bombca4kS4lg95m`aDUPX2
 R7
 32
-R76
+R152
 !i10b 1
-R77
-R156
 R157
+R166
+R167
 !i113 1
 R12
 R13
@@ -1307,21 +1350,21 @@ R25
 R1
 R2
 R3
-!i122 1615
+!i122 2153
 R4
-Z159 8E:/Pipeline_Processor/Write_Back.vhd
-Z160 FE:/Pipeline_Processor/Write_Back.vhd
+Z169 8E:/Pipeline_Processor/Write_Back.vhd
+Z170 FE:/Pipeline_Processor/Write_Back.vhd
 l0
 L5 1
 Vmh5^ol@RAm[5`Dn3O@mOm2
 !s100 BfHfT_6RUQc79meMzeQ=h2
 R7
 32
-R76
+R152
 !i10b 1
-R77
-Z161 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/Write_Back.vhd|
-Z162 !s107 E:/Pipeline_Processor/Write_Back.vhd|
+R157
+Z171 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/Write_Back.vhd|
+Z172 !s107 E:/Pipeline_Processor/Write_Back.vhd|
 !i113 1
 R12
 R13
@@ -1330,18 +1373,18 @@ R1
 R2
 R3
 DEx4 work 9 writeback 0 22 mh5^ol@RAm[5`Dn3O@mOm2
-!i122 1615
+!i122 2153
 l14
-R158
+R168
 V0ZzhZI[zCA;XdA;hY@PPj2
 !s100 _]8J2VzGiab91gT<J74GX0
 R7
 32
-R76
+R152
 !i10b 1
-R77
-R161
-R162
+R157
+R171
+R172
 !i113 1
 R12
 R13
