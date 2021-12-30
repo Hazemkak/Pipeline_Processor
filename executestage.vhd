@@ -40,7 +40,15 @@ entity executestage is
         flagEn: in std_logic_vector(2 downto 0); --input from ID/EX buffer
         clk, rst: in std_logic;
         flagRes: in std_logic; --input from ID/EX buffer to mux1 select
-        flagRev: in std_logic --input from ID/EX buffer to mux2 select
+        flagRev: in std_logic; --input from ID/EX buffer to mux2 select
+        ------------------------------------------------------------------
+
+        ----input from ID/EX buffer----------------------------------
+        jmpSel: in std_logic_vector(2 downto 0);
+        -------------------------------------------------------------
+
+        ----output from execute stage-------------------------------------
+        jmpOrNoJump: out std_logic
         ------------------------------------------------------------------
     );
 end executestage;
@@ -105,9 +113,29 @@ architecture data_executestage of executestage is
             ----------------------------------------------------------------
 
             ---------input select to mux2-----------------------------------
-            flagRev: in std_logic --input from ID/EX buffer to mux2 select
+            flagRev: in std_logic; --input from ID/EX buffer to mux2 select
+            ----------------------------------------------------------------
+
+            -------output from flagsregister and input to jump unit---------
+            outputZF, outputNF, outputCF: out std_logic
             ----------------------------------------------------------------
         );
+        end component;
+    
+        component jump is
+            port(
+                ----input from flagintegration------------------------------ 
+                inputZF, inputNF, inputCF: in std_logic;
+                -------------------------------------------------------------
+
+                ----input from ID/EX buffer----------------------------------
+                jmpSel: in std_logic_vector(2 downto 0);
+                -------------------------------------------------------------
+
+                ----output from jump unit------------------------------------
+                jmpOrNoJump: out std_logic
+                --------------------------------------------------------------
+            );
         end component;
 
     signal imIndex: std_logic_vector(15 downto 0); --output of sixteenbitfulladder and input to mux1
@@ -120,7 +148,7 @@ architecture data_executestage of executestage is
     signal zeroFlag, negativeFlag, carryFlag: std_logic; --output of ALU and input to flag register
     signal zeroFlagEnable, negativeFlagEnable, carryFlagEnable: std_logic; --output of ALU and input to tri-state buffer
     signal ALUThreeFlags, ALUTwoFlags: std_logic_vector(2 downto 0);
-
+    signal outputZF, outputNF, outputCF: std_logic;
     begin
         adder: sixteenbitfulladder port map(imValue, "0000000000000110", '0', imIndex, imIndexCarry);
         mux1: fourbyonemux port map(src1Data, imValue, imIndex, "0000000000000000", aluSel, mux1Output);
@@ -131,5 +159,6 @@ architecture data_executestage of executestage is
         alu1: ALU port map(mux4Output, mux2Output, result, carryFlag, zeroFlag, negativeFlag, operationSel, carryFlagEnable, zeroFlagEnable, negativeFlagEnable);
         ALUThreeFlags <= zeroFlag & negativeFlag & carryFlag;
         ALUTwoFlags <=  zeroFlag & negativeFlag & '0';
-        FI: flagsintegration port map(ALUThreeFlags, ALUTwoFlags, carryFlag, flagEn, clk, rst, flagRes, flagRev);
+        FI: flagsintegration port map(ALUThreeFlags, ALUTwoFlags, carryFlag, flagEn, clk, rst, flagRes, flagRev, outputZF, outputNF, outputCF);
+        jmp: jump port map(outputZF, outputNF, outputCF, jmpSel, jmpOrNoJump);
     end data_executestage;
