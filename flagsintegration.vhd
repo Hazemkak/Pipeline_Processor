@@ -57,7 +57,7 @@ architecture behav_flagsintegration of flagsintegration is
         temp1 <= FRzeroFlag & FRnegativeFlag & FRcarryFlag;
         temp2 <= FSRzeroFlag & FSRnegativeFlag & FSRcarryFlag;
         FR: flagregisterV2 port map(ALUThreeFlags, ALUTwoFlags, setCarry, mux2Output, flagEN, clk, rst, FRcarryFlag, FRnegativeFlag, FRzeroFlag);
-        mux1: twobyonemux port map(temp1, temp2, flagRes, mux1Output);
+        mux1: twobyonemux port map(temp2, temp1, flagRes, mux1Output); --test
         FSR: flagstoreregister port map(mux1Output(0), mux1Output(1), mux1Output(2), FSRcarryFlag, FSRnegativeFlag, FSRzeroFlag, clk, rst);
         mux2: twobyonemux port map(temp1, temp2, FlagRev, mux2Output);
     end behav_flagsintegration;
