@@ -3,3 +3,6 @@ work/*
 *.mpf
 *.bak
 *.wlf
+*.do
+*.txt
+*.mem
