@@ -1,9 +1,10 @@
 nop
 nop
-ldm r0 ,11
-setc
-jmp r0
-not r0
+ldm r1 ,11
+nop
+nop
+push r1
+pop r0
 nop
 nop
 nop

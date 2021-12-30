@@ -18,7 +18,7 @@ BEGIN
 			IF (reset = '1') THEN
 				SP_data <= "00000000000011111111111111111111";
 			END IF;
-			IF rising_edge(clk) THEN  
+			IF falling_edge(clk) THEN  
 				IF SP(0) = '1' THEN
 					IF SP(1)='0' and SP(2)='0' THEN -- 00 decrement by 1
 
