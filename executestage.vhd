@@ -115,7 +115,8 @@ architecture data_executestage of executestage is
     signal twoB, oneB: std_logic_vector(1 downto 0); --output of forwardingunit and select of mux2 and mux3 respectively
     signal mux1Output: std_logic_vector(15 downto 0); --output of mux1 and input to mux3
     signal mux2Output: std_logic_vector(15 downto 0); --output of mux2 and input to ALU
-    signal mux3Output: std_logic_vector(15 downto 0); --output of mux3 and input to ALU
+    signal mux3Output: std_logic_vector(15 downto 0); --output of mux3 and input to to mux4
+    signal mux4Output: std_logic_vector(15 downto 0); --output of mux4 and input to ALU 
     signal zeroFlag, negativeFlag, carryFlag: std_logic; --output of ALU and input to flag register
     signal zeroFlagEnable, negativeFlagEnable, carryFlagEnable: std_logic; --output of ALU and input to tri-state buffer
     signal ALUThreeFlags, ALUTwoFlags: std_logic_vector(2 downto 0);
@@ -126,7 +127,8 @@ architecture data_executestage of executestage is
         fu: forwardingunit port map(src1RegNum, src2RegNum, regDest_EX, regDest_MEM, WB_EXMEM, WB_MEMWB, HZEN, oneB, twoB);
         mux2: fourbyonemux port map(src2Data, aluData, memData, "0000000000000000", twoB, mux2Output);
         mux3: fourbyonemux port map(mux1Output, aluData, memData, "0000000000000000", oneB, mux3Output);
-        alu1: ALU port map(mux3Output, mux2Output, result, carryFlag, zeroFlag, negativeFlag, operationSel, carryFlagEnable, zeroFlagEnable, negativeFlagEnable);
+        mux4: fourbyonemux port map(mux3Output, imValue, imIndex, "0000000000000000", aluSel, mux4Output);
+        alu1: ALU port map(mux4Output, mux2Output, result, carryFlag, zeroFlag, negativeFlag, operationSel, carryFlagEnable, zeroFlagEnable, negativeFlagEnable);
         ALUThreeFlags <= zeroFlag & negativeFlag & carryFlag;
         ALUTwoFlags <=  zeroFlag & negativeFlag & '0';
         FI: flagsintegration port map(ALUThreeFlags, ALUTwoFlags, carryFlag, flagEn, clk, rst, flagRes, flagRev);
