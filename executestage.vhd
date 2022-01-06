@@ -48,8 +48,9 @@ entity executestage is
         -------------------------------------------------------------
 
         ----output from execute stage-------------------------------------
-        jmpOrNoJump: out std_logic
+        jmpOrNoJump: out std_logic;
         ------------------------------------------------------------------
+        MemExpFlag :  out std_logic
     );
 end executestage;
 
@@ -86,7 +87,8 @@ architecture data_executestage of executestage is
             result: out std_logic_vector(15 downto 0);
             carryFlag, zeroFlag, negativeFlag: out std_logic;
             sel: in std_logic_vector(2 downto 0);
-            carryFlagEnable, zeroFlagEnable, negativeFlagEnable: out std_logic
+            carryFlagEnable, zeroFlagEnable, negativeFlagEnable: out std_logic;
+            ExepFlag: out std_logic
         );
     end component;
 
@@ -149,16 +151,20 @@ architecture data_executestage of executestage is
     signal zeroFlagEnable, negativeFlagEnable, carryFlagEnable: std_logic; --output of ALU and input to tri-state buffer
     signal ALUThreeFlags, ALUTwoFlags: std_logic_vector(2 downto 0);
     signal outputZF, outputNF, outputCF: std_logic;
+
   
 
     begin
+
+      
+
         adder: sixteenbitfulladder port map(imValue, "0000000000000110", '0', imIndex, imIndexCarry);
         mux1: fourbyonemux port map(src1Data, imValue, imIndex, "0000000000000000", aluSel, mux1Output);
         fu: forwardingunit port map(src1RegNum, src2RegNum, regDest_EX, regDest_MEM, WB_EXMEM, WB_MEMWB, HZEN, oneB, twoB);
         mux2: fourbyonemux port map(src2Data, aluData, memData, "0000000000000000", twoB, mux2Output);
         mux3: fourbyonemux port map(mux1Output, aluData, memData, "0000000000000000", oneB, mux3Output);
         mux4: fourbyonemux port map(mux3Output, imValue, imIndex, "0000000000000000", aluSel, mux4Output);
-        alu1: ALU port map(mux4Output, mux2Output, result, carryFlag, zeroFlag, negativeFlag, operationSel, carryFlagEnable, zeroFlagEnable, negativeFlagEnable);
+        alu1: ALU port map(mux4Output, mux2Output, result, carryFlag, zeroFlag, negativeFlag, operationSel, carryFlagEnable, zeroFlagEnable, negativeFlagEnable,MemExpFlag);
         ALUThreeFlags <= zeroFlag & negativeFlag & carryFlag;
         ALUTwoFlags <=  zeroFlag & negativeFlag & '0';
         FI: flagsintegration port map(ALUThreeFlags, ALUTwoFlags, carryFlag, flagEn, clk, rst, flagRes, flagRev, outputZF, outputNF, outputCF);
