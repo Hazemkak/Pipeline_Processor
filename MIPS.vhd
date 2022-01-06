@@ -193,7 +193,7 @@ component executestage is
         ------------------------------------------------------------------
 
         ----output from EX stage to EX/MEM buffer-------------------------
-        storeData: out std_logic_vector(15 downto)
+        storeData: out std_logic_vector(15 downto 0)
         ------------------------------------------------------------------
     );
 end component;
@@ -223,6 +223,7 @@ component ExceptionHandler is
 		MR : In std_logic;
     MW16 : In std_logic;
 		MW32 : IN  std_logic;
+    isInt : IN std_logic;
     SP_select : IN std_logic_vector(2 DOWNTO 0);
     aluData : IN std_logic_vector(31 DOWNTO 0);
     SP_data  : IN std_logic_vector(31 DOWNTO 0);
@@ -348,7 +349,7 @@ Out_Reg: reg16bit port map(alu_out,IDEX_out(19),reset,clk,dataout); --IDEX_out m
 EXMEM_en<='1';
 InputPort<= datain  WHEN (IDEX_out(20)='1')
 	else alu_out;
-EXMEM_in<=Expmem&IDEX_out(130 downto 115)&IDEX_out(114 downto 83) &IDEX_out(66 downto 64)&IDEX_out(57 downto 42)&InputPort&IDEX_out(25 downto 13);
+EXMEM_in<=Expmem&IDEX_out(130 downto 115)&IDEX_out(114 downto 83) &IDEX_out(66 downto 64)&updatedStoreData&InputPort&IDEX_out(25 downto 13);
 EXMEM_buff : EXMEM port map(EXMEM_in,EXMEM_en,reset,clk,EXMEM_out);
 
 -----------------------------------------------------------------------------------------------------------------------------------
@@ -358,7 +359,7 @@ exception<=epc_enable; -- if there is an exception set it to '1'
 
 address<=x"000"&"000"&EXMEM_out(96)&EXMEM_out(28 downto 13);
 memrst<=EXMEM_out(3)or reset;
-exceptionSt: ExceptionHandler port map (clk,memrst,EXMEM_out(2),EXMEM_out(1),EXMEM_out(0),EXMEM_out(12 downto 10),address,sp_data,epc_enable,memoAddress);
+exceptionSt: ExceptionHandler port map (clk,memrst,EXMEM_out(2),EXMEM_out(1),EXMEM_out(0),EXMEM_out(5),EXMEM_out(12 downto 10),address,sp_data,epc_enable,memoAddress);
 
 sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data) ;
 

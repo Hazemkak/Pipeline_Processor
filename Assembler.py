@@ -223,6 +223,20 @@ for i in range(len(assembly)):
     instrcss[num]="10110"
     instrcss[num]+=3*"000"+"00"
 
+  
+  elif line[0]=="int":
+    instrcss[num]="10111"
+    dst ="000"
+    instrcss[num]+=3*dst+"10"
+    imm ="0000000000000000"+decimalToBinary(int(line[1]))
+    imm=imm[len(imm)-16:]
+    num+=1
+    instrcss[num]=imm
+
+  elif line[0]=="rti":
+    instrcss[num]="11000"
+    instrcss[num]+=3*"000"+"00"
+
   elif line[0]=="reset":
     instrcss[num]="11001"
     instrcss[num]+="000"*3+"00"

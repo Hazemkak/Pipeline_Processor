@@ -36,6 +36,8 @@ architecture archcontrol of control is
            else "00000000000000010000000001" when op_code="10100"
            else "10100000000010010000000001" when op_code="10101"
            else "11100000101000000000000000" when op_code="10110"
+           else "10100001100010001000010000" when op_code="10111"
+           else "11100000101000000100000000" when op_code="11000"
            else "00000000111000001000000000" when op_code="11001"
            else "00000000000000000000000000";
             

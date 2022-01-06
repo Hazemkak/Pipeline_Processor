@@ -56,7 +56,7 @@ entity executestage is
         ------------------------------------------------------------------
 
         ----output from EX stage to EX/MEM buffer-------------------------
-        storeData: out std_logic_vector(15 downto)
+        storeData: out std_logic_vector(15 downto 0)
         ------------------------------------------------------------------
     );
 end executestage;
@@ -160,17 +160,19 @@ architecture data_executestage of executestage is
     signal outputZF, outputNF, outputCF: std_logic;
 
     begin
-        adder: sixteenbitfulladder port map(imValue, "0000000000000110", '0', imIndex, imIndexCarry);
+        adder: sixteenbitfulladder port map(imValue, "0000000000000111", '0', imIndex, imIndexCarry);
         mux1: fourbyonemux port map(src1Data, imValue, imIndex, "0000000000000000", aluSel, mux1Output);
         fu: forwardingunit port map(src1RegNum, src2RegNum, regDest_EX, regDest_MEM, WB_EXMEM, WB_MEMWB, HZEN, oneB, twoB);
         mux2: fourbyonemux port map(src2Data, aluData, memData, "0000000000000000", twoB, mux2Output);
         mux3: fourbyonemux port map(mux1Output, aluData, memData, "0000000000000000", oneB, mux3Output);
-        mux4: fourbyonemux port map(mux3Output, imValue, imIndex, "0000000000000000", aluSel, mux4Output);
+        mux4: fourbyonemux port map(mux3Output, imValue, imIndex, imIndex, aluSel, mux4Output);
         alu1: ALU port map(mux4Output, mux2Output, result, carryFlag, zeroFlag, negativeFlag, operationSel, carryFlagEnable, zeroFlagEnable, negativeFlagEnable,MemExpFlag);
         ALUThreeFlags <= zeroFlag & negativeFlag & carryFlag;
         ALUTwoFlags <=  zeroFlag & negativeFlag & '0';
         FI: flagsintegration port map(ALUThreeFlags, ALUTwoFlags, carryFlag, flagEn, clk, rst, flagRes, flagRev, outputZF, outputNF, outputCF);
         jmp: jump port map(outputZF, outputNF, outputCF, jmpSel, jmpOrNoJump);
 
-        storeData <= mux3Output; 
+        storeData <= mux3Output when oneB(0)='1' or oneB(1)='1'
+        else src1Data;
+
     end data_executestage;
