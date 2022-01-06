@@ -65,6 +65,15 @@ Rsrc2 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0));
 END component;
 
 
+component reg16bit IS
+PORT(
+d : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+en : IN STD_LOGIC; 
+reset : IN STD_LOGIC; 
+clk : IN STD_LOGIC;
+q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)); 
+END component;
+
 component EXMEM IS
 PORT(
 d : IN STD_LOGIC_VECTOR(79 DOWNTO 0);
@@ -253,6 +262,7 @@ signal jmp_Address: STD_LOGIC_VECTOR(31 DOWNTO 0);
 signal Jump,exception : std_logic;
 signal PC_sel : STD_LOGIC_VECTOR(1 DOWNTO 0); 
 signal IFID_rst, IDEX_rst : std_logic;
+signal InputPort :STD_LOGIC_VECTOR(15 DOWNTO 0);
 
 --for exception handler
 signal enableInReg : std_logic;
@@ -318,11 +328,14 @@ IDEX_buff : IDEX port map(IDEX_in,IDEX_en,IDEX_rst,clk,IDEX_out);
 AluSel<=IDEX_out(18)&IDEX_out(4);
 ex: executestage port map (EXMEM_out(28 downto 13),writedata,IDEX_out(57 downto 42),IDEX_out(82 downto 67),AluSel ,IDEX_out(41 downto 26),IDEX_out(3 downto 1),alu_out,IDEX_out(63 downto 61),IDEX_out(60 downto 58),EXMEM_out(47 downto 45),MEMWB_out(60 downto 58),EXMEM_out(8),MEMWB_out(5),IDEX_out(0), IDEX_out(7 downto 5),clk,reset,IDEX_out(9),IDEX_out(8),IDEX_out(12 downto 10),Jump);
 
+Out_Reg: reg16bit port map(alu_out,IDEX_out(19),reset,clk,dataout); --IDEX_out maybe change to EXMEM_buff
 ----------------------------
 -- EX/MEM buffer
 
 EXMEM_en<='1';
-EXMEM_in<=IDEX_out(114 downto 83) &IDEX_out(66 downto 64)&IDEX_out(57 downto 42)&alu_out&IDEX_out(25 downto 13);
+InputPort<= datain  WHEN (IDEX_out(20)='1')
+	else alu_out;
+EXMEM_in<=IDEX_out(114 downto 83) &IDEX_out(66 downto 64)&IDEX_out(57 downto 42)&InputPort&IDEX_out(25 downto 13);
 EXMEM_buff : EXMEM port map(EXMEM_in,EXMEM_en,reset,clk,EXMEM_out);
 
 -----------------------------------------------------------------------------------------------------------------------------------
