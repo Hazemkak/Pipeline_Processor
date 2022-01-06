@@ -180,16 +180,21 @@ component executestage is
         flagRev: in std_logic; --input from ID/EX buffer to mux2 select
         ------------------------------------------------------------------
 
-        
-        ----input from ID/EX buffer----------------------------------
+        ----input from ID/EX buffer---------------------------------------
         jmpSel: in std_logic_vector(2 downto 0);
-        -------------------------------------------------------------
+        ------------------------------------------------------------------
 
         ----output from execute stage-------------------------------------
         jmpOrNoJump: out std_logic;
         ------------------------------------------------------------------
 
-        MemExpFlag :  out std_logic
+        ----output from ALU to EX/MEM buffer------------------------------
+        MemExpFlag :  out std_logic;
+        ------------------------------------------------------------------
+
+        ----output from EX stage to EX/MEM buffer-------------------------
+        storeData: out std_logic_vector(15 downto)
+        ------------------------------------------------------------------
     );
 end component;
 
@@ -280,6 +285,7 @@ signal Expmem,memrst : std_logic;
 signal MW16_en,MW32_en: std_logic;
 
 SIGNAL MWD16 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+signal updatedStoreData: std_logic_vector (15 downto 0); 
 begin
 
 
@@ -333,7 +339,7 @@ IDEX_buff : IDEX port map(IDEX_in,IDEX_en,IDEX_rst,clk,IDEX_out);
 
 
 AluSel<=IDEX_out(18)&IDEX_out(4);
-ex: executestage port map (EXMEM_out(28 downto 13),writedata,IDEX_out(57 downto 42),IDEX_out(82 downto 67),AluSel ,IDEX_out(41 downto 26),IDEX_out(3 downto 1),alu_out,IDEX_out(63 downto 61),IDEX_out(60 downto 58),EXMEM_out(47 downto 45),MEMWB_out(60 downto 58),EXMEM_out(8),MEMWB_out(5),IDEX_out(0), IDEX_out(7 downto 5),clk,reset,IDEX_out(9),IDEX_out(8),IDEX_out(12 downto 10),Jump,Expmem);
+ex: executestage port map (EXMEM_out(28 downto 13),writedata,IDEX_out(57 downto 42),IDEX_out(82 downto 67),AluSel ,IDEX_out(41 downto 26),IDEX_out(3 downto 1),alu_out,IDEX_out(63 downto 61),IDEX_out(60 downto 58),EXMEM_out(47 downto 45),MEMWB_out(60 downto 58),EXMEM_out(8),MEMWB_out(5),IDEX_out(0), IDEX_out(7 downto 5),clk,reset,IDEX_out(9),IDEX_out(8),IDEX_out(12 downto 10),Jump,Expmem, updatedStoreData);
 
 Out_Reg: reg16bit port map(alu_out,IDEX_out(19),reset,clk,dataout); --IDEX_out maybe change to EXMEM_buff
 ----------------------------

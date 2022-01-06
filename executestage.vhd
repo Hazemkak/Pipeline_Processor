@@ -43,14 +43,21 @@ entity executestage is
         flagRev: in std_logic; --input from ID/EX buffer to mux2 select
         ------------------------------------------------------------------
 
-        ----input from ID/EX buffer----------------------------------
+        ----input from ID/EX buffer---------------------------------------
         jmpSel: in std_logic_vector(2 downto 0);
-        -------------------------------------------------------------
+        ------------------------------------------------------------------
 
         ----output from execute stage-------------------------------------
         jmpOrNoJump: out std_logic;
         ------------------------------------------------------------------
-        MemExpFlag :  out std_logic
+
+        -----output from ALU to EX/MEM buffer-----------------------------
+        MemExpFlag:  out std_logic;
+        ------------------------------------------------------------------
+
+        ----output from EX stage to EX/MEM buffer-------------------------
+        storeData: out std_logic_vector(15 downto)
+        ------------------------------------------------------------------
     );
 end executestage;
 
@@ -152,12 +159,7 @@ architecture data_executestage of executestage is
     signal ALUThreeFlags, ALUTwoFlags: std_logic_vector(2 downto 0);
     signal outputZF, outputNF, outputCF: std_logic;
 
-  
-
     begin
-
-      
-
         adder: sixteenbitfulladder port map(imValue, "0000000000000110", '0', imIndex, imIndexCarry);
         mux1: fourbyonemux port map(src1Data, imValue, imIndex, "0000000000000000", aluSel, mux1Output);
         fu: forwardingunit port map(src1RegNum, src2RegNum, regDest_EX, regDest_MEM, WB_EXMEM, WB_MEMWB, HZEN, oneB, twoB);
@@ -169,5 +171,6 @@ architecture data_executestage of executestage is
         ALUTwoFlags <=  zeroFlag & negativeFlag & '0';
         FI: flagsintegration port map(ALUThreeFlags, ALUTwoFlags, carryFlag, flagEn, clk, rst, flagRes, flagRev, outputZF, outputNF, outputCF);
         jmp: jump port map(outputZF, outputNF, outputCF, jmpSel, jmpOrNoJump);
-        
+
+        storeData <= mux3Output; 
     end data_executestage;
