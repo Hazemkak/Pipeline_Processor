@@ -369,7 +369,7 @@ MEMWB_buff : MEMWB port map(MEMWB_in,MEMWB_en,reset,clk,MEMWB_out); --
 
 -- WB stage 
 -- here i considerd the in port in the writeback which is false and will be changed 
-write_Back: writeback port map (MEMWB_out(4),MEMWB_out(6),datain,MEMWB_out(25 downto 10),MEMWB_out(57 downto 42),writedata);
+write_Back: writeback port map (MEMWB_out(4),MEMWB_out(6),MEMWB_out(25 downto 10),MEMWB_out(25 downto 10),MEMWB_out(57 downto 42),writedata);
 -- alu from 10 to 25 from mem 26+16=42 to 57 4 6 datain
 write_address<=MEMWB_out(60 downto 58); 
 write_en<=MEMWB_out(5) and (not exception);
