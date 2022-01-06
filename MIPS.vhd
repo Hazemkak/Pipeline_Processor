@@ -315,7 +315,7 @@ exception<='0'; -- if there is an exception set it to '1'
 sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data) ;
 
 -- (Temp for testing ) it should change with mux later 
-address<=sp_data when EXMEM_out(10)='1' -- stack
+address<=sp_data when EXMEM_out(10)='1' and -- stack
   else x"00000001" when EXMEM_out(3)='1'-- reset
   else x"0000"&EXMEM_out(28 downto 13); -- address from alu
 memo :DataMEM port map (clk,EXMEM_out(0),EXMEM_out(1),EXMEM_out(2),address,EXMEM_out(44 downto 29),EXMEM_out(79 downto 48),mem_out); --
@@ -336,7 +336,7 @@ MEMWB_buff : MEMWB port map(MEMWB_in,MEMWB_en,reset,clk,MEMWB_out); --
 
 -- WB stage 
 -- here i considerd the in port in the writeback which is false and will be changed 
-write_Back: writeback port map (MEMWB_out(4),MEMWB_out(6),datain,MEMWB_out(25 downto 10),MEMWB_out(57 downto 42),writedata);
+write_Back: writeback port map (MEMWB_out(4),MEMWB_out(6),MEMWB_out(25 downto 10),MEMWB_out(25 downto 10),MEMWB_out(57 downto 42),writedata);
 -- alu from 10 to 25 from mem 26+16=42 to 57 4 6 datain
 write_address<=MEMWB_out(60 downto 58); 
 write_en<=MEMWB_out(5) and (not exception);
