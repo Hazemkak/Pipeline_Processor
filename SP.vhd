@@ -20,19 +20,19 @@ BEGIN
 			END IF;
 			IF falling_edge(clk) THEN  
 				IF SP(0) = '1' THEN
-					IF SP(1)='0' and SP(2)='0' THEN -- 00 decrement by 1
+					IF SP(1)='0' and SP(2)='0' THEN -- 00 decrement by 1 PUSH
 
 						SP_data <= std_logic_vector( to_unsigned( to_integer(unsigned(SP_data)) - 1 , 32) );
 
-					ELSIF SP(1)='1' and SP(2)='0' THEN -- 01 increment by 1
+					ELSIF SP(1)='1' and SP(2)='0' THEN -- 01 increment by 1 POP
 
 						SP_data <= std_logic_vector( to_unsigned( to_integer(unsigned(SP_data)) + 1 , 32) );
 
-					ELSIF SP(1)='0' and SP(2)='1' THEN -- 10 decrement by 2
+					ELSIF SP(1)='0' and SP(2)='1' THEN -- 10 decrement by 2 PUSH
 
 						SP_data <= std_logic_vector( to_unsigned( to_integer(unsigned(SP_data)) - 2 , 32) );
 
-					ELSIF SP(1)='1' and SP(2)='1' THEN -- 11 increment by 2
+					ELSIF SP(1)='1' and SP(2)='1' THEN -- 11 increment by 2 POP
 
 						SP_data <= std_logic_vector( to_unsigned( to_integer(unsigned(SP_data)) + 2 , 32) );
 

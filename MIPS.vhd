@@ -200,6 +200,32 @@ component Hazard_Unit is
 );
 end component;
 
+component ExceptionHandler is
+  PORT(
+		clk : IN std_logic;
+		rst  : IN std_logic;
+		MR : In std_logic;
+    MW16 : In std_logic;
+		MW32 : IN  std_logic;
+    SP_select : IN std_logic_vector(2 DOWNTO 0);
+    aluData : IN std_logic_vector(31 DOWNTO 0);
+    SP_data  : INOUT std_logic_vector(31 DOWNTO 0);
+
+    enableInReg : OUT std_logic;--TODO:
+		memoAddress : OUT std_logic_vector(31 DOWNTO 0)
+);
+end component;
+
+component ExceptionProgramCounter is
+  PORT(
+		clk : IN std_logic;
+		reset: IN std_logic;
+		EPC_Enable  : IN std_logic;
+    EPC_data  : INOUT std_logic_vector(31 DOWNTO 0);
+    Instruction_data : IN std_logic_vector(31 DOWNTO 0)
+);
+end component;
+
 
 
 
@@ -228,6 +254,14 @@ signal Jump,exception : std_logic;
 signal PC_sel : STD_LOGIC_VECTOR(1 DOWNTO 0); 
 signal IFID_rst, IDEX_rst : std_logic;
 
+--for exception handler
+signal enableInReg : std_logic;
+signal memoAddress : std_logic_vector(31 DOWNTO 0);
+
+--for program counter
+signal epc_enable : std_logic;
+signal epc_data : std_logic_vector(31 DOWNTO 0);
+signal instruction : std_logic_vector(31 downto 0);--TODO: remove this
 
 begin
 
@@ -297,14 +331,17 @@ EXMEM_buff : EXMEM port map(EXMEM_in,EXMEM_en,reset,clk,EXMEM_out);
 exception<='0'; -- if there is an exception set it to '1'
 
 
-
-
 sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data) ;
 
 -- (Temp for testing ) it should change with mux later 
 address<=sp_data when EXMEM_out(10)='1' -- stack
   else x"00000001" when EXMEM_out(3)='1'-- reset
   else x"0000"&EXMEM_out(28 downto 13); -- address from alu
+--TODO: change address memoAddress
+exceptionSt: ExceptionHandler port map (clk,reset,EXMEM_out(2),EXMEM_out(1),EXMEM_out(0),EXMEM_out(12 downto 10),address,sp_data,epc_enable,memoAddress);
+
+exceptionProgramCounterReg: ExceptionProgramCounter port map (clk,reset,epc_enable,epc_data,instruction) ;
+
 memo :DataMEM port map (clk,EXMEM_out(0),EXMEM_out(1),EXMEM_out(2),address,EXMEM_out(44 downto 29),EXMEM_out(79 downto 48),mem_out); --
 
 ----------------------------
