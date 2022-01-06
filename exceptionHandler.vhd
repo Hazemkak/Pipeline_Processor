@@ -27,7 +27,7 @@ BEGIN
 
                 IF rst = '1' THEN
 
-                    memoAddress <= "00000000000000000000000000000000";--32bit zeros
+                    memoAddress <= "00000000000000000000000000000001";--32bit zeros
                     enableInReg <= '0';
 
 				ELSIF SP_select(0) = '1' THEN -- check for empty stack pop
@@ -45,7 +45,7 @@ BEGIN
                     ELSIF SP_select(1)='1' and SP_select(2)='1' THEN -- 11 increment by 2 POP32 , so check if SP_data is at  prev last memo place
 
                         IF SP_data > "00000000000011111111111111111101" THEN
-                            memoAddress <= "00000000000000000000000000000010";
+                            memoAddress <= "00000000000000000000000000000011";
                             enableInReg <= '1';
                         ELSE 
                             enableInReg <= '0';
@@ -59,7 +59,7 @@ BEGIN
                     IF MR = '1' or MW16 = '1' or MW32 = '1' THEN
                         
                         IF aluData > "00000000000011111111111111111111" THEN
-                            memoAddress <= "00000000000000000000000000000100";
+                            memoAddress <= "00000000000000000000000000000101";
                             enableInReg <= '1';
                         ELSE
                             memoAddress <= aluData;

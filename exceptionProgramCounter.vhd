@@ -8,7 +8,7 @@ ENTITY ExceptionProgramCounter IS
 		reset: IN std_logic;
 		EPC_Enable  : IN std_logic;
         EPC_data  : INOUT std_logic_vector(31 DOWNTO 0);
-        Instruction_data : IN std_logic_vector(31 DOWNTO 0)
+        Instruction_data : IN std_logic_vector(15 DOWNTO 0)
 	);
 END ENTITY ExceptionProgramCounter;
 
@@ -21,7 +21,7 @@ BEGIN
 			END IF;
 			IF rising_edge(clk) THEN  
 				IF (EPC_Enable = '1') THEN
-                    EPC_data <= Instruction_data;
+                    EPC_data <= x"0000" & Instruction_data;
 				ELSE
                     EPC_data <= EPC_data;
 				END IF;

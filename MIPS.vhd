@@ -43,11 +43,11 @@ END component;
 
 component IDEX IS
 PORT(
-d : IN STD_LOGIC_VECTOR(114 DOWNTO 0);
+d : IN STD_LOGIC_VECTOR(130 DOWNTO 0);
 en : IN STD_LOGIC; 
 reset : IN STD_LOGIC; 
 clk : IN STD_LOGIC;
-q : OUT STD_LOGIC_VECTOR(114 DOWNTO 0)); 
+q : OUT STD_LOGIC_VECTOR(130 DOWNTO 0)); 
 END component;
 
 
@@ -76,11 +76,11 @@ END component;
 
 component EXMEM IS
 PORT(
-d : IN STD_LOGIC_VECTOR(79 DOWNTO 0);
+d : IN STD_LOGIC_VECTOR(95 DOWNTO 0);
 en : IN STD_LOGIC; 
 reset : IN STD_LOGIC; 
 clk : IN STD_LOGIC;
-q : OUT STD_LOGIC_VECTOR(79 DOWNTO 0)); 
+q : OUT STD_LOGIC_VECTOR(95 DOWNTO 0)); 
 END component;
 
 component MEMWB IS
@@ -231,7 +231,7 @@ component ExceptionProgramCounter is
 		reset: IN std_logic;
 		EPC_Enable  : IN std_logic;
     EPC_data  : INOUT std_logic_vector(31 DOWNTO 0);
-    Instruction_data : IN std_logic_vector(31 DOWNTO 0)
+    Instruction_data : IN std_logic_vector(15 DOWNTO 0)
 );
 end component;
 
@@ -244,8 +244,8 @@ signal PC : std_logic_vector (31 downto 0);
 signal newPC ,Next_PC: std_logic_vector (31 downto 0);
 signal instraction :std_logic_vector (31 downto 0);
 signal IFID_in,IFID_out  : std_logic_vector (63 downto 0);
-signal  IDEX_in ,IDEX_out: std_logic_vector (114 downto 0);
-signal  EXMEM_in ,EXMEM_out: std_logic_vector (79 downto 0);
+signal  IDEX_in ,IDEX_out: std_logic_vector (130 downto 0);
+signal  EXMEM_in ,EXMEM_out: std_logic_vector (95 downto 0);
 signal  MEMWB_in ,MEMWB_out: std_logic_vector (60 downto 0);
 signal cin : std_logic_vector(31 downto 0);
 signal Rsrc1,Rsrc2,writedata,alu_out :  STD_LOGIC_VECTOR(15 DOWNTO 0); 
@@ -271,7 +271,6 @@ signal memoAddress : std_logic_vector(31 DOWNTO 0);
 --for program counter
 signal epc_enable : std_logic;
 signal epc_data : std_logic_vector(31 DOWNTO 0);
-signal instruction : std_logic_vector(31 downto 0);--TODO: remove this
 
 begin
 
@@ -316,7 +315,7 @@ regFile :registerfile port map(reset,clk,IFID_out(7 downto 5),IFID_out(4 downto 
 
 IDEX_en<='1';
 IDEX_rst<=reset or Pc_sel(1); 
-IDEX_in<=IFID_out(63 downto 32)&IFID_out(31 downto 16)&IFID_out(10 downto 2)&Rsrc1&Rsrc2&controls;
+IDEX_in<=IFID_out(15 downto 0)&IFID_out(63 downto 32)&IFID_out(31 downto 16)&IFID_out(10 downto 2)&Rsrc1&Rsrc2&controls;
 IDEX_buff : IDEX port map(IDEX_in,IDEX_en,IDEX_rst,clk,IDEX_out);
 
 -----------------------------------------------------------------------------------------------------------------------------------
@@ -335,7 +334,7 @@ Out_Reg: reg16bit port map(alu_out,IDEX_out(19),reset,clk,dataout); --IDEX_out m
 EXMEM_en<='1';
 InputPort<= datain  WHEN (IDEX_out(20)='1')
 	else alu_out;
-EXMEM_in<=IDEX_out(114 downto 83) &IDEX_out(66 downto 64)&IDEX_out(57 downto 42)&InputPort&IDEX_out(25 downto 13);
+EXMEM_in<=IDEX_out(130 downto 115)&IDEX_out(114 downto 83) &IDEX_out(66 downto 64)&IDEX_out(57 downto 42)&InputPort&IDEX_out(25 downto 13);
 EXMEM_buff : EXMEM port map(EXMEM_in,EXMEM_en,reset,clk,EXMEM_out);
 
 -----------------------------------------------------------------------------------------------------------------------------------
@@ -347,15 +346,12 @@ exception<='0'; -- if there is an exception set it to '1'
 sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data) ;
 
 -- (Temp for testing ) it should change with mux later 
-address<=sp_data when EXMEM_out(10)='1' -- stack
-  else x"00000001" when EXMEM_out(3)='1'-- reset
-  else x"0000"&EXMEM_out(28 downto 13); -- address from alu
---TODO: change address memoAddress
+address<=x"0000"&EXMEM_out(28 downto 13);
 exceptionSt: ExceptionHandler port map (clk,reset,EXMEM_out(2),EXMEM_out(1),EXMEM_out(0),EXMEM_out(12 downto 10),address,sp_data,epc_enable,memoAddress);
 
-exceptionProgramCounterReg: ExceptionProgramCounter port map (clk,reset,epc_enable,epc_data,instruction) ;
+exceptionProgramCounterReg: ExceptionProgramCounter port map (clk,reset,epc_enable,epc_data,EXMEM_out(95 downto 80)) ;
 
-memo :DataMEM port map (clk,EXMEM_out(0),EXMEM_out(1),EXMEM_out(2),address,EXMEM_out(44 downto 29),EXMEM_out(79 downto 48),mem_out); --
+memo :DataMEM port map (clk,EXMEM_out(0),EXMEM_out(1),EXMEM_out(2),memoAddress,EXMEM_out(44 downto 29),EXMEM_out(79 downto 48),mem_out); --
 
 ----------------------------
 -- MEM/WB buffer
