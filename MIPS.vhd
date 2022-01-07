@@ -85,11 +85,11 @@ END component;
 
 component MEMWB IS
 PORT(
-d : IN STD_LOGIC_VECTOR(60 DOWNTO 0);
+d : IN STD_LOGIC_VECTOR(61 DOWNTO 0);
 en : IN STD_LOGIC; 
 reset : IN STD_LOGIC; 
 clk : IN STD_LOGIC;
-q : OUT STD_LOGIC_VECTOR(60 DOWNTO 0)); 
+q : OUT STD_LOGIC_VECTOR(61 DOWNTO 0)); 
 END component;
 
 component ALU IS
@@ -126,7 +126,8 @@ component STACKPOINTER IS
 		clk : IN std_logic;
 		reset: IN std_logic;
 		SP  : IN std_logic_vector(2 DOWNTO 0); -- SP[0] is the enable // SP[1] & SP[2] are selector for mux
-  	SP_data  : INOUT std_logic_vector(31 DOWNTO 0)
+  	SP_data  : INOUT std_logic_vector(31 DOWNTO 0);
+    exception : IN std_logic
 	);
 END component ;
 
@@ -254,7 +255,7 @@ signal instraction :std_logic_vector (31 downto 0);
 signal IFID_in,IFID_out  : std_logic_vector (63 downto 0);
 signal  IDEX_in ,IDEX_out: std_logic_vector (130 downto 0);
 signal  EXMEM_in ,EXMEM_out: std_logic_vector (96 downto 0);
-signal  MEMWB_in ,MEMWB_out: std_logic_vector (60 downto 0);
+signal  MEMWB_in ,MEMWB_out: std_logic_vector (61 downto 0);
 signal cin : std_logic_vector(31 downto 0);
 signal Rsrc1,Rsrc2,writedata,alu_out :  STD_LOGIC_VECTOR(15 DOWNTO 0); 
 
@@ -361,7 +362,7 @@ address<=x"000"&"000"&EXMEM_out(96)&EXMEM_out(28 downto 13);
 memrst<=EXMEM_out(3)or reset;
 exceptionSt: ExceptionHandler port map (clk,memrst,EXMEM_out(2),EXMEM_out(1),EXMEM_out(0),EXMEM_out(5),EXMEM_out(12 downto 10),address,sp_data,epc_enable,memoAddress);
 
-sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data) ;
+sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data,exception) ;
 
 -- (Temp for testing ) it should change with mux later 
 
@@ -380,7 +381,7 @@ memo :DataMEM port map (clk,MW32_en,MW16_en,EXMEM_out(2),memoAddress,MWD16,EXMEM
 -- MEM/WB buffer
 
 MEMWB_en<='1';
-MEMWB_in<=EXMEM_out(47 downto 45)&mem_out&EXMEM_out(28 downto 13)&EXMEM_out(12 downto 3);
+MEMWB_in<=exception&EXMEM_out(47 downto 45)&mem_out&EXMEM_out(28 downto 13)&EXMEM_out(12 downto 3);
 MEMWB_buff : MEMWB port map(MEMWB_in,MEMWB_en,reset,clk,MEMWB_out); -- 
 
 -----------------------------------------------------------------------------------------------------------------------------------
@@ -395,7 +396,7 @@ MEMWB_buff : MEMWB port map(MEMWB_in,MEMWB_en,reset,clk,MEMWB_out); --
 write_Back: writeback port map (MEMWB_out(4),MEMWB_out(6),MEMWB_out(25 downto 10),MEMWB_out(25 downto 10),MEMWB_out(57 downto 42),writedata);
 -- alu from 10 to 25 from mem 26+16=42 to 57 4 6 datain
 write_address<=MEMWB_out(60 downto 58); 
-write_en<=MEMWB_out(5) and (not exception);
+write_en<=MEMWB_out(5) and (not MEMWB_out(61));
 
 
 

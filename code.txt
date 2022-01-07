@@ -1,4 +1,3 @@
-
 # all numbers in hex format
 # we always start by reset signal
 # this is a commented line
