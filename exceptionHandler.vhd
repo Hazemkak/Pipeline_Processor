@@ -12,7 +12,7 @@ ENTITY ExceptionHandler IS
 		MW32 : IN  std_logic;
         SP_select : IN std_logic_vector(2 DOWNTO 0);-- SP(0) is the enable of SP 
         aluData : IN std_logic_vector(31 DOWNTO 0);
-        SP_data  : INOUT std_logic_vector(31 DOWNTO 0);
+        SP_data  : IN std_logic_vector(31 DOWNTO 0);
 
         enableInReg : OUT std_logic;--TODO:
 		memoAddress : OUT std_logic_vector(31 DOWNTO 0));
