@@ -114,6 +114,7 @@ component DataMEM IS
     MW16  : IN std_logic;
     MR : in std_logic;
 		address : IN  std_logic_vector(31 DOWNTO 0);
+    address2 : IN  std_logic_vector(31 DOWNTO 0);
 		data_16bits : IN  std_logic_vector(15 DOWNTO 0);
 		data_32bits : IN  std_logic_vector(31 DOWNTO 0);
 
@@ -228,7 +229,7 @@ component ExceptionHandler is
     SP_select : IN std_logic_vector(2 DOWNTO 0);
     aluData : IN std_logic_vector(31 DOWNTO 0);
     SP_data  : IN std_logic_vector(31 DOWNTO 0);
-
+    memOut : in std_logic_vector(31 DOWNTO 0);
     enableInReg : OUT std_logic;--TODO:
 		memoAddress : OUT std_logic_vector(31 DOWNTO 0)
 );
@@ -360,7 +361,7 @@ exception<=epc_enable; -- if there is an exception set it to '1'
 
 address<=x"000"&"000"&EXMEM_out(96)&EXMEM_out(28 downto 13);
 memrst<=EXMEM_out(3)or reset;
-exceptionSt: ExceptionHandler port map (clk,memrst,EXMEM_out(2),EXMEM_out(1),EXMEM_out(0),EXMEM_out(5),EXMEM_out(12 downto 10),address,sp_data,epc_enable,memoAddress);
+exceptionSt: ExceptionHandler port map (clk,memrst,EXMEM_out(2),EXMEM_out(1),EXMEM_out(0),EXMEM_out(5),EXMEM_out(12 downto 10),address,sp_data,mem_out,epc_enable,memoAddress);
 
 sp : STACKPOINTER port map (clk,reset,EXMEM_out(12 downto 10),sp_data,exception) ;
 
@@ -375,7 +376,7 @@ MWD16 <= EXMEM_out(44 downto 29) when MW16_en='1' and EXMEM_out(10)='0'
       ELSE EXMEM_out(28 downto 13);
 
 
-memo :DataMEM port map (clk,MW32_en,MW16_en,EXMEM_out(2),memoAddress,MWD16,EXMEM_out(79 downto 48),mem_out); --
+memo :DataMEM port map (clk,MW32_en,MW16_en,EXMEM_out(2),memoAddress,sp_data,MWD16,EXMEM_out(79 downto 48),mem_out); --
 
 ----------------------------
 -- MEM/WB buffer

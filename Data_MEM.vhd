@@ -10,6 +10,7 @@ ENTITY DataMEM IS
         MW16  : IN std_logic;
 		MR : in std_logic;
 		address : IN  std_logic_vector(31 DOWNTO 0);
+		address2 : IN  std_logic_vector(31 DOWNTO 0);
 		data_16bits : IN  std_logic_vector(15 DOWNTO 0);
 		data_32bits : IN  std_logic_vector(31 DOWNTO 0);
 
@@ -29,8 +30,8 @@ ARCHITECTURE ArchDataMEM OF DataMEM IS
 				
 				
 				IF MW32 = '1' THEN
-					ram_arr(to_integer(unsigned(address))) <= data_32bits(31 DOWNTO 16);
-                    ram_arr(to_integer(to_unsigned(to_integer(unsigned(address))+1048575,20))) <= data_32bits(15 DOWNTO 0);
+					ram_arr(to_integer(unsigned(address2))) <= data_32bits(31 DOWNTO 16);
+                    ram_arr(to_integer(to_unsigned(to_integer(unsigned(address2))+1048575,20))) <= data_32bits(15 DOWNTO 0);
 				END IF;
                 IF MW16 = '1' THEN
 

@@ -165,7 +165,7 @@ architecture data_executestage of executestage is
         fu: forwardingunit port map(src1RegNum, src2RegNum, regDest_EX, regDest_MEM, WB_EXMEM, WB_MEMWB, HZEN, oneB, twoB);
         mux2: fourbyonemux port map(src2Data, aluData, memData, "0000000000000000", twoB, mux2Output);
         mux3: fourbyonemux port map(mux1Output, aluData, memData, "0000000000000000", oneB, mux3Output);
-        mux4: fourbyonemux port map(mux3Output, imValue, imIndex, imIndex, aluSel, mux4Output);
+        mux4: fourbyonemux port map(mux3Output, imValue, imIndex, imValue, aluSel, mux4Output);
         alu1: ALU port map(mux4Output, mux2Output, result, carryFlag, zeroFlag, negativeFlag, operationSel, carryFlagEnable, zeroFlagEnable, negativeFlagEnable,MemExpFlag);
         ALUThreeFlags <= zeroFlag & negativeFlag & carryFlag;
         ALUTwoFlags <=  zeroFlag & negativeFlag & '0';

@@ -42,7 +42,7 @@ for i in range(len(assembly)):
     continue
 
   if (line[0]==".org"):
-    if(int(line[1],16)<=8):
+    if(int(line[1],16)<=8 or int(line[1],16)>=4096):
       i+=1
       addr=assembly[i]
       addr=addr.translate(table)
