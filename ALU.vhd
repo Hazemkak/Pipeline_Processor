@@ -8,7 +8,8 @@ entity ALU is
         result: out std_logic_vector(15 downto 0);
         carryFlag, zeroFlag, negativeFlag: out std_logic;
         sel: in std_logic_vector(2 downto 0);
-        carryFlagEnable, zeroFlagEnable, negativeFlagEnable: out std_logic
+        carryFlagEnable, zeroFlagEnable, negativeFlagEnable: out std_logic;
+        ExepFlag: out std_logic
     );
 end ALU;
 
@@ -35,6 +36,7 @@ architecture data_ALU of ALU is
     signal addCarry, incCarry, subBorrow: std_logic;
 
     begin
+        ExepFlag<=addCarry;
         add: sixteenbitfulladder port map(firstOperand, secondOperand, '0', addResult, addCarry);
         sub: sixteenbitfullsubtractor port map(firstOperand, secondOperand, '0', subResult, subBorrow);
         inc: sixteenbitfulladder port map(firstOperand, "0000000000000001", '0', incResult, incCarry);

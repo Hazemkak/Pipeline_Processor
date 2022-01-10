@@ -1,0 +1,7 @@
+work/*
+*.mti
+*.mpf
+*.bak
+*.wlf
+*.txt
+*.mem

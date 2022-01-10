@@ -36,11 +36,27 @@ entity executestage is
         ------------------------------------------------------------------
 
         ---------------inputs to flagsintegration unit--------------------
-        setCarry: in  std_logic; --input from ID/EX buffer
-        flagEn: in std_logic_vector(1 downto 0); --input from ID/EX buffer
+        -- setCarry: in  std_logic; --input from ID/EX buffer
+        flagEn: in std_logic_vector(2 downto 0); --input from ID/EX buffer
         clk, rst: in std_logic;
         flagRes: in std_logic; --input from ID/EX buffer to mux1 select
-        flagRev: in std_logic --input from ID/EX buffer to mux2 select
+        flagRev: in std_logic; --input from ID/EX buffer to mux2 select
+        ------------------------------------------------------------------
+
+        ----input from ID/EX buffer---------------------------------------
+        jmpSel: in std_logic_vector(2 downto 0);
+        ------------------------------------------------------------------
+
+        ----output from execute stage-------------------------------------
+        jmpOrNoJump: out std_logic;
+        ------------------------------------------------------------------
+
+        -----output from ALU to EX/MEM buffer-----------------------------
+        MemExpFlag:  out std_logic;
+        ------------------------------------------------------------------
+
+        ----output from EX stage to EX/MEM buffer-------------------------
+        storeData: out std_logic_vector(15 downto 0)
         ------------------------------------------------------------------
     );
 end executestage;
@@ -78,7 +94,8 @@ architecture data_executestage of executestage is
             result: out std_logic_vector(15 downto 0);
             carryFlag, zeroFlag, negativeFlag: out std_logic;
             sel: in std_logic_vector(2 downto 0);
-            carryFlagEnable, zeroFlagEnable, negativeFlagEnable: out std_logic
+            carryFlagEnable, zeroFlagEnable, negativeFlagEnable: out std_logic;
+            ExepFlag: out std_logic
         );
     end component;
 
@@ -95,8 +112,8 @@ architecture data_executestage of executestage is
             -----------input to flag register and output from ALU -----------
             ALUThreeflags: in std_logic_vector(2 downto 0); --input from ALU when ADD or SUB
             ALUTwoFlags: in std_logic_vector(2 downto 0); --input from ALU when AND or NOT
-            setCarry: in  std_logic; --input from ID/EX buffer
-            flagEn: in std_logic_vector(1 downto 0); --input from ID/EX buffer
+            setCarry: in  std_logic; --input from ALU "1 when setCarry operation zero otherwise"
+            flagEn: in std_logic_vector(2 downto 0); --input from ID/EX buffer
             clk, rst: in std_logic;
             ----------------------------------------------------------------
 
@@ -105,9 +122,29 @@ architecture data_executestage of executestage is
             ----------------------------------------------------------------
 
             ---------input select to mux2-----------------------------------
-            flagRev: in std_logic --input from ID/EX buffer to mux2 select
+            flagRev: in std_logic; --input from ID/EX buffer to mux2 select
+            ----------------------------------------------------------------
+
+            -------output from flagsregister and input to jump unit---------
+            outputZF, outputNF, outputCF: out std_logic
             ----------------------------------------------------------------
         );
+        end component;
+    
+        component jump is
+            port(
+                ----input from flagintegration------------------------------ 
+                inputZF, inputNF, inputCF: in std_logic;
+                -------------------------------------------------------------
+
+                ----input from ID/EX buffer----------------------------------
+                jmpSel: in std_logic_vector(2 downto 0);
+                -------------------------------------------------------------
+
+                ----output from jump unit------------------------------------
+                jmpOrNoJump: out std_logic
+                --------------------------------------------------------------
+            );
         end component;
 
     signal imIndex: std_logic_vector(15 downto 0); --output of sixteenbitfulladder and input to mux1
@@ -115,19 +152,27 @@ architecture data_executestage of executestage is
     signal twoB, oneB: std_logic_vector(1 downto 0); --output of forwardingunit and select of mux2 and mux3 respectively
     signal mux1Output: std_logic_vector(15 downto 0); --output of mux1 and input to mux3
     signal mux2Output: std_logic_vector(15 downto 0); --output of mux2 and input to ALU
-    signal mux3Output: std_logic_vector(15 downto 0); --output of mux3 and input to ALU
+    signal mux3Output: std_logic_vector(15 downto 0); --output of mux3 and input to to mux4
+    signal mux4Output: std_logic_vector(15 downto 0); --output of mux4 and input to ALU 
     signal zeroFlag, negativeFlag, carryFlag: std_logic; --output of ALU and input to flag register
     signal zeroFlagEnable, negativeFlagEnable, carryFlagEnable: std_logic; --output of ALU and input to tri-state buffer
     signal ALUThreeFlags, ALUTwoFlags: std_logic_vector(2 downto 0);
+    signal outputZF, outputNF, outputCF: std_logic;
 
     begin
-        adder: sixteenbitfulladder port map(imValue, "0000000000000110", '0', imIndex, imIndexCarry);
+        adder: sixteenbitfulladder port map(imValue, "0000000000000111", '0', imIndex, imIndexCarry);
         mux1: fourbyonemux port map(src1Data, imValue, imIndex, "0000000000000000", aluSel, mux1Output);
         fu: forwardingunit port map(src1RegNum, src2RegNum, regDest_EX, regDest_MEM, WB_EXMEM, WB_MEMWB, HZEN, oneB, twoB);
         mux2: fourbyonemux port map(src2Data, aluData, memData, "0000000000000000", twoB, mux2Output);
         mux3: fourbyonemux port map(mux1Output, aluData, memData, "0000000000000000", oneB, mux3Output);
-        alu1: ALU port map(mux3Output, mux2Output, result, carryFlag, zeroFlag, negativeFlag, operationSel, carryFlagEnable, zeroFlagEnable, negativeFlagEnable);
+        mux4: fourbyonemux port map(mux3Output, imValue, imIndex, imValue, aluSel, mux4Output);
+        alu1: ALU port map(mux4Output, mux2Output, result, carryFlag, zeroFlag, negativeFlag, operationSel, carryFlagEnable, zeroFlagEnable, negativeFlagEnable,MemExpFlag);
         ALUThreeFlags <= zeroFlag & negativeFlag & carryFlag;
         ALUTwoFlags <=  zeroFlag & negativeFlag & '0';
-        FI: flagsintegration port map(ALUThreeFlags, ALUTwoFlags, setCarry, flagEn, clk, rst, flagRes, flagRev);
+        FI: flagsintegration port map(ALUThreeFlags, ALUTwoFlags, carryFlag, flagEn, clk, rst, flagRes, flagRev, outputZF, outputNF, outputCF);
+        jmp: jump port map(outputZF, outputNF, outputCF, jmpSel, jmpOrNoJump);
+
+        storeData <= mux3Output when oneB(0)='1' or oneB(1)='1'
+        else src1Data;
+
     end data_executestage;

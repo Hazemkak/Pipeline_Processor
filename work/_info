@@ -1,0 +1,1487 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/kc/Downloads/3rd CMP/Architecture/Pipeline_Processor
+T_opt
+!s110 1641583201
+VmkONPh?1RLZNDV:M_l3f:0
+04 4 8 work mips archmips 1
+=1-3c2c30d61833-61d89261-2a2-2a30
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+R0
+Ealu
+Z1 w1641478227
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 209
+Z5 dC:/Users/user/Desktop/Pipeline_Processor
+Z6 8C:/Users/user/Desktop/Pipeline_Processor/ALU.vhd
+Z7 FC:/Users/user/Desktop/Pipeline_Processor/ALU.vhd
+l0
+L5 1
+VPBC;CgCLK2WR2C4]^IAY>1
+!s100 >ZgH@c@h6KgW7hak5N1;h1
+Z8 OV;C;2020.1;71
+32
+Z9 !s110 1641690084
+!i10b 1
+Z10 !s108 1641690084.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/ALU.vhd|
+Z12 !s107 C:/Users/user/Desktop/Pipeline_Processor/ALU.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Adata_alu
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 PBC;CgCLK2WR2C4]^IAY>1
+!i122 209
+l38
+L16 97
+VODm?412^S<2PY?L;ojIG01
+!s100 AR``ENMNR5lQAeKCQPToO2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Econtrol
+Z15 w1641501860
+R3
+R4
+!i122 210
+R5
+Z16 8C:/Users/user/Desktop/Pipeline_Processor/Control_Unit.vhd
+Z17 FC:/Users/user/Desktop/Pipeline_Processor/Control_Unit.vhd
+l0
+L4 1
+VIVIC39K=IehS=PL]E:T;n2
+!s100 QO[ZE=klM]L>o7mjk8dj:0
+R8
+32
+R9
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/Control_Unit.vhd|
+Z19 !s107 C:/Users/user/Desktop/Pipeline_Processor/Control_Unit.vhd|
+!i113 1
+R13
+R14
+Aarchcontrol
+R3
+R4
+DEx4 work 7 control 0 22 IVIC39K=IehS=PL]E:T;n2
+!i122 210
+l13
+L12 35
+Va0e=Ig5knBiZPMz>VhLg@1
+!s100 ZEOemGBC1hAQF746XRZTX1
+R8
+32
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14
+Edatamem
+Z20 w1641687187
+R2
+R3
+R4
+!i122 211
+R5
+Z21 8C:/Users/user/Desktop/Pipeline_Processor/Data_MEM.vhd
+Z22 FC:/Users/user/Desktop/Pipeline_Processor/Data_MEM.vhd
+l0
+L5 1
+VaI>mbULgVCaH1;UdmWY;d2
+!s100 3iKfPjQF^Xff==M0aM:b@1
+R8
+32
+R9
+!i10b 1
+R10
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/Data_MEM.vhd|
+Z24 !s107 C:/Users/user/Desktop/Pipeline_Processor/Data_MEM.vhd|
+!i113 1
+R13
+R14
+Aarchdatamem
+R2
+R3
+R4
+DEx4 work 7 datamem 0 22 aI>mbULgVCaH1;UdmWY;d2
+!i122 211
+l25
+L20 34
+V?N9Lhj7`BEOhV8co]SO5=3
+!s100 WNH=J6Xa5^;gLXz6d2e]Z1
+R8
+32
+R9
+!i10b 1
+R10
+R23
+R24
+!i113 1
+R13
+R14
+Edecoder3_8
+Z25 w1641326423
+R3
+R4
+!i122 212
+R5
+Z26 8C:/Users/user/Desktop/Pipeline_Processor/decoder.vhd
+Z27 FC:/Users/user/Desktop/Pipeline_Processor/decoder.vhd
+l0
+L4 1
+VEZEYP;dUgAH3NX380bBT13
+!s100 JQ022KKEe;?kZ69gnKW9X3
+R8
+32
+R9
+!i10b 1
+R10
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/decoder.vhd|
+Z29 !s107 C:/Users/user/Desktop/Pipeline_Processor/decoder.vhd|
+!i113 1
+R13
+R14
+Aarchdecoder
+R3
+R4
+DEx4 work 10 decoder3_8 0 22 EZEYP;dUgAH3NX380bBT13
+!i122 212
+l12
+L11 18
+Vi38VKm;1eX?[[^eA7G9Rb0
+!s100 WU6BVzRmW[V?<44FedG062
+R8
+32
+R9
+!i10b 1
+R10
+R28
+R29
+!i113 1
+R13
+R14
+Eexceptionhandler
+Z30 w1641690077
+R2
+R3
+R4
+!i122 241
+R5
+Z31 8C:/Users/user/Desktop/Pipeline_Processor/exceptionHandler.vhd
+Z32 FC:/Users/user/Desktop/Pipeline_Processor/exceptionHandler.vhd
+l0
+L5 1
+VemTm:7F4LSaSZ8PCKHTUd1
+!s100 `9C_6eh0mXGocL:SDmGbz2
+R8
+32
+Z33 !s110 1641690088
+!i10b 1
+Z34 !s108 1641690088.000000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/exceptionHandler.vhd|
+Z36 !s107 C:/Users/user/Desktop/Pipeline_Processor/exceptionHandler.vhd|
+!i113 1
+R13
+R14
+Aexceptionhandlerarc
+R2
+R3
+R4
+DEx4 work 16 exceptionhandler 0 22 emTm:7F4LSaSZ8PCKHTUd1
+!i122 241
+l27
+L25 31
+V6;]?Z]]o1mNg[Xobc`TfE3
+!s100 @?O`zSeX_zf4d@g6Z0T4h2
+R8
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R13
+R14
+Eexceptionprogramcounter
+Z37 w1641462991
+R2
+R3
+R4
+!i122 242
+R5
+Z38 8C:/Users/user/Desktop/Pipeline_Processor/exceptionProgramCounter.vhd
+Z39 FC:/Users/user/Desktop/Pipeline_Processor/exceptionProgramCounter.vhd
+l0
+L5 1
+V>8WI>U9>]=M3DjdEcjHL62
+!s100 9J:]MD1:TkPfOUhminXB<1
+R8
+32
+R33
+!i10b 1
+R34
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/exceptionProgramCounter.vhd|
+Z41 !s107 C:/Users/user/Desktop/Pipeline_Processor/exceptionProgramCounter.vhd|
+!i113 1
+R13
+R14
+Aarch_exceptionprogramcounter
+R2
+R3
+R4
+Z42 DEx4 work 23 exceptionprogramcounter 0 22 >8WI>U9>]=M3DjdEcjHL62
+!i122 242
+l16
+Z43 L15 16
+Z44 V_LLoR1LXX0j7ibAmECkck2
+Z45 !s100 oZZhY^Kz_N2;4TjBeAlP=0
+R8
+32
+R33
+!i10b 1
+R34
+R40
+R41
+!i113 1
+R13
+R14
+Eexecutestage
+Z46 w1641688037
+R2
+R3
+R4
+!i122 213
+R5
+Z47 8C:/Users/user/Desktop/Pipeline_Processor/executestage.vhd
+Z48 FC:/Users/user/Desktop/Pipeline_Processor/executestage.vhd
+l0
+L5 1
+VPQAOkBV`U0e>P[IP`Dg6_2
+!s100 2U0?Mag:_z`8c:3_7J<`_3
+R8
+32
+R9
+!i10b 1
+R10
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/executestage.vhd|
+Z50 !s107 C:/Users/user/Desktop/Pipeline_Processor/executestage.vhd|
+!i113 1
+R13
+R14
+Adata_executestage
+R2
+R3
+R4
+DEx4 work 12 executestage 0 22 PQAOkBV`U0e>P[IP`Dg6_2
+!i122 213
+l162
+L64 115
+VlT?;eCQ`ko]ag6TUa^INE1
+!s100 95a[`8a;6H@E55Rmc0d@f0
+R8
+32
+R9
+!i10b 1
+R10
+R49
+R50
+!i113 1
+R13
+R14
+Eexmem
+R1
+R3
+R4
+!i122 214
+R5
+Z51 8C:/Users/user/Desktop/Pipeline_Processor/EX-MEM.vhd
+Z52 FC:/Users/user/Desktop/Pipeline_Processor/EX-MEM.vhd
+l0
+L5 1
+V@AJV^0M7GImNlW<^W;RRK2
+!s100 74z2^@=i_X8Y>fO7hR>E12
+R8
+32
+R9
+!i10b 1
+R10
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/EX-MEM.vhd|
+Z54 !s107 C:/Users/user/Desktop/Pipeline_Processor/EX-MEM.vhd|
+!i113 1
+R13
+R14
+Aarchexmem
+R3
+R4
+DEx4 work 5 exmem 0 22 @AJV^0M7GImNlW<^W;RRK2
+!i122 214
+l16
+Z55 L14 17
+V^iaf^kEnSa6VLm;iNXEd12
+!s100 _zaXjnoHRaU?7iA^d5cli2
+R8
+32
+R9
+!i10b 1
+R10
+R53
+R54
+!i113 1
+R13
+R14
+Eflagregister
+R25
+R2
+R3
+R4
+!i122 215
+R5
+Z56 8C:/Users/user/Desktop/Pipeline_Processor/flagregister.vhd
+Z57 FC:/Users/user/Desktop/Pipeline_Processor/flagregister.vhd
+l0
+L5 1
+VNOaeT3WTGo5VO77MjBR4j0
+!s100 Dd3S45c1N;n8A=kieo=FZ2
+R8
+32
+R9
+!i10b 1
+R10
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/flagregister.vhd|
+Z59 !s107 C:/Users/user/Desktop/Pipeline_Processor/flagregister.vhd|
+!i113 1
+R13
+R14
+Abehav_flagregister
+R2
+R3
+R4
+DEx4 work 12 flagregister 0 22 NOaeT3WTGo5VO77MjBR4j0
+!i122 215
+l24
+L23 21
+V0SEgINS[bkgEB@@kVi61M1
+!s100 T=WmY:`2TZYZ>dHNZ4AdG0
+R8
+32
+R9
+!i10b 1
+R10
+R58
+R59
+!i113 1
+R13
+R14
+Eflagregisterv2
+R25
+R2
+R3
+R4
+!i122 216
+R5
+Z60 8C:/Users/user/Desktop/Pipeline_Processor/flagregisterV2.vhd
+Z61 FC:/Users/user/Desktop/Pipeline_Processor/flagregisterV2.vhd
+l0
+L5 1
+VOAXTBQ_TZJCdL5X^hl;<C2
+!s100 1ezn8mA]bz?EA?C:eNcBD3
+R8
+32
+Z62 !s110 1641690085
+!i10b 1
+R10
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/flagregisterV2.vhd|
+Z64 !s107 C:/Users/user/Desktop/Pipeline_Processor/flagregisterV2.vhd|
+!i113 1
+R13
+R14
+Adata_flagregisterv2
+R2
+R3
+R4
+DEx4 work 14 flagregisterv2 0 22 OAXTBQ_TZJCdL5X^hl;<C2
+!i122 216
+l18
+L17 36
+V1BR]kBnXcE>io3mMVUo[[2
+!s100 T4HnW8o:TDNSi68<AdYC>1
+R8
+32
+R62
+!i10b 1
+R10
+R63
+R64
+!i113 1
+R13
+R14
+Eflagsintegration
+R25
+R2
+R3
+R4
+!i122 217
+R5
+Z65 8C:/Users/user/Desktop/Pipeline_Processor/flagsintegration.vhd
+Z66 FC:/Users/user/Desktop/Pipeline_Processor/flagsintegration.vhd
+l0
+L5 1
+V<NiE5Km1IaekTJ^zYzClY2
+!s100 R0Im]J3IAR:VX;nfZ>^1R2
+R8
+32
+R62
+!i10b 1
+Z67 !s108 1641690085.000000
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/flagsintegration.vhd|
+Z69 !s107 C:/Users/user/Desktop/Pipeline_Processor/flagsintegration.vhd|
+!i113 1
+R13
+R14
+Abehav_flagsintegration
+R2
+R3
+R4
+DEx4 work 16 flagsintegration 0 22 <NiE5Km1IaekTJ^zYzClY2
+!i122 217
+l60
+L27 44
+VckLGzc;QTYW]W3jci38hI2
+!s100 @YlGGczCX2dhz7fmB??;D1
+R8
+32
+R62
+!i10b 1
+R67
+R68
+R69
+!i113 1
+R13
+R14
+Eflagstoreregister
+R25
+R2
+R3
+R4
+!i122 218
+R5
+Z70 8C:/Users/user/Desktop/Pipeline_Processor/flagstoreregister.vhd
+Z71 FC:/Users/user/Desktop/Pipeline_Processor/flagstoreregister.vhd
+l0
+L5 1
+VGa6VjjXefL0Zo9Oh7aF180
+!s100 35WnW1;6;^Mng6Idmd1NR0
+R8
+32
+R62
+!i10b 1
+R67
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/flagstoreregister.vhd|
+Z73 !s107 C:/Users/user/Desktop/Pipeline_Processor/flagstoreregister.vhd|
+!i113 1
+R13
+R14
+Abehav_flagstoreregister
+R2
+R3
+R4
+DEx4 work 17 flagstoreregister 0 22 Ga6VjjXefL0Zo9Oh7aF180
+!i122 218
+l14
+L13 15
+VIZBa]=5A@TR6efe;B[XCn1
+!s100 ^7<gj3]WODm7oZ1jMg[Jj2
+R8
+32
+R62
+!i10b 1
+R67
+R72
+R73
+!i113 1
+R13
+R14
+Eforwardingunit
+R25
+R2
+R3
+R4
+!i122 219
+R5
+Z74 8C:/Users/user/Desktop/Pipeline_Processor/forwardingunit.vhd
+Z75 FC:/Users/user/Desktop/Pipeline_Processor/forwardingunit.vhd
+l0
+L5 1
+VNiU>PZiX;RVIXY^gH@?:j0
+!s100 2K55gP^3I2ZXE<XGRN^NX3
+R8
+32
+R62
+!i10b 1
+R67
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/forwardingunit.vhd|
+Z77 !s107 C:/Users/user/Desktop/Pipeline_Processor/forwardingunit.vhd|
+!i113 1
+R13
+R14
+Adata_forwardingunit
+R2
+R3
+R4
+DEx4 work 14 forwardingunit 0 22 NiU>PZiX;RVIXY^gH@?:j0
+!i122 219
+l15
+R55
+VdIzjYIlCdcZ6Afc2T]TDA2
+!s100 za`B1OUjU1<Sz^>U95f:l2
+R8
+32
+R62
+!i10b 1
+R67
+R76
+R77
+!i113 1
+R13
+R14
+Efourbyonemux
+R25
+R2
+R3
+R4
+!i122 220
+R5
+Z78 8C:/Users/user/Desktop/Pipeline_Processor/fourbyonemux.vhd
+Z79 FC:/Users/user/Desktop/Pipeline_Processor/fourbyonemux.vhd
+l0
+L5 1
+VDfjhZG73o[Tj?Uzk;cAUT2
+!s100 C0BPOnQGDLc`fgn<fPBFo2
+R8
+32
+R62
+!i10b 1
+R67
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/fourbyonemux.vhd|
+Z81 !s107 C:/Users/user/Desktop/Pipeline_Processor/fourbyonemux.vhd|
+!i113 1
+R13
+R14
+Adata_fourbyonemux
+R2
+R3
+R4
+Z82 DEx4 work 12 fourbyonemux 0 22 DfjhZG73o[Tj?Uzk;cAUT2
+!i122 220
+l14
+Z83 L13 8
+VUXfgl==m^f1a7R260PFUb0
+!s100 B8n;i9NEQW6^P?J:@F_ee1
+R8
+32
+R62
+!i10b 1
+R67
+R80
+R81
+!i113 1
+R13
+R14
+Aarchmux_4_1_32bit
+w1640359298
+R2
+R3
+R4
+R82
+!i122 889
+8E:/Pipeline_Processor/MUX_4_1_32bit.vhd
+FE:/Pipeline_Processor/MUX_4_1_32bit.vhd
+l14
+R83
+VO47nF>WKeGe:]IUlndXLl0
+!s100 X16_KdWnGmVYY`nlTkQjm2
+R8
+32
+!s110 1640359415
+!i10b 1
+!s108 1640359415.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Pipeline_Processor/MUX_4_1_32bit.vhd|
+!s107 E:/Pipeline_Processor/MUX_4_1_32bit.vhd|
+!i113 1
+R13
+R14
+dE:/Pipeline_Processor
+Ehazard_unit
+R25
+R2
+R3
+R4
+!i122 221
+R5
+Z84 8C:/Users/user/Desktop/Pipeline_Processor/HazardDetection_Unit.vhd
+Z85 FC:/Users/user/Desktop/Pipeline_Processor/HazardDetection_Unit.vhd
+l0
+L5 1
+VKfdiz0`bC2MA?Ug[C4@X:0
+!s100 ZSMN:ml4hDXFkh?:Pe8243
+R8
+32
+R62
+!i10b 1
+R67
+Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/HazardDetection_Unit.vhd|
+Z87 !s107 C:/Users/user/Desktop/Pipeline_Processor/HazardDetection_Unit.vhd|
+!i113 1
+R13
+R14
+Aarchhazard_unit
+R2
+R3
+R4
+DEx4 work 11 hazard_unit 0 22 Kfdiz0`bC2MA?Ug[C4@X:0
+!i122 221
+l17
+L16 7
+V5mU5nFjXSS8X5Xg?cIC6T1
+!s100 :G]anbXm>=8S6_>;ETY2P0
+R8
+32
+R62
+!i10b 1
+R67
+R86
+R87
+!i113 1
+R13
+R14
+Eidex
+R37
+R3
+R4
+!i122 222
+R5
+Z88 8C:/Users/user/Desktop/Pipeline_Processor/ID-EX.vhd
+Z89 FC:/Users/user/Desktop/Pipeline_Processor/ID-EX.vhd
+l0
+L5 1
+V5iRBYVQ8G5?FAb3he^kh90
+!s100 2S>iRO;U^SXXgRg2;FeA22
+R8
+32
+R62
+!i10b 1
+R67
+Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/ID-EX.vhd|
+Z91 !s107 C:/Users/user/Desktop/Pipeline_Processor/ID-EX.vhd|
+!i113 1
+R13
+R14
+Aarchidex
+R3
+R4
+DEx4 work 4 idex 0 22 5iRBYVQ8G5?FAb3he^kh90
+!i122 222
+l15
+Z92 L13 17
+V`7Vb]cafQIP8?4UWTaFSm3
+!s100 Gj;[_AL;cNV;5iV65n?<h0
+R8
+32
+R62
+!i10b 1
+R67
+R90
+R91
+!i113 1
+R13
+R14
+Eifid
+R25
+R3
+R4
+!i122 223
+R5
+Z93 8C:/Users/user/Desktop/Pipeline_Processor/IF-ID.vhd
+Z94 FC:/Users/user/Desktop/Pipeline_Processor/IF-ID.vhd
+l0
+L5 1
+V3g1lD7=2o1PKYQbW:Egz[2
+!s100 YlmT1nj40]fcjd`JZfE=l1
+R8
+32
+R62
+!i10b 1
+R67
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/IF-ID.vhd|
+Z96 !s107 C:/Users/user/Desktop/Pipeline_Processor/IF-ID.vhd|
+!i113 1
+R13
+R14
+Aarchifid
+R3
+R4
+DEx4 work 4 ifid 0 22 3g1lD7=2o1PKYQbW:Egz[2
+!i122 223
+l15
+R92
+VbA0gDJbBVg`N2Xh0?DADl1
+!s100 VdN3ijH<aVlOf>aKOAL0b0
+R8
+32
+R62
+!i10b 1
+R67
+R95
+R96
+!i113 1
+R13
+R14
+Einstractionmem
+R25
+R2
+R3
+R4
+!i122 224
+R5
+Z97 8C:/Users/user/Desktop/Pipeline_Processor/Instraction_MEM.vhd
+Z98 FC:/Users/user/Desktop/Pipeline_Processor/Instraction_MEM.vhd
+l0
+L5 1
+V2dUYb?BU?;6HdRBC_Wl4L0
+!s100 S<LMVNYkUhaKKPm[VSkkM1
+R8
+32
+R62
+!i10b 1
+R67
+Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/Instraction_MEM.vhd|
+Z100 !s107 C:/Users/user/Desktop/Pipeline_Processor/Instraction_MEM.vhd|
+!i113 1
+R13
+R14
+Aarchinstractionmem
+R2
+R3
+R4
+DEx4 work 14 instractionmem 0 22 2dUYb?BU?;6HdRBC_Wl4L0
+!i122 224
+l17
+L12 9
+V:L@SNFeHG1`EY4S0EVEP00
+!s100 h]?Y;E7Y`VbM@2SOF>nf42
+R8
+32
+R62
+!i10b 1
+R67
+R99
+R100
+!i113 1
+R13
+R14
+Ejump
+R25
+R2
+R3
+R4
+!i122 225
+R5
+Z101 8C:/Users/user/Desktop/Pipeline_Processor/jump.vhd
+Z102 FC:/Users/user/Desktop/Pipeline_Processor/jump.vhd
+l0
+L5 1
+V7=9lN?3`9HCRa[oR^IEk11
+!s100 oFKTb]P;k9DGL5G4Xa;AY0
+R8
+32
+Z103 !s110 1641690086
+!i10b 1
+Z104 !s108 1641690086.000000
+Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/jump.vhd|
+Z106 !s107 C:/Users/user/Desktop/Pipeline_Processor/jump.vhd|
+!i113 1
+R13
+R14
+Adata_jump
+R2
+R3
+R4
+DEx4 work 4 jump 0 22 7=9lN?3`9HCRa[oR^IEk11
+!i122 225
+l14
+R83
+VNN2UVBY4W[MWNoYmi[Hc:3
+!s100 `OVM_g7TlG?ad3?Comjai1
+R8
+32
+R103
+!i10b 1
+R104
+R105
+R106
+!i113 1
+R13
+R14
+Ememwb
+Z107 w1641680461
+R3
+R4
+!i122 226
+R5
+Z108 8C:/Users/user/Desktop/Pipeline_Processor/MEM-WB.vhd
+Z109 FC:/Users/user/Desktop/Pipeline_Processor/MEM-WB.vhd
+l0
+L5 1
+VBYQNzPANo:7kPn8l`_ikg0
+!s100 YJ3ML=U1kolfTC5lme<=E3
+R8
+32
+R103
+!i10b 1
+R104
+Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/MEM-WB.vhd|
+Z111 !s107 C:/Users/user/Desktop/Pipeline_Processor/MEM-WB.vhd|
+!i113 1
+R13
+R14
+Aarchmemwb
+R3
+R4
+DEx4 work 5 memwb 0 22 BYQNzPANo:7kPn8l`_ikg0
+!i122 226
+l16
+R55
+VDUmf<<CO3eO6V?ecI6jC62
+!s100 H^zW@DAJEkXz2UHR<Y_LS1
+R8
+32
+R103
+!i10b 1
+R104
+R110
+R111
+!i113 1
+R13
+R14
+Emips
+Z112 w1641688503
+R2
+R3
+R4
+!i122 227
+R5
+Z113 8C:/Users/user/Desktop/Pipeline_Processor/MIPS.vhd
+Z114 FC:/Users/user/Desktop/Pipeline_Processor/MIPS.vhd
+l0
+L7 1
+V3I2fIXRB7TNOI?bXYD7]71
+!s100 Z[=^Yn5LjQ4NW3bE3;7Ao1
+R8
+32
+R103
+!i10b 1
+R104
+Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/MIPS.vhd|
+Z116 !s107 C:/Users/user/Desktop/Pipeline_Processor/MIPS.vhd|
+!i113 1
+R13
+R14
+Aarchmips
+R2
+R3
+R4
+DEx4 work 4 mips 0 22 3I2fIXRB7TNOI?bXYD7]71
+!i122 227
+l292
+L17 388
+VOg1DKA[K[J8c2KJKbW9i13
+!s100 O?>MLMg4G:OBdH7UK7YnX2
+R8
+32
+R103
+!i10b 1
+R104
+R115
+R116
+!i113 1
+R13
+R14
+Emux_4_1_32bit
+R25
+R2
+R3
+R4
+!i122 228
+R5
+Z117 8C:/Users/user/Desktop/Pipeline_Processor/MUX_4_1_32bit.vhd
+Z118 FC:/Users/user/Desktop/Pipeline_Processor/MUX_4_1_32bit.vhd
+l0
+L5 1
+V?=5ndD^cQNDz:Sf8ldB_f0
+!s100 QQE1CdC0VQZQkn@L=LARU3
+R8
+32
+R103
+!i10b 1
+R104
+Z119 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/MUX_4_1_32bit.vhd|
+Z120 !s107 C:/Users/user/Desktop/Pipeline_Processor/MUX_4_1_32bit.vhd|
+!i113 1
+R13
+R14
+Aarchmux_4_1_32bit
+R2
+R3
+R4
+DEx4 work 13 mux_4_1_32bit 0 22 ?=5ndD^cQNDz:Sf8ldB_f0
+!i122 228
+l14
+R83
+Vhed3h^`7An5T4a_Kf44M]0
+!s100 B:WanCIfm]kBCP4EJOiGA1
+R8
+32
+R103
+!i10b 1
+R104
+R119
+R120
+!i113 1
+R13
+R14
+Eonebitfulladder
+R25
+R2
+R3
+R4
+!i122 229
+R5
+Z121 8C:/Users/user/Desktop/Pipeline_Processor/onebitfulladder.vhd
+Z122 FC:/Users/user/Desktop/Pipeline_Processor/onebitfulladder.vhd
+l0
+L5 1
+VG]1HZb4N_EHBN0U;cKk302
+!s100 d1jdgP5gKK;4XBIdB^J>32
+R8
+32
+R103
+!i10b 1
+R104
+Z123 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/onebitfulladder.vhd|
+Z124 !s107 C:/Users/user/Desktop/Pipeline_Processor/onebitfulladder.vhd|
+!i113 1
+R13
+R14
+Adata_onebitfulladder
+R2
+R3
+R4
+DEx4 work 15 onebitfulladder 0 22 G]1HZb4N_EHBN0U;cKk302
+!i122 229
+l14
+Z125 L13 5
+VKfH`E:H[S32h8<GNjH`JI1
+!s100 @R?S>GA7;38^bl<gc9?Q40
+R8
+32
+R103
+!i10b 1
+R104
+R123
+R124
+!i113 1
+R13
+R14
+Eonebitfullsubtractor
+R25
+R2
+R3
+R4
+!i122 230
+R5
+Z126 8C:/Users/user/Desktop/Pipeline_Processor/onebitfullsubtractor.vhd
+Z127 FC:/Users/user/Desktop/Pipeline_Processor/onebitfullsubtractor.vhd
+l0
+L5 1
+V2MIA8?i7LE:H8LYhDS@b02
+!s100 o[W3?Y2JXY1igGi14[<[^3
+R8
+32
+R103
+!i10b 1
+R104
+Z128 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/onebitfullsubtractor.vhd|
+Z129 !s107 C:/Users/user/Desktop/Pipeline_Processor/onebitfullsubtractor.vhd|
+!i113 1
+R13
+R14
+Adata_onebitfullsubtractor
+R2
+R3
+R4
+DEx4 work 20 onebitfullsubtractor 0 22 2MIA8?i7LE:H8LYhDS@b02
+!i122 230
+l14
+R125
+VR2>F;5KLh`N?3nZPSAR811
+!s100 WaD9ZSG_FQQS]AE6e5]YL1
+R8
+32
+R103
+!i10b 1
+R104
+R128
+R129
+!i113 1
+R13
+R14
+Epc_reg
+Z130 w1641686997
+R3
+R4
+!i122 231
+R5
+Z131 8C:/Users/user/Desktop/Pipeline_Processor/PC.vhd
+Z132 FC:/Users/user/Desktop/Pipeline_Processor/PC.vhd
+l0
+L5 1
+V>1U0EYOF]2P72`;j0gMg43
+!s100 hcP`??]:=@;k3QX<Xh[AV0
+R8
+32
+Z133 !s110 1641690087
+!i10b 1
+R104
+Z134 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/PC.vhd|
+Z135 !s107 C:/Users/user/Desktop/Pipeline_Processor/PC.vhd|
+!i113 1
+R13
+R14
+Apcarchreg
+R3
+R4
+DEx4 work 6 pc_reg 0 22 >1U0EYOF]2P72`;j0gMg43
+!i122 231
+l15
+R92
+VEcKkShmMzdaD1mH^0>NoS2
+!s100 h<fHCZ_P6?E_9L18lj^lm3
+R8
+32
+R133
+!i10b 1
+R104
+R134
+R135
+!i113 1
+R13
+R14
+Ereg16bit
+R25
+R3
+R4
+!i122 232
+R5
+Z136 8C:/Users/user/Desktop/Pipeline_Processor/reg16bit.vhd
+Z137 FC:/Users/user/Desktop/Pipeline_Processor/reg16bit.vhd
+l0
+L5 1
+VMXJK4BVjVaL4XHM_2D?OR0
+!s100 =A_fiYLhcPR[186hP]VUJ3
+R8
+32
+R133
+!i10b 1
+Z138 !s108 1641690087.000000
+Z139 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/reg16bit.vhd|
+Z140 !s107 C:/Users/user/Desktop/Pipeline_Processor/reg16bit.vhd|
+!i113 1
+R13
+R14
+Aarchreg16bit
+R3
+R4
+DEx4 work 8 reg16bit 0 22 MXJK4BVjVaL4XHM_2D?OR0
+!i122 232
+l15
+R92
+Vz1S1JPP?kZE;Oe`Knifh`1
+!s100 di?e@3B?EP>^9``0PcH>T0
+R8
+32
+R133
+!i10b 1
+R138
+R139
+R140
+!i113 1
+R13
+R14
+Eregisterfile
+R25
+R3
+R4
+!i122 233
+R5
+Z141 8C:/Users/user/Desktop/Pipeline_Processor/Register_File.vhd
+Z142 FC:/Users/user/Desktop/Pipeline_Processor/Register_File.vhd
+l0
+L5 1
+V:XbidYkPk]m^GOT2oBJX22
+!s100 [Y`]MP]NmU<R=R7RW56IF1
+R8
+32
+R133
+!i10b 1
+R138
+Z143 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/Register_File.vhd|
+Z144 !s107 C:/Users/user/Desktop/Pipeline_Processor/Register_File.vhd|
+!i113 1
+R13
+R14
+Aarchregisterfile
+R3
+R4
+DEx4 work 12 registerfile 0 22 :XbidYkPk]m^GOT2oBJX22
+!i122 233
+l51
+L22 75
+V]ET]UY1AdJigPKig;^4eo2
+!s100 g]^PN22Mf=7kTd<9;]e1d2
+R8
+32
+R133
+!i10b 1
+R138
+R143
+R144
+!i113 1
+R13
+R14
+Esixteenbitfulladder
+R25
+R2
+R3
+R4
+!i122 234
+R5
+Z145 8C:/Users/user/Desktop/Pipeline_Processor/sixteenbitfulladder.vhd
+Z146 FC:/Users/user/Desktop/Pipeline_Processor/sixteenbitfulladder.vhd
+l0
+L5 1
+V_0V]NinF30]d@OC[Jn@fc1
+!s100 [IIPO;gagShc9GXJ>9nZ13
+R8
+32
+R133
+!i10b 1
+R138
+Z147 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/sixteenbitfulladder.vhd|
+Z148 !s107 C:/Users/user/Desktop/Pipeline_Processor/sixteenbitfulladder.vhd|
+!i113 1
+R13
+R14
+Adata_sixteenbitfulladder
+R2
+R3
+R4
+DEx4 work 19 sixteenbitfulladder 0 22 _0V]NinF30]d@OC[Jn@fc1
+!i122 234
+l24
+R55
+V?kbiD4h07=BTP_hnO[_9Q0
+!s100 D710[Eo]F;aF5nzGQ7d9F0
+R8
+32
+R133
+!i10b 1
+R138
+R147
+R148
+!i113 1
+R13
+R14
+Esixteenbitfullsubtractor
+R25
+R2
+R3
+R4
+!i122 235
+R5
+Z149 8C:/Users/user/Desktop/Pipeline_Processor/sixteenfullsubtractor.vhd
+Z150 FC:/Users/user/Desktop/Pipeline_Processor/sixteenfullsubtractor.vhd
+l0
+L5 1
+V=C<<UQKC`f]Mc?ao9Cb=f3
+!s100 Ga4^9>JIjnYdTX<2EQRIM3
+R8
+32
+R133
+!i10b 1
+R138
+Z151 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/sixteenfullsubtractor.vhd|
+Z152 !s107 C:/Users/user/Desktop/Pipeline_Processor/sixteenfullsubtractor.vhd|
+!i113 1
+R13
+R14
+Adata_sixteenbitfullsubtractor
+R2
+R3
+R4
+DEx4 work 24 sixteenbitfullsubtractor 0 22 =C<<UQKC`f]Mc?ao9Cb=f3
+!i122 235
+l24
+R55
+V26>DWeRS@6n1_h46kdjLa2
+!s100 kd`XJ3i=9R4CUOX]2LT@J2
+R8
+32
+R133
+!i10b 1
+R138
+R151
+R152
+!i113 1
+R13
+R14
+Estackpointer
+R107
+R2
+R3
+R4
+!i122 236
+R5
+Z153 8C:/Users/user/Desktop/Pipeline_Processor/SP.vhd
+Z154 FC:/Users/user/Desktop/Pipeline_Processor/SP.vhd
+l0
+L5 1
+VB=9T`1NWIOJGR4hY<`@zk0
+!s100 I6^z26gCW9KZX0N6_JmXb2
+R8
+32
+R133
+!i10b 1
+R138
+Z155 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/SP.vhd|
+Z156 !s107 C:/Users/user/Desktop/Pipeline_Processor/SP.vhd|
+!i113 1
+R13
+R14
+Aarch_stackpointer
+R2
+R3
+R4
+DEx4 work 12 stackpointer 0 22 B=9T`1NWIOJGR4hY<`@zk0
+!i122 236
+l16
+L15 41
+VYW[M`L:Z9D`KTAfczF<6l1
+!s100 60lX?<1BcbU59Io5007;k1
+R8
+32
+R133
+!i10b 1
+R138
+R155
+R156
+!i113 1
+R13
+R14
+Etri_state_buffer
+R25
+R3
+R4
+!i122 238
+R5
+Z157 8C:/Users/user/Desktop/Pipeline_Processor/Tri-stateBuffer.vhd
+Z158 FC:/Users/user/Desktop/Pipeline_Processor/Tri-stateBuffer.vhd
+l0
+L5 1
+VSOV_@nmn<L=hN^Fl@Hn4A0
+!s100 g=9coaCdd6[37Q?i_gSOz0
+R8
+32
+R133
+!i10b 1
+R138
+Z159 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/Tri-stateBuffer.vhd|
+Z160 !s107 C:/Users/user/Desktop/Pipeline_Processor/Tri-stateBuffer.vhd|
+!i113 1
+R13
+R14
+Aarchtristate
+R3
+R4
+DEx4 work 16 tri_state_buffer 0 22 SOV_@nmn<L=hN^Fl@Hn4A0
+!i122 238
+l14
+L12 7
+VlFYnz>Qfho?I9a68A5[^f2
+!s100 3W2VAS[Z2Y3kZKMKU^gkm2
+R8
+32
+R133
+!i10b 1
+R138
+R159
+R160
+!i113 1
+R13
+R14
+Etristatebuffer
+R25
+R2
+R3
+R4
+!i122 237
+R5
+Z161 8C:/Users/user/Desktop/Pipeline_Processor/tristatebuffer.vhd
+Z162 FC:/Users/user/Desktop/Pipeline_Processor/tristatebuffer.vhd
+l0
+L5 1
+Vm<b^HFXN6ePIdDcLX8ojI1
+!s100 ;>9I]i6h_o`5D]nLCi6Oz1
+R8
+32
+R133
+!i10b 1
+R138
+Z163 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/tristatebuffer.vhd|
+Z164 !s107 C:/Users/user/Desktop/Pipeline_Processor/tristatebuffer.vhd|
+!i113 1
+R13
+R14
+Adata_tristatebuffer
+R2
+R3
+R4
+DEx4 work 14 tristatebuffer 0 22 m<b^HFXN6ePIdDcLX8ojI1
+!i122 237
+l14
+R125
+VDYYG>gF:W6CKoDTonG2IN3
+!s100 1?AhYgCz7oZF:VagfELDU1
+R8
+32
+R133
+!i10b 1
+R138
+R163
+R164
+!i113 1
+R13
+R14
+Etwobyonemux
+R25
+R2
+R3
+R4
+!i122 239
+R5
+Z165 8C:/Users/user/Desktop/Pipeline_Processor/twobyonemux.vhd
+Z166 FC:/Users/user/Desktop/Pipeline_Processor/twobyonemux.vhd
+l0
+L5 1
+V1h@LW?IP5g5KUOEAZmIHz1
+!s100 `:K1m=0J@0<d34i0AU>Z90
+R8
+32
+R33
+!i10b 1
+R138
+Z167 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/twobyonemux.vhd|
+Z168 !s107 C:/Users/user/Desktop/Pipeline_Processor/twobyonemux.vhd|
+!i113 1
+R13
+R14
+Adata_twobyonemux
+R2
+R3
+R4
+DEx4 work 11 twobyonemux 0 22 1h@LW?IP5g5KUOEAZmIHz1
+!i122 239
+l14
+Z169 L13 6
+VFWA1YUC?[z1WLJ>Lgm[TG0
+!s100 Bombca4kS4lg95m`aDUPX2
+R8
+32
+R33
+!i10b 1
+R138
+R167
+R168
+!i113 1
+R13
+R14
+Ewriteback
+R25
+R2
+R3
+R4
+!i122 240
+R5
+Z170 8C:/Users/user/Desktop/Pipeline_Processor/Write_Back.vhd
+Z171 FC:/Users/user/Desktop/Pipeline_Processor/Write_Back.vhd
+l0
+L5 1
+Vmh5^ol@RAm[5`Dn3O@mOm2
+!s100 BfHfT_6RUQc79meMzeQ=h2
+R8
+32
+R33
+!i10b 1
+R34
+Z172 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/user/Desktop/Pipeline_Processor/Write_Back.vhd|
+Z173 !s107 C:/Users/user/Desktop/Pipeline_Processor/Write_Back.vhd|
+!i113 1
+R13
+R14
+Awrite_back
+R2
+R3
+R4
+DEx4 work 9 writeback 0 22 mh5^ol@RAm[5`Dn3O@mOm2
+!i122 240
+l14
+R169
+V0ZzhZI[zCA;XdA;hY@PPj2
+!s100 _]8J2VzGiab91gT<J74GX0
+R8
+32
+R33
+!i10b 1
+R34
+R172
+R173
+!i113 1
+R13
+R14

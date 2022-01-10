@@ -8,7 +8,7 @@ entity flagregisterV2 is
         ALUTwoFlags: in std_logic_vector(2 downto 0);
         setCarry: in std_logic;
         flagRev: in std_logic_vector(2 downto 0);
-        flagSel: in std_logic_vector(1 downto 0);
+        flagSel: in std_logic_vector(2 downto 0);-- updated to allow jumps to change the corrected value of the flags
         clk, rst: in std_logic;
         carryFlag, negativeFlag, zeroFlag: out std_logic
     );
@@ -23,19 +23,29 @@ architecture data_flagregisterV2 of flagregisterV2 is
                 negativeFlag <= '0';
                 zeroFlag <= '0';
             elsif (clk'event and clk = '1') then
-                if (flagSel = "00") then
+                if (flagSel = "000") then
                     carryFlag <= flagRev(0);
                     negativeFlag <= flagRev(1);
                     zeroFlag <= flagRev(2);
-                elsif (flagSel = "01") then
+                elsif (flagSel = "001") then
                     carryFlag <= setCarry;
-                elsif (flagSel <= "10") then
+                elsif (flagSel <= "010") then
                     negativeFlag <= ALUTwoFlags(1);
                     zeroFlag <= ALUTwoFlags(2);
-                else 
+                elsif (flagSel <= "011") then 
                     carryFlag <= ALUThreeFlags(0);
                     negativeFlag <= ALUThreeFlags(1);
                     zeroFlag <= ALUThreeFlags(2);
+                elsif (flagSel <= "100") then -- jump when zeroFlag = 1
+                    zeroFlag <= '0';
+                elsif (flagSel <= "101") then -- jump when negativeFlag = 1
+                    negativeFlag <= '0';
+                elsif (flagSel <= "110") then -- jump when carryFlag = 1
+                    carryFlag <= '0';
+                else 
+                    carryFlag <= '0';
+                    negativeFlag <= '0';
+                    zeroFlag <= '0';
                 end if;
             end if;
         end process;

@@ -8,14 +8,18 @@ entity flagsintegration is
         ALUThreeflags: in std_logic_vector(2 downto 0); --input from ALU when ADD or SUB
         ALUTwoFlags: in std_logic_vector(2 downto 0); --input from ALU when AND or NOT
         setCarry: in  std_logic; --input from ID/EX buffer
-        flagEn: in std_logic_vector(1 downto 0); --input from ID/EX buffer
+        flagEn: in std_logic_vector(2 downto 0); --input from ID/EX buffer
         clk, rst: in std_logic;
         ----------------------------------------------------------------
         ---------input select to mux1-----------------------------------
         flagRes: in std_logic; --input from ID/EX buffer to mux1 select
         ----------------------------------------------------------------
         ---------input select to mux2-----------------------------------
-        flagRev: in std_logic --input from ID/EX buffer to mux2 select
+        flagRev: in std_logic; --input from ID/EX buffer to mux2 select
+        ----------------------------------------------------------------
+
+        -------output from flagsregister and input to jump unit---------
+        outputZF, outputNF, outputCF: out std_logic
         ----------------------------------------------------------------
     );
 end flagsintegration;
@@ -27,7 +31,7 @@ architecture behav_flagsintegration of flagsintegration is
             ALUTwoFlags: in std_logic_vector(2 downto 0);
             setCarry: in std_logic;
             flagRev: in std_logic_vector(2 downto 0);
-            flagSel: in std_logic_vector(1 downto 0);
+            flagSel: in std_logic_vector(2 downto 0);
             clk, rst: in std_logic;
             carryFlag, negativeFlag, zeroFlag: out std_logic
         );
@@ -57,7 +61,10 @@ architecture behav_flagsintegration of flagsintegration is
         temp1 <= FRzeroFlag & FRnegativeFlag & FRcarryFlag;
         temp2 <= FSRzeroFlag & FSRnegativeFlag & FSRcarryFlag;
         FR: flagregisterV2 port map(ALUThreeFlags, ALUTwoFlags, setCarry, mux2Output, flagEN, clk, rst, FRcarryFlag, FRnegativeFlag, FRzeroFlag);
-        mux1: twobyonemux port map(temp1, temp2, flagRes, mux1Output);
+        mux1: twobyonemux port map(temp2, temp1, flagRes, mux1Output); --test
         FSR: flagstoreregister port map(mux1Output(0), mux1Output(1), mux1Output(2), FSRcarryFlag, FSRnegativeFlag, FSRzeroFlag, clk, rst);
         mux2: twobyonemux port map(temp1, temp2, FlagRev, mux2Output);
+        outputZF <= FRzeroFlag;
+        outputNF <= FRnegativeFlag;
+        outputCF <= FRcarryFlag;
     end behav_flagsintegration;
